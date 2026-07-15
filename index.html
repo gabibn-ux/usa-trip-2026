@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דשבורד טיול ארה"ב 2026 — גבי ואורלי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f7f5ef; --surface:#ffffff; --surface2:#f4f2ec; --border:#e3e0d6;
+  --text:#233331; --text2:#5c6663;
+  --accent1:#1b575a; --accent2:#25696c; --accent3:#c08a3e;
+  --accent4:#2f7d4f; --accent5:#8a5a1f; --accent6:#d4a24a;
+  --teal:#1b575a; --teal-bright:#25696c; --amber:#c08a3e; --green:#2f7d4f;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { direction:rtl; }
+body { background:var(--bg); color:var(--text); font-family:'Heebo',sans-serif; line-height:1.6;
+  background-image:radial-gradient(circle at 12% 8%,rgba(27,87,90,.14),transparent 45%),radial-gradient(circle at 88% 92%,rgba(192,138,62,.12),transparent 45%); min-height:100vh; }
+.wrap { max-width:1200px; margin:0 auto; padding:32px 20px; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(12px);} to{opacity:1;transform:none;} }
+.card { animation:fadeIn .5s ease both; }
+.header { margin-bottom:26px; border-bottom:1px solid var(--border); padding-bottom:20px; }
+.eyebrow { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:var(--accent1); letter-spacing:.1em; }
+.header h1 { font-size:34px; font-weight:900; margin-top:2px; color:var(--text); }
+.header .sub { color:var(--text2); font-size:15px; margin-top:6px; }
+.header .meta { color:var(--text2); font-size:13px; margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
+.chip { background:var(--surface2); border:1px solid var(--border); padding:3px 12px; border-radius:20px; font-size:12px; }
+.grid { display:grid; gap:16px; }
+.grid-2 { grid-template-columns:repeat(2,1fr); }
+.grid-4 { grid-template-columns:repeat(4,1fr); }
+@media (max-width:820px){ .grid-2,.grid-4{grid-template-columns:1fr;} }
+.panel { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:22px; box-shadow:0 2px 12px rgba(27,87,90,.05); }
+.panel h3 { font-size:18px; margin-bottom:16px; font-weight:700; display:flex; align-items:center; gap:8px; }
+.kpi { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px; position:relative; overflow:hidden; box-shadow:0 2px 12px rgba(27,87,90,.05); }
+.kpi::before { content:""; position:absolute; top:0; right:0; left:0; height:3px; background:linear-gradient(90deg,var(--c),transparent); }
+.kpi-num { font-size:32px; font-weight:900; color:var(--c); line-height:1.1; }
+.kpi-label { color:var(--text2); font-size:13px; margin-top:6px; }
+.kpi-delta { font-size:12px; margin-top:6px; color:var(--text2); }
+.tabs { display:flex; gap:6px; margin:24px 0 20px; flex-wrap:wrap; border-bottom:1px solid var(--border); }
+.tab-btn { background:none; border:none; color:var(--text2); font-family:inherit; font-size:14px; padding:10px 15px; cursor:pointer; border-bottom:2px solid transparent; }
+.tab-btn.active { color:var(--accent1); border-bottom-color:var(--accent1); font-weight:700; }
+.tab-content { display:none; }
+.tab-content.active { display:block; animation:fadeIn .4s ease both; }
+.bar-item { display:grid; grid-template-columns:130px 1fr 64px; align-items:center; gap:12px; margin-bottom:11px; }
+.bar-label { font-size:13px; color:var(--text2); text-align:right; }
+.bar-track { background:var(--surface2); border-radius:8px; height:24px; overflow:hidden; }
+.bar-fill { height:100%; border-radius:8px; transition:width 1s ease; }
+.bar-value { font-weight:700; font-size:14px; text-align:left; }
+.insight { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:0 2px 12px rgba(27,87,90,.05); }
+.insight-head { display:flex; align-items:center; gap:9px; margin-bottom:8px; }
+.insight-icon { font-size:20px; }
+.insight h4 { font-size:15px; font-weight:700; }
+.insight-body { color:var(--text2); font-size:13.5px; }
+.insight-action { margin-top:10px; font-size:13px; color:var(--accent1); font-weight:500; }
+.day-row { display:grid; grid-template-columns:60px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid var(--border); }
+.day-row:last-child { border-bottom:none; }
+.day-badge { text-align:center; }
+.day-badge .dn { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; color:var(--accent1); line-height:1; }
+.day-badge .dd { font-size:10px; color:var(--text2); margin-top:2px; }
+.day-main .droute { font-size:15px; font-weight:700; color:var(--text); }
+.day-main .dhotel { font-size:12px; color:var(--accent1); margin-top:2px; }
+.day-timeline { margin-top:10px; background:var(--surface2); border-radius:10px; padding:12px 14px; }
+.tl-row { display:grid; grid-template-columns:56px 1fr; gap:10px; padding:5px 0; align-items:baseline; }
+.tl-time { font-size:12px; font-weight:700; color:var(--accent1); font-variant-numeric:tabular-nums; }
+.tl-act { font-size:12.5px; color:var(--text); line-height:1.6; }
+.tl-act b { color:var(--accent1); font-weight:600; }
+.day-food { margin-top:8px; font-size:11px; color:var(--text2); padding:5px 10px; background:var(--surface); border-radius:6px; border:1px solid var(--border); }
+.day-foot { margin-top:8px; display:flex; gap:12px; flex-wrap:wrap; font-size:11px; color:var(--text2); }
+.day-foot span b { color:var(--accent1); font-weight:500; }
+.dnote { margin-top:6px; font-size:11.5px; padding:6px 10px; border-radius:6px; line-height:1.5; }
+.dnote.warn { background:rgba(138,90,31,.14); color:#8a5a1f; border:1px solid rgba(138,90,31,.3); }
+.dnote.star { background:rgba(47,125,79,.16); color:#2f7d4f; border:1px solid rgba(47,125,79,.35); }
+table { width:100%; border-collapse:collapse; }
+th { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--text2); text-align:right; padding:8px 10px; border-bottom:1px solid var(--border); }
+th.num { text-align:left; }
+td { padding:7px 10px; font-size:12.5px; color:var(--text); border-bottom:1px solid var(--border); vertical-align:top; }
+td.num { text-align:left; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.muted { color:var(--text2); font-size:11.5px; }
+.tag { display:inline-block; font-size:10px; padding:1px 7px; border-radius:4px; font-weight:500; white-space:nowrap; }
+.t-paid { background:rgba(47,125,79,.22); color:#2f7d4f; }
+.t-pending { background:rgba(212,162,74,.22); color:#8a5a1f; }
+.t-est { background:rgba(37,105,108,.22); color:#1b575a; }
+.t-route { background:rgba(47,125,79,.22); color:#2f7d4f; }
+.t-opt { background:rgba(212,162,74,.22); color:#8a5a1f; }
+.t-no { background:rgba(138,90,31,.22); color:#8a5a1f; }
+.donut-wrap { display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; }
+.legend { display:flex; flex-direction:column; gap:7px; }
+.legend-item { display:flex; align-items:center; gap:8px; font-size:12.5px; }
+.legend-sq { width:12px; height:12px; border-radius:3px; }
+.legend-val { color:var(--text2); margin-right:auto; padding-right:14px; font-variant-numeric:tabular-nums; }
+.weather-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+@media (max-width:820px){ .weather-grid{grid-template-columns:repeat(2,1fr);} }
+.wcell { background:var(--surface2); border-radius:10px; padding:12px; text-align:center; border:1px solid var(--border); }
+.wcell .wp { font-size:10px; color:var(--text2); text-transform:uppercase; letter-spacing:.04em; }
+.wcell .wt { font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--accent1); margin-top:3px; }
+.wcell .wd { font-size:10.5px; color:var(--text2); margin-top:3px; }
+.animal-cat { margin-bottom:22px; }
+.animal-cat-title { font-size:16px; font-weight:700; margin-bottom:12px; display:flex; align-items:center; gap:8px; padding-bottom:8px; border-bottom:2px solid var(--border); }
+.animal-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+@media (max-width:820px){ .animal-grid{grid-template-columns:1fr;} }
+.animal-card { background:var(--surface2); border-radius:12px; padding:14px; border-right:3px solid var(--c); }
+.animal-name { font-size:14px; font-weight:700; color:var(--text); }
+.animal-where { font-size:12px; color:var(--accent1); margin-top:3px; font-weight:500; }
+.animal-desc { font-size:12px; color:var(--text2); margin-top:5px; line-height:1.5; }
+.animal-when { font-size:11px; margin-top:6px; display:inline-block; padding:2px 8px; border-radius:20px; background:var(--surface); border:1px solid var(--border); color:var(--text2); }
+.footer { margin-top:36px; padding-top:20px; border-top:1px solid var(--border); text-align:center; font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--text2); font-size:15px; }
+
+.layout { display:flex; gap:20px; align-items:flex-start; }
+.sidebar { width:210px; flex-shrink:0; position:sticky; top:20px; display:flex; flex-direction:column; gap:4px; background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:12px; box-shadow:0 2px 12px rgba(27,87,90,.05); }
+.sidebar .tab-btn { text-align:right; padding:11px 14px; border-radius:10px; font-size:14px; }
+.sidebar .tab-btn.active { background:var(--surface2); border-bottom:none; color:var(--accent1); }
+.main-content { flex:1; min-width:0; }
+@media (max-width:900px){ .layout{flex-direction:column;} .sidebar{width:100%; position:static; flex-direction:row; flex-wrap:wrap;} }
+
+.map-wrap { height:560px; border-radius:16px; overflow:hidden; border:1px solid var(--border); }
+.map-legend { display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; font-size:12.5px; color:var(--text2); }
+.map-legend span { display:inline-flex; align-items:center; gap:6px; }
+.map-legend .ln { display:inline-block; width:22px; height:3px; border-radius:2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="header card">
+  <div class="eyebrow">דשבורד תכנון טיול</div>
+  <h1>ארצות הברית 2026</h1>
+  <div class="sub">גבי בן עזרא ואורלי · 26 באוקטובר – 10 בנובמבר · 16 ימים · דגש: ציפורים, חיות, נוף · ללא הליכות קשות</div>
+  <div class="meta"><span class="chip">קליפורניה</span><span class="chip">יוטה</span><span class="chip">אריזונה</span><span class="chip">נבאדה</span><span class="chip">ניו יורק</span><span class="chip">גבי: צמחוני</span><span class="chip">אורלי: טבעונית</span></div>
+</div>
+<div class="grid grid-4">
+  <div class="kpi card" style="--c:var(--accent1)"><div class="kpi-num">$11,024</div><div class="kpi-label">סה"כ תקציב צפוי (זוגי)</div><div class="kpi-delta">שולם: $3,067.60 · יתרה: ~$7,956</div></div>
+  <div class="kpi card" style="--c:var(--accent2)"><div class="kpi-num">16</div><div class="kpi-label">ימים · 9 לינות שונות</div><div class="kpi-delta">2 טיסות פנים · 2 רכבים</div></div>
+  <div class="kpi card" style="--c:var(--accent4)"><div class="kpi-num">~1,850</div><div class="kpi-label">מייל נסיעה ברכב</div><div class="kpi-delta">כביש 1 + פארקים דרום-מערב</div></div>
+  <div class="kpi card" style="--c:var(--accent3)"><div class="kpi-num">2</div><div class="kpi-label">פעולות דחופות פתוחות</div><div class="kpi-delta">רכב LV · Sphere</div></div>
+</div>
+<div class="layout">
+<nav class="sidebar">
+  <button class="tab-btn active" onclick="showTab(event,'route')">🗺️ מסלול מפורט</button>
+  <button class="tab-btn" onclick="showTab(event,'animals')">🦅 חיות וציפורים</button>
+  <button class="tab-btn" onclick="showTab(event,'budget')">💰 תקציב</button>
+  <button class="tab-btn" onclick="showTab(event,'attractions')">📍 אטרקציות בדרך</button>
+  <button class="tab-btn" onclick="showTab(event,'map')">🗺️ מפת מסלול</button>
+  <button class="tab-btn" onclick="showTab(event,'logistics')">✈️ טיסות, רכבים ומלונות</button>
+  <button class="tab-btn" onclick="showTab(event,'food')">🥗 קולינריה</button>
+  <button class="tab-btn" onclick="showTab(event,'insights')">💡 תובנות ופעולות</button>
+</nav>
+<div class="main-content">
+<div id="tab-route" class="tab-content active">
+  <div class="panel" style="margin-bottom:16px">
+    <h3>🌤️ מזג אוויר ושקיעה לפי יעד</h3>
+    <div class="weather-grid">
+      <div class="wcell"><div class="wp">סן פרנסיסקו</div><div class="wt">20–22°</div><div class="wd">שמשי · 18:15</div></div>
+      <div class="wcell"><div class="wp">כרמל/מונטריי</div><div class="wt">18–20°</div><div class="wd">ערפל בוקר · 18:10</div></div>
+      <div class="wcell"><div class="wp">סנטה ברברה</div><div class="wt">22–24°</div><div class="wd">חם · 18:05</div></div>
+      <div class="wcell"><div class="wp">ציון</div><div class="wt">22–25°</div><div class="wd">יבש · 18:00</div></div>
+      <div class="wcell"><div class="wp">ברייס קניון</div><div class="wt">10–14°</div><div class="wd">קר·שלג · 17:55</div></div>
+      <div class="wcell"><div class="wp">פייג'/גרנד</div><div class="wt">15–22°</div><div class="wd">נעים · 16:50–17:10</div></div>
+      <div class="wcell"><div class="wp">לאס וגאס</div><div class="wt">22–26°</div><div class="wd">שמשי · 17:05</div></div>
+      <div class="wcell"><div class="wp">ניו יורק</div><div class="wt">12–14°</div><div class="wd">קריר·גשם · 16:45</div></div>
+    </div>
+    <div class="dnote warn" style="margin-top:12px">🕐 הפרשי שעות מישראל: קליפורניה 9–10 שע' · יוטה/אריזונה 8–9 שע' · ניו יורק 7 שע'. ⚠️ שינוי שעות בארה"ב בלילה 31.10→1.11 — שעה אחורה, בזמן שאתם בברייס/פייג'.</div>
+  </div>
+  <div class="panel"><h3>📋 יומן מסלול — 16 ימים</h3><div id="days"></div></div>
+</div>
+<div id="tab-animals" class="tab-content">
+  <div class="panel">
+    <h3>🦅 חיות וציפורים — היכן והמתי</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:18px">מבוסס על מקורות צפרות ושמורות טבע. ⭐ = מפגש שיא.</p>
+    <div class="animal-cat">
+      <div class="animal-cat-title">🦅 ציפורים — נדירות ומרשימות</div>
+      <div class="animal-grid">
+        <div class="animal-card" style="--c:var(--accent1)"><div class="animal-name">⭐ קונדור קליפורני</div><div class="animal-where">גרנד קניון South Rim — Yavapai Point</div><div class="animal-desc">אחת הציפורים הנדירות בעולם (~560 בטבע). מוט כנף 3 מ'.</div><div class="animal-when">⚠️ שיא אפריל–ספטמבר. בנובמבר סיכוי נמוך יותר</div></div>
+        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">⭐ יערנים נודדים</div><div class="animal-where">Central Park — The Ramble</div><div class="animal-desc">200+ מינים בשנה, נדידת סתיו פעילה.</div><div class="animal-when">✓ ספט'–נוב'</div></div>
+        <div class="animal-card" style="--c:var(--accent6)"><div class="animal-name">דורסים בנדידה</div><div class="animal-where">Belvedere Castle</div><div class="animal-desc">Cooper's Hawk, Red-tailed Hawk (Pale Male תושב קבע).</div><div class="animal-when">✓ ספט'–נוב'</div></div>
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">ציפורי ים וחוף</div><div class="animal-where">17-Mile Drive · Bird Rock · Pier 39</div><div class="animal-desc">קורמורנים, שקנאים, שחפים.</div><div class="animal-when">✓ כל השנה</div></div>
+        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">ברווזי מים ואנפות</div><div class="animal-where">Central Park Reservoir · Stow Lake</div><div class="animal-desc">Great Blue Heron, Great Egret.</div><div class="animal-when">✓ סתיו-חורף מצוין</div></div>
+        <div class="animal-card" style="--c:var(--accent1)"><div class="animal-name">הודו בר וציפורי מדבר</div><div class="animal-where">Zion · Bryce · גרנד קניון</div><div class="animal-desc">Wild Turkey, Steller's Jay, Common Raven.</div><div class="animal-when">✓ כל השנה</div></div>
+      </div>
+    </div>
+    <div class="animal-cat">
+      <div class="animal-cat-title">🦭 חיות בר</div>
+      <div class="animal-grid">
+        <div class="animal-card" style="--c:var(--accent3)"><div class="animal-name">⭐ פילי ים</div><div class="animal-where">Piedras Blancas Rookery</div><div class="animal-desc">29.10 = שיא "פריקה סתווית". מאות פרטים צעירים.</div><div class="animal-when">✓ מובטח לראות</div></div>
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">⭐ לוטרות ים</div><div class="animal-where">Moss Landing</div><div class="animal-desc">צפות על הגב, שוברות צדפות.</div><div class="animal-when">✓ כל השנה</div></div>
+        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">אריות ים</div><div class="animal-where">Pier 39 SF</div><div class="animal-desc">עשרות רבצים על הרציף.</div><div class="animal-when">✓ שיא סתיו-חורף</div></div>
+        <div class="animal-card" style="--c:var(--accent6)"><div class="animal-name">כבשי הרים</div><div class="animal-where">Zion · Valley of Fire (אופ')</div><div class="animal-desc">⚠️ Red Rock הוסר מהמסלול.</div><div class="animal-when">✓ כל השנה</div></div>
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">איילים</div><div class="animal-where">Zion Canyon Junction · Bryce</div><div class="animal-desc">שחר/דמדומים = הכי פעיל.</div><div class="animal-when">✓ כל השנה</div></div>
+      </div>
+    </div>
+    <div class="dnote star">💡 הורידו Merlin Bird ID (Cornell Lab, חינם) לפני הטיול.</div>
+  </div>
+</div>
+<div id="tab-budget" class="tab-content">
+  <div class="panel" style="margin-bottom:16px">
+    <h3>💳 סטטוס תשלום</h3>
+    <div class="bar-item"><div class="bar-label">שולם</div><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,var(--accent4),var(--green))"></div></div><div class="bar-value">$3,067.60</div></div>
+    <div class="bar-item"><div class="bar-label">יתרה לתשלום</div><div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,var(--accent3),var(--amber))"></div></div><div class="bar-value">$7,956</div></div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
+      <div style="font-size:12px;color:var(--text2);margin-bottom:8px">שולם עד כה:</div>
+      <div style="font-size:12.5px;line-height:1.9">✈️ לופטהנזה — $1,843<br>✈️ American AA2138 — $437<br>✈️ Southwest WN2319 — $456.80<br>🚗 רכב ראשון Alamo — $205<br>🛡️ ביטוח נסיעה — $125.80</div>
+    </div>
+  </div>
+  <div class="panel"><h3>💰 פירוט תקציב מלא (זוגי, $)</h3><table><thead><tr><th>קטגוריה</th><th>פריט</th><th>סטטוס</th><th class="num">עלות $</th></tr></thead><tbody id="budget-rows"></tbody></table></div>
+</div>
+<div id="tab-attractions" class="tab-content">
+  <div class="panel">
+    <h3>📍 אטרקציות ועצירות בדרך</h3>
+    <table><thead><tr><th>אזור</th><th>אטרקציה</th><th>מה רואים</th><th>הליכה</th><th>במסלול</th><th>הערות</th><th>מפה</th></tr></thead><tbody id="attr-rows"></tbody></table>
+  </div>
+</div>
+<div id="tab-map" class="tab-content">
+  <div class="panel">
+    <h3>🗺️ מפות מסלול נסיעה יומיות</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">כל יום: כפתור ניווט מלא + קישור נפרד לכל עצירה.</p>
+    <div id="mapCards"></div>
+  </div>
+</div>
+<div id="tab-logistics" class="tab-content">
+  <div class="panel" style="margin-bottom:16px">
+    <h3>✈️ טיסות</h3>
+    <table><thead><tr><th>מסלול</th><th>פרטים</th><th>סטטוס</th><th class="num">$ זוגי</th></tr></thead><tbody>
+      <tr><td>TLV → SFO (לופטהנזה)</td><td class="muted">26.10 · LH691/LH454 · 7FBTLH</td><td><span class="tag t-paid">שולם</span></td><td class="num">1,843</td></tr>
+      <tr><td>EWR → TLV (לופטהנזה)</td><td class="muted">10.11 · LH7602</td><td><span class="tag t-paid">שולם</span></td><td class="num">כלול</td></tr>
+      <tr><td>SBA → LAS (Southwest)</td><td class="muted">30.10 · WN2319 · 09:55→11:10 · BW5U5N · 18D/18E</td><td><span class="tag t-paid">שולם</span></td><td class="num">456.80</td></tr>
+      <tr><td>LAS → JFK (American)</td><td class="muted">6.11 · AA2138 · 11:41→19:40 · IWCVVZ · 21D/21E</td><td><span class="tag t-paid">שולם</span></td><td class="num">437</td></tr>
+    </tbody></table>
+    <div class="dnote warn" style="margin-top:8px">⚠️ כבודה לא כלולה בשתי הטיסות הפנימיות. $100/טיסה ($50+$50). טרם שולם.</div>
+  </div>
+  <div class="panel" style="margin-bottom:16px">
+    <h3>🚗 רכבים</h3>
+    <table><thead><tr><th>רכב</th><th>פרטים</th><th>סטטוס</th><th class="num">$</th></tr></thead><tbody>
+      <tr><td>ראשון — Alamo</td><td class="muted">SF→SBA · 28–30.10 · Equinox · אופרן #55124868</td><td><span class="tag t-paid">שולם</span></td><td class="num">205</td></tr>
+      <tr><td>שני — Alamo</td><td class="muted">LAS · 30.10–4.11</td><td><span class="tag t-pending">להזמין</span></td><td class="num">~439</td></tr>
+    </tbody></table>
+  </div>
+  <div class="panel">
+    <h3>🏨 מלונות</h3>
+    <table><thead><tr><th>מלון</th><th>תאריכים</th><th>מס' הזמנה</th><th>סטטוס</th><th>בוקר</th><th class="num">$</th></tr></thead><tbody>
+      <tr><td>Hotel Riu Plaza, SF</td><td class="muted">26–27.10</td><td class="muted">WRC3HUXR</td><td><span class="tag t-pending">במלון</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">485</td></tr>
+      <tr><td>Comfort Inn Carmel</td><td class="muted">28.10</td><td class="muted">#6090660070</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">229</td></tr>
+      <tr><td>West Beach Inn SB</td><td class="muted">29.10</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ קל</span></td><td class="num">280</td></tr>
+      <tr><td>Hampton Inn Zion</td><td class="muted">30.10</td><td class="muted">#6314446390</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">281</td></tr>
+      <tr><td>Best Western Bryce</td><td class="muted">31.10</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">132</td></tr>
+      <tr><td>Wingate Page</td><td class="muted">01.11</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">94</td></tr>
+      <tr><td>Bright Angel Lodge</td><td class="muted">02.11</td><td class="muted">Xanterra #20511844</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-est">✗ נפרד</span></td><td class="num">327</td></tr>
+      <tr><td>Paris Las Vegas</td><td class="muted">03–06.11 · ביטול עד 25.10</td><td class="muted">איסתא #423574</td><td><span class="tag t-pending">עד 20.10.26</span></td><td style="text-align:center"><span class="tag t-est">✗</span></td><td class="num">661</td></tr>
+      <tr><td>Innside NoMad NY</td><td class="muted">06–10.11 · ביטול עד 22.10</td><td class="muted">איסתא #423938</td><td><span class="tag t-pending">עד 17.10.26</span></td><td style="text-align:center"><span class="tag t-est">✗</span></td><td class="num">966</td></tr>
+      <tr><td style="padding-right:20px">↳ מיסים בדלפק Innside</td><td class="muted">בצ'ק-אין</td><td class="muted">—</td><td><span class="tag t-pending">בצ'ק-אין</span></td><td class="muted" style="text-align:center">—</td><td class="num">197.36</td></tr>
+      <tr style="border-top:2px solid var(--accent1)"><td colspan="5" style="font-weight:700">סה"כ מלונות</td><td class="num" style="font-weight:900;color:var(--accent1)">3,652</td></tr>
+    </tbody></table>
+    <div class="dnote warn" style="margin-top:8px">⚠️ בוקר לא כלול: גרנד קניון (Harvey House Café), Paris LV, Innside NoMad.</div>
+  </div>
+</div>
+<div id="tab-food" class="tab-content">
+  <div class="panel" style="margin-bottom:16px">
+    <h3>🍽️ תוכנית קולינרית יומית — טבעוני/צמחוני</h3>
+    <p style="color:var(--text2);font-size:13px">אורלי טבעונית, גבי צמחוני. בוקר/צהריים קליל, ערב = מסעדה בינונית.</p>
+  </div>
+  <div class="panel" style="margin-bottom:16px">
+    <h3>📅 לוח ארוחות ערב</h3>
+    <table><thead><tr><th>תאריך</th><th>מסעדה</th><th>הערה</th></tr></thead><tbody>
+      <tr><td class="muted">26.10</td><td><b>The Plant Cafe Organic</b></td><td class="muted">SF, ליד הרציף</td></tr>
+      <tr><td class="muted">27.10</td><td><b>Greens Restaurant</b> 🔴</td><td class="muted">Fort Mason — להזמין!</td></tr>
+      <tr><td class="muted">28.10 צהריים</td><td><b>Julia's Vegetarian</b></td><td class="muted">Pacific Grove</td></tr>
+      <tr><td class="muted">28.10 ערב</td><td><b>Cultura Comida y Bebida</b> 🔴</td><td class="muted">כרמל — נסגרת מהר, להזמין!</td></tr>
+      <tr><td class="muted">29.10</td><td><b>Satellite SB</b></td><td class="muted">State Street, סנטה ברברה</td></tr>
+      <tr><td class="muted">30.10</td><td><b>Thai Sapa</b></td><td class="muted">ספרינגדייל</td></tr>
+      <tr><td class="muted">31.10</td><td><b>Bryce Canyon Lodge</b></td><td class="muted">ברייס</td></tr>
+      <tr><td class="muted">01.11</td><td><b>Bonkers Restaurant</b></td><td class="muted">פייג' (צהריים: Rocking V Cafe בקנאב)</td></tr>
+      <tr><td class="muted">02.11</td><td><b>Bright Angel/El Tovar</b></td><td class="muted">גרנד קניון</td></tr>
+      <tr><td class="muted">03–05.11</td><td class="muted">⏸️ לא מוצג כרגע</td><td class="muted">לאס וגאס — טרם הוחלט</td></tr>
+      <tr><td class="muted">06.11</td><td><b>PLANTA Queen NoMad</b></td><td class="muted">15 W 27th St — אותו בלוק כמו המלון!</td></tr>
+      <tr><td class="muted">07.11, 09.11</td><td class="muted">⏸️ לא מוצג כרגע</td><td class="muted">—</td></tr>
+      <tr><td class="muted">08.11</td><td><b>Hangawi</b> 🎂</td><td class="muted">יומולדת אורלי! 12 E 32nd St</td></tr>
+    </tbody></table>
+  </div>
+  <div class="panel">
+    <h3>📌 הזמנת מקום מראש — כחודש לפני (~26.09.26)</h3>
+    <div class="grid grid-2">
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Greens Restaurant</h4></div><p class="insight-body">27.10, SF — להזמין.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Cultura Comida y Bebida</h4></div><p class="insight-body">28.10, כרמל — דחוף!</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🎂</span><h4>Hangawi</h4></div><p class="insight-body">8.11, NYC — יומולדת אורלי.</p></div>
+    </div>
+  </div>
+</div>
+<div id="tab-insights" class="tab-content">
+  <div class="panel" style="margin-bottom:16px">
+    <h3>💳 תזכורות תשלום</h3>
+    <table><thead><tr><th>מלון</th><th>מתי לשלם</th><th class="num">$</th></tr></thead><tbody>
+      <tr><td>Innside NY NoMad</td><td><span class="tag t-pending">⏰ עד 17.10.26</span></td><td class="num">966+197.36</td></tr>
+      <tr><td>Paris Las Vegas</td><td><span class="tag t-pending">⏰ עד 20.10.26</span></td><td class="num">661</td></tr>
+    </tbody></table>
+    <div class="dnote warn" style="margin-top:12px">⚠️ שתי תזכורות דחופות: 17.10 ו-20.10.26. שאר 7 המלונות בצ'ק-אין.</div>
+  </div>
+  <div class="panel" style="margin-bottom:16px">
+    <h3>🎯 פעולות פתוחות</h3>
+    <div class="grid grid-2">
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>רכב שני בלאס וגאס</h4></div><p class="insight-body">Alamo, ~$439. להזמין בהקדם.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Sphere (4.11)</h4></div><p class="insight-body">~$250. להזמין ספט'–אוק'.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟡</span><h4>America the Beautiful Pass</h4></div><p class="insight-body">$250. לרכוש באוקטובר 2026.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟢</span><h4>ESTA + צ'ק-אין</h4></div><p class="insight-body">לכל נוסע. צ'ק-אין מ-25.10.</p></div>
+    </div>
+  </div>
+</div>
+</div></div>
+<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026</div>
+</div>
+<script>
+function showTab(e,name){
+  document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el=>el.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  e.currentTarget.classList.add('active');
+}
+const days = [
+{n:"1",d:"26.10",route:"נחיתה בסן פרנסיסקו",hotel:"Hotel Riu Plaza · לילה 1/2",dist:"—",time:"—",
+ tl:[["13:40","נחיתה ב-SFO"],["15:00","צ'ק-אין"],["16:30","הליכה ב-Fisherman's Wharf"],["17:00","Pier 39 — אריות ים"],["19:00","ארוחת ערב ב-The Plant Cafe Organic"]],
+ note:"יום הגעה רגוע. הפרש שעות: 9 שע'.",type:""},
+{n:"2",d:"27.10",route:"סן פרנסיסקו — יום עיר",hotel:"Riu Plaza · לילה 2/2",dist:"מקומי",time:"—",
+ tl:[["09:00","Golden Gate Park"],["09:30","Stow Lake"],["11:00","Crissy Field"],["15:00","Cable Car"],["19:00","ארוחת ערב ב-Greens Restaurant 🔴"]],
+ note:"עונת השיא ב-SF.",type:""},
+{n:"3",d:"28.10",route:"SF ← Moss Landing ← מונטריי ← 17-Mile ← כרמל",hotel:"Comfort Inn Carmel · 1 לילה",dist:"~125 מייל",time:"~6.5 שע'",
+ tl:[["08:30","איסוף רכב Beach St"],["11:15","Moss Landing — לוטרות ים"],["12:15","צהריים ב-Julia's Vegetarian"],["13:15","17-Mile Drive"],["13:45","Bird Rock"],["15:00","צ'ק-אין כרמל"],["19:00","ארוחת ערב ב-Cultura Comida y Bebida 🔴"]],
+ note:"✓ סדר נכון: Moss Landing לפני מונטריי/17-Mile.",type:"star"},
+{n:"4",d:"29.10",route:"כרמל ← Big Sur ← Piedras Blancas ← סנטה ברברה",hotel:"West Beach Inn · 1 לילה",dist:"~230 מייל",time:"~6 שע'",
+ tl:[["07:30","יציאה — לא לאחר!"],["08:30","Bixby Creek Bridge"],["10:00","Piedras Blancas — פילי ים"],["14:30","הגעה SB"],["16:00","Stearns Wharf"],["18:05","שקיעה"],["19:00","ארוחת ערב ב-Satellite SB"]],
+ note:"⚠️ היום ההדוק ביותר.",type:"warn"},
+{n:"5",d:"30.10",route:"SB ✈️ LAS ← ספרינגדייל/ציון",hotel:"Hampton Inn Zion · 1 לילה",dist:"~158 מייל",time:"טיסה+2.5 שע'",
+ tl:[["07:50","החזרת רכב SBA"],["09:55","המראה WN2319 ✓ BW5U5N"],["11:10","נחיתה LAS"],["12:00","רכב שני"],["15:30","הגעה ספרינגדייל"],["17:15","טיול בעיירה"]],
+ note:"✓ טיסה מאושרת 09:55→11:10.",type:"star"},
+{n:"6",d:"31.10",route:"ציון (בוקר) ← ברייס — ערב תצפית",hotel:"Best Western Bryce · 1 לילה",dist:"~85 מייל",time:"~1.5 שע'",
+ tl:[["08:00","שאטל ספרינגדייל"],["08:30","Pa'rus Trail"],["10:30","Canyon Junction — איילים"],["12:30","יציאה לברייס"],["16:30","Sunset Point — תצפית בלבד"],["17:55","שקיעה"]],
+ note:"✓ יום=סיור אחד. ⚠️ קר! שינוי שעות.",type:"warn"},
+{n:"7",d:"01.11",route:"ברייס — סיור מלא ← פייג'",hotel:"Wingate Page · 1 לילה",dist:"171 מייל",time:"3:19 שע'",
+ tl:[["08:45","Inspiration+Bryce Point"],["09:15","Rim Trail הסלול"],["11:15","יציאה לפייג'"],["14:35","הגעה"],["16:50","שקיעה"],["19:00","ארוחת ערב ב-Bonkers Restaurant"]],
+ note:"סיור הבוקר המלא של ברייס.",type:"star"},
+{n:"8",d:"02.11",route:"פייג' ← (Horseshoe Bend) ← גרנד קניון",hotel:"Bright Angel Lodge · 1 לילה",dist:"~140 מייל",time:"~2:45 שע'",
+ tl:[["08:00","אופ': Horseshoe Bend בוקר"],["12:15","Desert View Watchtower"],["13:45","צ'ק-אין"],["16:30","תצפית שקיעה+קונדור"],["19:00","ארוחת ערב ב-Bright Angel/El Tovar"]],
+ note:"⚠️ Lipan Point סגור עד 23.12.26.",type:"warn"},
+{n:"9",d:"03.11",route:"גרנד קניון ← Hoover Dam ← לאס וגאס",hotel:"Paris Las Vegas · לילה 1/3",dist:"~280 מייל",time:"~4.5 שע'",
+ tl:[["09:30","יציאה — גמיש"],["13:30","Hoover Dam — פתוח עד 21:00"],["15:30","הגעה, צ'ק-אין"],["19:30","ערב חופשי בסטריפ"]],
+ note:"✓ Hoover Dam פתוח עד 21:00.",type:"star"},
+{n:"10",d:"04.11",route:"לאס וגאס — Sphere",hotel:"Paris LV · לילה 2/3",dist:"מקומי",time:"—",
+ tl:[["14:00","Bellagio"],["15:30","Venetian"],["20:00","מופע Sphere"]],
+ note:"יום עירוני, אפס מאמץ.",type:""},
+{n:"11",d:"05.11",route:"לאס וגאס — יום בעיר (Outlets)",hotel:"Paris LV · לילה 3/3",dist:"4 מייל Uber",time:"~5 דק'",
+ tl:[["11:00","Uber ל-North Premium Outlets"],["13:00","צהריים Cheesecake Factory"],["15:00","בריכה/מנוחה"]],
+ note:"✓ Red Rock הוסר. Outlets ב-Uber.",type:"star"},
+{n:"12",d:"06.11",route:"וגאס ✈️ ניו יורק (AA2138)",hotel:"Innside NoMad · לילה 1/4",dist:"—",time:"~5 שע'",
+ tl:[["09:15","Uber לטרמינל 3 (לא 1!)"],["11:41","המראה AA2138"],["19:40","נחיתה JFK"],["21:00","הגעה למלון"],["21:30","ארוחת ערב ב-PLANTA Queen NoMad — אותו בלוק!"]],
+ note:"✓ טיסה מאושרת IWCVVZ.",type:"star"},
+{n:"13",d:"07.11",route:"ניו יורק — סנטרל פארק",hotel:"Innside NoMad · לילה 2/4",dist:"מקומי",time:"—",
+ tl:[["09:00","The Ramble — צפרות"],["11:00","Belvedere Castle"],["19:00","ארוחת ערב"]],
+ note:"⭐ עונת ההגירה בשיאה.",type:"star"},
+{n:"14",d:"08.11",route:"ניו יורק — High Line 🎂 יומולדת אורלי",hotel:"Innside NoMad · לילה 3/4",dist:"מקומי",time:"—",
+ tl:[["09:30","High Line"],["11:30","Chelsea Market"],["19:00","🎂 ארוחת יומולדת ב-Hangawi"]],
+ note:"🎂 יומולדת אורלי! להזמין מראש.",type:"star"},
+{n:"15",d:"09.11",route:"ניו יורק — MET",hotel:"Innside NoMad · לילה 4/4",dist:"מקומי",time:"—",
+ tl:[["10:00","The MET"],["15:00","Central Park Reservoir"],["19:00","ערב חופשי"]],
+ note:"MET — suggested donation.",type:""},
+{n:"16",d:"10.11",route:"ניו יורק ✈️ ישראל",hotel:"— חזרה —",dist:"—",time:"EWR ~45 דק'",
+ tl:[["10:00","Bryant Park"],["10:45","Grand Central"],["15:30","יציאה ל-EWR"],["19:30","המראה LH7602"]],
+ note:"⚠️ Terminal C. לא לאחר 15:30!",type:"warn"},
+];
+document.getElementById('days').innerHTML = days.map(d=>`
+  <div class="day-row"><div class="day-badge"><div class="dn">${d.n}</div><div class="dd">${d.d}</div></div>
+  <div class="day-main"><div class="droute">${d.route}</div><div class="dhotel">🏨 ${d.hotel}</div>
+  <div class="day-timeline">${d.tl.map(t=>`<div class="tl-row"><div class="tl-time">${t[0]}</div><div class="tl-act">${t[1]}</div></div>`).join('')}</div>
+  <div class="day-foot"><span>📏 <b>${d.dist}</b></span><span>⏱️ <b>${d.time}</b></span></div>
+  ${d.note?`<div class="dnote ${d.type||''}">${d.note}</div>`:''}</div></div>`).join('');
+const budget = [
+  ["✈️ טיסות","TLV↔SFO/EWR לופטהנזה","paid","שולם",1843],
+  ["","SBA→LAS Southwest WN2319 · BW5U5N","paid","שולם",456.80],
+  ["","LAS→JFK American AA2138 · IWCVVZ","paid","שולם",437],
+  ["","↳ כבודה Southwest ($50+$50)","est","טרם שולם",100],
+  ["","↳ כבודה American ($50+$50)","est","טרם שולם",100],
+  ["🏨 מלונות","Riu Plaza SF","pending","לשלם במלון",485],
+  ["","Comfort Inn Carmel","pending","לשלם",229],
+  ["","West Beach Inn SB","pending","לשלם",280],
+  ["","Hampton Inn Zion","pending","לשלם",281],
+  ["","Best Western Bryce","pending","לשלם",132],
+  ["","Wingate Page","pending","לשלם",94],
+  ["","Bright Angel Lodge","pending","לשלם",327],
+  ["","Paris Las Vegas","pending","עד 20.10.26",661],
+  ["","Innside NY NoMad","pending","עד 17.10.26",966],
+  ["","↳ Innside — מיסי דלפק","pending","בצ'ק-אין",197.36],
+  ["🚗 רכב+דלק","רכב ראשון Alamo","paid","שולם",205],
+  ["","רכב שני Alamo LAS","est","משוער",439],
+  ["","דלק שני הרכבים","est","משוער",155],
+  ["","17-Mile Drive+חניות","est","משוער",30],
+  ["","Uber NYC→EWR","est","משוער",80],
+  ["🏔️ פארקים","America the Beautiful Pass","pending","טרם נרכש",250],
+  ["🎭 בידור","Sphere · 2 כרטיסים","pending","טרם הוזמן",250],
+  ["","Eiffel Tower+Edge","est","משוער",120],
+  ["🍽️ אוכל","SF+כרמל+SB","est","משוער",270],
+  ["","פארקים ציון→גרנד","est","משוער",200],
+  ["","לאס וגאס","est","משוער",300],
+  ["","ניו יורק","est","משוער",400],
+  ["","טיפים","est","משוער",200],
+  ["🛍️ קניות+שונות","קניות גבי","est","תקציב",500],
+  ["","קניות אורלי","est","תקציב",500],
+  ["","ביטוח נסיעה","paid","שולם",125.80],
+  ["","תרופות/שוטף","est","משוער",50],
+];
+document.getElementById('budget-rows').innerHTML = budget.map(b=>{
+  const tc = b[2]==='paid'?'t-paid':(b[2]==='pending'?'t-pending':'t-est');
+  return `<tr><td>${b[0]}</td><td class="muted">${b[1]}</td><td><span class="tag ${tc}">${b[3]}</span></td><td class="num">$${b[4].toLocaleString()}</td></tr>`;
+}).join('') + `<tr style="border-top:2px solid var(--accent1)"><td colspan="3" style="font-weight:700">סה"כ (זוגי)</td><td class="num" style="font-weight:900;color:var(--accent1)">$11,024</td></tr>`;
+const attr = [
+  ["סן פרנסיסקו","Pier 39","אריות ים","אפס","✓","route","ליד המלון","Pier 39 San Francisco"],
+  ["סן פרנסיסקו","Crissy Field","גשר+ציפורים","קלה","✓","route","","Crissy Field San Francisco"],
+  ["כביש 1","17-Mile Drive · Bird Rock","פילי ים","אפס","✓","route","$12","Bird Rock 17-Mile Drive Pebble Beach"],
+  ["כביש 1","Moss Landing","לוטרות ים","אפס","✓","route","","Moss Landing State Beach CA"],
+  ["כביש 1","Bixby Creek Bridge","נוף חוף","2 דק'","✓","route","","Bixby Creek Bridge Big Sur"],
+  ["כביש 1","Piedras Blancas","פילי ים","אפס","✓","route","⭐","Piedras Blancas Elephant Seal Vista Point"],
+  ["ציון","Pa'rus Trail","איילים","שטוחה","✓","route","","Pa'rus Trail Zion National Park"],
+  ["ברייס","Bryce Point","Hoodoos","5 דק'","✓","route","","Bryce Point Bryce Canyon National Park"],
+  ["פייג'","Horseshoe Bend","נוף","נגישה","✓","route","","Horseshoe Bend Overlook Page AZ"],
+  ["גרנד קניון","Desert View+Mather","תצפיות","5 דק'","✓","route","","Desert View Watchtower Grand Canyon"],
+  ["לאס וגאס","Hoover Dam","סכר","אפס","✓","route","","Hoover Dam Bypass Bridge Overlook"],
+  ["לאס וגאס","Sphere","מופע","מושב","✓","route","","Sphere Las Vegas"],
+  ["לאס וגאס","North Premium Outlets","קניות","Uber","✓","route","","Las Vegas North Premium Outlets"],
+  ["ניו יורק","Central Park · Ramble","ציפורים","קלה","✓","route","⭐","The Ramble Central Park New York"],
+  ["ניו יורק","High Line","נוף","שטוחה","✓","route","","High Line New York entrance"],
+];
+document.getElementById('attr-rows').innerHTML = attr.map(a=>{
+  const tc = a[5]==='route'?'t-route':'t-no';
+  const mapLink = a[7] ? `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a[7])}" target="_blank" style="text-decoration:none;font-size:11px;color:var(--accent1)">📍 מפות ↗</a>` : '—';
+  return `<tr><td>${a[0]}</td><td>${a[1]}</td><td class="muted">${a[2]}</td><td class="muted" style="text-align:center">${a[3]}</td><td style="text-align:center"><span class="tag ${tc}">${a[4]}</span></td><td class="muted">${a[6]}</td><td style="text-align:center">${mapLink}</td></tr>`;
+}).join('');
+
+const segments = [
+  {day:"3",date:"28.10",from:"סן פרנסיסקו",to:"כרמל",dist:"~125 מייל",time:"~6.5 שע'",flat:37.8074,flng:-122.4135,tlat:36.5554,tlng:-121.9194,color:"#1b575a",
+   stops:[["Moss Landing — לוטרות ים",36.8046,-121.786],["17-Mile Drive",36.6177,-121.9166],["Bird Rock",36.5721,-121.9647]]},
+  {day:"4",date:"29.10",from:"כרמל",to:"סנטה ברברה",dist:"~230 מייל",time:"~6 שע'",flat:36.5554,flng:-121.9194,tlat:34.4091,tlng:-119.6934,color:"#1b575a",
+   stops:[["Bixby Creek Bridge",36.3714,-121.9018],["Piedras Blancas",35.6641,-121.2864]]},
+  {day:"5",date:"30.10",from:"שדה LAS",to:"ספרינגדייל",dist:"~158 מייל",time:"~2.5 שע'",flat:36.084,flng:-115.1537,tlat:37.185,tlng:-113.0013,color:"#2f7d4f",stops:[]},
+  {day:"6",date:"31.10",from:"ספרינגדייל",to:"ברייס",dist:"~85 מייל",time:"~1.5 שע'",flat:37.185,flng:-113.0013,tlat:37.6748,tlng:-112.1524,color:"#2f7d4f",stops:[]},
+  {day:"7",date:"01.11",from:"ברייס",to:"פייג'",dist:"171 מייל",time:"3:19 שע'",flat:37.6748,flng:-112.1524,tlat:36.9226,tlng:-111.4732,color:"#2f7d4f",
+   stops:[["Kanab UT",37.0475,-112.5263]]},
+  {day:"8",date:"02.11",from:"פייג'",to:"גרנד קניון",dist:"~140 מייל",time:"~2.75 שע'",flat:36.9226,flng:-111.4732,tlat:36.0569,tlng:-112.1406,color:"#2f7d4f",
+   stops:[["Horseshoe Bend",36.8794,-111.5104],["Desert View",36.0453,-111.829]]},
+  {day:"9",date:"03.11",from:"גרנד קניון",to:"לאס וגאס",dist:"~280 מייל",time:"~4.5 שע'",flat:36.0569,flng:-112.1406,tlat:36.1125,tlng:-115.1707,color:"#2f7d4f",
+   stops:[["Hoover Dam",36.0161,-114.7377]]},
+];
+document.getElementById('mapCards').innerHTML = segments.map(s=>{
+  const wp = s.stops.length ? '&waypoints='+s.stops.map(x=>x[1]+','+x[2]).join('|') : '';
+  const link = `https://www.google.com/maps/dir/?api=1&origin=${s.flat},${s.flng}&destination=${s.tlat},${s.tlng}${wp}&travelmode=driving`;
+  const chips = s.stops.map(x=>`<a href="https://www.google.com/maps/search/?api=1&query=${x[1]},${x[2]}" target="_blank" style="text-decoration:none;font-size:11px;color:${s.color};background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px;margin-left:6px">📍 ${x[0]} ↗</a>`).join('');
+  return `<div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+      <div style="font-weight:700">יום ${s.day} · ${s.date}: ${s.from} → ${s.to}</div>
+      <a href="${link}" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:${s.color};padding:5px 12px;border-radius:20px">🧭 ניווט מלא ↗</a>
+    </div>
+    <div style="font-size:12px;color:var(--text2);margin-top:6px">${s.dist} · ${s.time}</div>
+    <div style="margin-top:8px">${chips}</div>
+  </div>`;
+}).join('');
+</script>
+</body>
+</html>
