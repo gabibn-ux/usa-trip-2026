@@ -118,6 +118,8 @@ td.muted { color:var(--text2); font-size:11.5px; }
 .map-legend { display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; font-size:12.5px; color:var(--text2); }
 .map-legend span { display:inline-flex; align-items:center; gap:6px; }
 .map-legend .ln { display:inline-block; width:22px; height:3px; border-radius:2px; }
+.leaflet-popup-content { font-family:'Heebo',sans-serif; direction:rtl; text-align:right; font-size:13px; }
+.leaflet-popup-content b { color:#1b575a; }
 </style>
 </head>
 <body>
@@ -166,145 +168,444 @@ td.muted { color:var(--text2); font-size:11.5px; }
 <div id="tab-animals" class="tab-content">
   <div class="panel">
     <h3>🦅 חיות וציפורים — היכן והמתי</h3>
-    <p style="color:var(--text2);font-size:13px;margin-bottom:18px">מבוסס על מקורות צפרות ושמורות טבע. ⭐ = מפגש שיא.</p>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:18px">מבוסס על מקורות צפרות ושמורות טבע. ⭐ = מפגש שיא. שימו לב להערות עונתיות — חלק מהמינים תלויי עונה, ונובמבר אינו שיא לכולם.</p>
     <div class="animal-cat">
       <div class="animal-cat-title">🦅 ציפורים — נדירות ומרשימות</div>
       <div class="animal-grid">
-        <div class="animal-card" style="--c:var(--accent1)"><div class="animal-name">⭐ קונדור קליפורני</div><div class="animal-where">גרנד קניון South Rim — Yavapai Point</div><div class="animal-desc">אחת הציפורים הנדירות בעולם (~560 בטבע). מוט כנף 3 מ'.</div><div class="animal-when">⚠️ שיא אפריל–ספטמבר. בנובמבר סיכוי נמוך יותר</div></div>
-        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">⭐ יערנים נודדים</div><div class="animal-where">Central Park — The Ramble</div><div class="animal-desc">200+ מינים בשנה, נדידת סתיו פעילה.</div><div class="animal-when">✓ ספט'–נוב'</div></div>
-        <div class="animal-card" style="--c:var(--accent6)"><div class="animal-name">דורסים בנדידה</div><div class="animal-where">Belvedere Castle</div><div class="animal-desc">Cooper's Hawk, Red-tailed Hawk (Pale Male תושב קבע).</div><div class="animal-when">✓ ספט'–נוב'</div></div>
-        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">ציפורי ים וחוף</div><div class="animal-where">17-Mile Drive · Bird Rock · Pier 39</div><div class="animal-desc">קורמורנים, שקנאים, שחפים.</div><div class="animal-when">✓ כל השנה</div></div>
-        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">ברווזי מים ואנפות</div><div class="animal-where">Central Park Reservoir · Stow Lake</div><div class="animal-desc">Great Blue Heron, Great Egret.</div><div class="animal-when">✓ סתיו-חורף מצוין</div></div>
-        <div class="animal-card" style="--c:var(--accent1)"><div class="animal-name">הודו בר וציפורי מדבר</div><div class="animal-where">Zion · Bryce · גרנד קניון</div><div class="animal-desc">Wild Turkey, Steller's Jay, Common Raven.</div><div class="animal-when">✓ כל השנה</div></div>
+        <div class="animal-card" style="--c:var(--accent1)"><div class="animal-name">⭐ קונדור קליפורני (California Condor)</div><div class="animal-where">גרנד קניון South Rim — Yavapai Point, Lookout Studio, מעל Bright Angel Trail</div><div class="animal-desc">אחת הציפורים הנדירות בעולם (~560 בטבע). מוט כנף 3 מ', ראש אדום קירח, כתמים לבנים מתחת לכנף. מספרי כנף מזוהים.</div><div class="animal-when">⚠️ עונה: שיא אפריל–ספטמבר. בנובמבר סיכוי נמוך יותר אך אפשרי — לסרוק שמיים בסבלנות</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent1);padding:2px 9px;border-radius:12px">יום 8 · 2.11</span>
+        <a href="https://www.nps.gov/grca/learn/nature/condors.htm" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=36.0605,-112.1073" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">⭐ יערנים נודדים (Warblers) ותורדים</div><div class="animal-where">Central Park — The Ramble, North Woods, ליד The Gill</div><div class="animal-desc">The Ramble על נתיב הנדידה האטלנטי — 200+ מינים בשנה. בסתיו: Northern Flicker, Cedar Waxwing, תורדים, יערנים מאחרים.</div><div class="animal-when">✓ עונה: ספט'–נוב' נדידת סתיו פעילה. תחילת נובמבר עדיין טוב</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent2);padding:2px 9px;border-radius:12px">יום 13 · 7.11</span>
+        <a href="https://www.centralparknyc.org/locations/the-ramble" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=40.7773,-73.9694" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent6)"><div class="animal-name">דורסים בנדידה (Hawks & Raptors)</div><div class="animal-where">Central Park — Belvedere Castle (תצפית גבוהה)</div><div class="animal-desc">בסתיו עוברים מעל הפארק Cooper's Hawk, Sharp-shinned, Red-tailed, בזים. אפשרי אף Rough-legged Hawk בסוף אוקטובר–נובמבר.</div><div class="animal-when">✓ עונה: ספט'–נוב'. Red-tailed Hawk (Pale Male) תושב קבע</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent6);padding:2px 9px;border-radius:12px">יום 13 · 7.11</span>
+        <a href="https://www.centralparknyc.org/locations/belvedere-castle" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=40.7794,-73.9692" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">ציפורי ים וחוף (Cormorants, Pelicans)</div><div class="animal-where">17-Mile Drive · Bird Rock · Piedras Blancas · Pier 39</div><div class="animal-desc">מושבות קורמורנים, שקנאים חומים, שחפים, צוללנים. Bird Rock — מושבה גדולה ורועשת ממש ליד הכביש.</div><div class="animal-when">✓ עונה: כל השנה לאורך חוף קליפורניה</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent4);padding:2px 9px;border-radius:12px">ימים 1–4 · 26–29.10</span>
+        <a href="https://www.pebblebeach.com/17-mile-drive/" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=36.5721,-121.9647" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">ברווזי מים ואנפות (Waterfowl & Herons)</div><div class="animal-where">Central Park Lake & Reservoir · Stow Lake SF</div><div class="animal-desc">Wood Duck, Northern Shoveler, Great Blue Heron, Great Egret, Black-crowned Night-Heron, Belted Kingfisher.</div><div class="animal-when">✓ עונה: סתיו-חורף מצוין לברווזי מים ב-Reservoir</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent2);padding:2px 9px;border-radius:12px">ימים 2, 15 · 27.10, 9.11</span>
+        <a href="https://www.centralparknyc.org/locations/reservoir" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=40.7849,-73.9654" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent1)"><div class="animal-name">הודו בר וציפורי מדבר</div><div class="animal-where">Zion · Bryce · גרנד קניון (יער Kaibab)</div><div class="animal-desc">Wild Turkey, Steller's Jay (עורב כחול מצויץ), Common Raven, Canyon Wren. נפוצים סביב חניוני התצפית.</div><div class="animal-when">✓ עונה: כל השנה · בוקר פעיל יותר</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent1);padding:2px 9px;border-radius:12px">ימים 6–8 · 31.10–2.11</span>
+        <a href="https://www.nps.gov/zion/learn/nature/birds.htm" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=37.2982,-113.0263" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
       </div>
     </div>
     <div class="animal-cat">
-      <div class="animal-cat-title">🦭 חיות בר</div>
+      <div class="animal-cat-title">🦭 חיות בר — יונקים ימיים ויבשתיים</div>
       <div class="animal-grid">
-        <div class="animal-card" style="--c:var(--accent3)"><div class="animal-name">⭐ פילי ים</div><div class="animal-where">Piedras Blancas Rookery</div><div class="animal-desc">29.10 = שיא "פריקה סתווית". מאות פרטים צעירים.</div><div class="animal-when">✓ מובטח לראות</div></div>
-        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">⭐ לוטרות ים</div><div class="animal-where">Moss Landing</div><div class="animal-desc">צפות על הגב, שוברות צדפות.</div><div class="animal-when">✓ כל השנה</div></div>
-        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">אריות ים</div><div class="animal-where">Pier 39 SF</div><div class="animal-desc">עשרות רבצים על הרציף.</div><div class="animal-when">✓ שיא סתיו-חורף</div></div>
-        <div class="animal-card" style="--c:var(--accent6)"><div class="animal-name">כבשי הרים</div><div class="animal-where">Zion · Valley of Fire (אופ')</div><div class="animal-desc">⚠️ Red Rock הוסר מהמסלול.</div><div class="animal-when">✓ כל השנה</div></div>
-        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">איילים</div><div class="animal-where">Zion Canyon Junction · Bryce</div><div class="animal-desc">שחר/דמדומים = הכי פעיל.</div><div class="animal-when">✓ כל השנה</div></div>
+        <div class="animal-card" style="--c:var(--accent3)"><div class="animal-name">⭐ פילי ים (Elephant Seals)</div><div class="animal-where">Piedras Blancas Rookery — חניון ממש ליד החוף</div><div class="animal-desc">חניון ממש ליד החוף. 29.10 חל בזנב שיא ה"פריקה הסתווית" (juvenile haul-out, שיא שלישי מתוך 3 בשנה) — מאות פרטים צעירים על החוף. עונת הרבייה הגדולה עם הזכרים הבוגרים מתחילה בסוף נובמבר ונמשכת עד מרץ — לא תיתפס בטיול.</div><div class="animal-when">✓ מובטח לראות פילי ים · ✗ לא עונת השיא (בוגרים) — זו דצמבר–מרץ</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent3);padding:2px 9px;border-radius:12px">יום 4 · 29.10</span>
+        <a href="https://elephantseal.org/" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=35.6641,-121.2864" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">⭐ לוטרות ים (Sea Otters)</div><div class="animal-where">Moss Landing — ממש מהגשר</div><div class="animal-desc">צפות על הגב, שוברות צדפות על הבטן. Moss Landing — מהמקומות הטובים בעולם לצפייה, ממש מהגשר.</div><div class="animal-when">✓ עונה: כל השנה</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent4);padding:2px 9px;border-radius:12px">יום 3 · 28.10</span>
+        <a href="https://www.fisheries.noaa.gov/species/southern-sea-otter" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=36.8046,-121.786" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent2)"><div class="animal-name">אריות ים וכלבי ים (Sea Lions)</div><div class="animal-where">Pier 39 SF</div><div class="animal-desc">עשרות רבצים על רציפי העץ ב-Pier 39, רועשים ומשעשעים. צפייה מהמדרכה, אפס הליכה.</div><div class="animal-when">✓ עונה: כל השנה, שיא בסתיו-חורף</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent2);padding:2px 9px;border-radius:12px">ימים 1–2 · 26–27.10</span>
+        <a href="https://www.pier39.com/attraction/sea-lions/" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=37.8087,-122.4098" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent6)"><div class="animal-name">כבשי הרים (Bighorn Sheep)</div><div class="animal-where">Zion · Valley of Fire (אופציונלי בלבד)</div><div class="animal-desc">Desert Bighorn על מדרונות סלע, במיוחד באזורי הצוקים בציון. עין חדה נדרשת. ⚠️ Red Rock Canyon הוסר מהמסלול (5.11 = יום בעיר) — הוסר גם כאן.</div><div class="animal-when">✓ עונה: כל השנה · בוקר/ערב פעיל יותר</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent6);padding:2px 9px;border-radius:12px">יום 6 · 31.10</span>
+        <a href="https://www.nps.gov/zion/learn/nature/bighornsheep.htm" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=37.2201,-113.0263" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">איילים (Mule Deer)</div><div class="animal-where">Zion Canyon (Canyon Junction) · Bryce · גרנד קניון</div><div class="animal-desc">איילי פרד מסתובבים בנחת בשטח הפתוח, במיוחד בבוקר מוקדם ולפנות ערב. נפוצים לאורך Pa'rus Trail.</div><div class="animal-when">✓ עונה: כל השנה · שיא פעילות שחר/דמדומים</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent4);padding:2px 9px;border-radius:12px">יום 6 · 31.10</span>
+        <a href="https://www.nps.gov/zion/planyourvisit/safety.htm" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=37.2185,-112.9885" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent3)"><div class="animal-name">סנאים וצ'יפמנקים</div><div class="animal-where">כל הפארקים · Central Park</div><div class="animal-desc">Rock Squirrel, Golden-mantled Ground Squirrel, Eastern Gray Squirrel (בסנטרל פארק). נפוצים ופעילים בסתיו.</div><div class="animal-when">✓ עונה: סתיו — פעילות איסוף מזון מוגברת</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent3);padding:2px 9px;border-radius:12px">ימים 6–8, 13 · לאורך הטיול</span>
+        <a href="https://www.centralparknyc.org/locations/the-ramble" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=40.7773,-73.9694" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
       </div>
     </div>
-    <div class="dnote star">💡 הורידו Merlin Bird ID (Cornell Lab, חינם) לפני הטיול.</div>
+    <div class="animal-cat">
+      <div class="animal-cat-title">🐢 זוחלים ואחר</div>
+      <div class="animal-grid">
+        <div class="animal-card" style="--c:var(--accent4)"><div class="animal-name">צבי מים (Painted Turtles)</div><div class="animal-where">Central Park — Turtle Pond</div><div class="animal-desc">משתזפים על סלעים בימים שמשיים. פעילים בסתיו כל עוד מזג האוויר נעים.</div><div class="animal-when">◐ עונה: תלוי בטמפרטורה — יום שמשי עדיף</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10.5px;font-weight:700;color:white;background:var(--accent4);padding:2px 9px;border-radius:12px">יום 13 · 7.11</span>
+        <a href="https://www.centralparknyc.org/locations/turtle-pond" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">🌐 מידע נוסף ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=40.7794,-73.9688" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--text2);border:1px solid var(--border);padding:2px 9px;border-radius:12px">📍 מיקום במפות ↗</a>
+    </div></div>
+        <div class="animal-card" style="--c:var(--accent5)"><div class="animal-name">לווייתנים (לא במסלול)</div><div class="animal-where">מפרץ מונטריי — דורש הפלגה</div><div class="animal-desc">לווייתני גב וגדולים במפרץ מונטריי. ⚠️ דורש שיט — לא רלוונטי כי אינכם אוהבי שיט.</div><div class="animal-when">✗ לא במסלול — דורש שיט</div></div>
+      </div>
+    </div>
+    <div class="dnote star">💡 טיפ מקצועי: הורידו את אפליקציית <b>Merlin Bird ID</b> (Cornell Lab, חינם) לפני הטיול. מצלמים או מקליטים ציפור — האפליקציה מזהה אוטומטית. חוויה מצוינת לזיהוי בזמן אמת, במיוחד ב-The Ramble ובגרנד קניון.</div>
   </div>
 </div>
 <div id="tab-budget" class="tab-content">
-  <div class="panel" style="margin-bottom:16px">
-    <h3>💳 סטטוס תשלום</h3>
-    <div class="bar-item"><div class="bar-label">שולם</div><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,var(--accent4),var(--green))"></div></div><div class="bar-value">$3,067.60</div></div>
-    <div class="bar-item"><div class="bar-label">יתרה לתשלום</div><div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,var(--accent3),var(--amber))"></div></div><div class="bar-value">$7,956</div></div>
-    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
-      <div style="font-size:12px;color:var(--text2);margin-bottom:8px">שולם עד כה:</div>
-      <div style="font-size:12.5px;line-height:1.9">✈️ לופטהנזה — $1,843<br>✈️ American AA2138 — $437<br>✈️ Southwest WN2319 — $456.80<br>🚗 רכב ראשון Alamo — $205<br>🛡️ ביטוח נסיעה — $125.80</div>
+  <div class="grid grid-2" style="margin-bottom:16px">
+    <div class="panel">
+      <h3>📊 פילוח תקציב לפי קטגוריה</h3>
+      <div class="donut-wrap">
+        <svg width="180" height="180" viewBox="0 0 160 160" style="transform:rotate(-90deg)">
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--surface2)" stroke-width="24"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--accent1)" stroke-width="24" stroke-dasharray="82.1 294.9" stroke-dashoffset="0"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--accent2)" stroke-width="24" stroke-dasharray="138.5 238.5" stroke-dashoffset="-82.1"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--accent4)" stroke-width="24" stroke-dasharray="30.6 346.4" stroke-dashoffset="-220.6"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--accent3)" stroke-width="24" stroke-dasharray="45.6 331.4" stroke-dashoffset="-251.2"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--accent6)" stroke-width="24" stroke-dasharray="15.0 362.0" stroke-dashoffset="-296.8"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--accent5)" stroke-width="24" stroke-dasharray="57.9 319.1" stroke-dashoffset="-311.8"/>
+        </svg>
+        <div class="legend">
+          <div class="legend-item"><span class="legend-sq" style="background:var(--accent1)"></span>טיסות<span class="legend-val">$2,467</span></div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--accent2)"></span>מלונות<span class="legend-val">$4,158</span></div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--accent4)"></span>רכב + דלק<span class="legend-val">$920</span></div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--accent3)"></span>אוכל<span class="legend-val">$1,370</span></div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--accent6)"></span>בידור<span class="legend-val">$450</span></div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--accent5)"></span>פארקים+קניות+שונות<span class="legend-val">$1,740</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>💳 סטטוס תשלום</h3>
+      <div class="bar-item"><div class="bar-label">שולם</div><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,var(--accent4),var(--mint))"></div></div><div class="bar-value">$3,067.60</div></div>
+      <div class="bar-item"><div class="bar-label">יתרה לתשלום</div><div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,var(--accent3),var(--pink))"></div></div><div class="bar-value">$7,956</div></div>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
+        <div style="font-size:12px;color:var(--text2);margin-bottom:8px">שולם עד כה:</div>
+        <div style="font-size:12.5px;line-height:1.9">✈️ לופטהנזה — $1,843<br>✈️ American AA2138 (LAS→JFK) — $437<br>✈️ Southwest WN2319 (SBA→LAS) — $456.80<br>🚗 רכב ראשון Alamo — $205<br>🛡️ ביטוח נסיעה Phoenix Travel Smart — $125.80</div>
+      </div>
     </div>
   </div>
   <div class="panel"><h3>💰 פירוט תקציב מלא (זוגי, $)</h3><table><thead><tr><th>קטגוריה</th><th>פריט</th><th>סטטוס</th><th class="num">עלות $</th></tr></thead><tbody id="budget-rows"></tbody></table></div>
 </div>
 <div id="tab-attractions" class="tab-content">
   <div class="panel">
-    <h3>📍 אטרקציות ועצירות בדרך</h3>
+    <h3>📍 אטרקציות ועצירות בדרך — לפי אזור</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:14px">דגש: חיות וציפורים · נוף · אפס/מעט הליכה · ✓ במסלול, ◐ אופציונלי, ✗ הושמט</p>
     <table><thead><tr><th>אזור</th><th>אטרקציה</th><th>מה רואים</th><th>הליכה</th><th>במסלול</th><th>הערות</th><th>מפה</th></tr></thead><tbody id="attr-rows"></tbody></table>
   </div>
 </div>
 <div id="tab-map" class="tab-content">
   <div class="panel">
     <h3>🗺️ מפות מסלול נסיעה יומיות</h3>
-    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">כל יום: כפתור ניווט מלא + קישור נפרד לכל עצירה.</p>
-    <div id="mapCards"></div>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:16px">כל יום: כפתור ניווט מלא (עם כל העצירות בסדר הנכון) + קישור נפרד לכל עצירה בנפרד — לבדיקה מהירה או תכנון גמיש בשטח.</p>
+    
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 3 · 28.10</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=37.8074,-122.4135&destination=36.5554,-121.9194&waypoints=36.8046,-121.786|36.6177,-121.9166|36.5721,-121.9647&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#1b575a;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#1b575a" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="120" cy="45" r="6" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="200" cy="45" r="6" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="280" cy="45" r="6" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#1b575a" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">סן פרנסיסקו</text><text x="120" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Moss Landing</text><text x="200" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">שער 17-Mile Drive (פסיפיק גרוב)</text><text x="280" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Bird Rock</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">כרמל</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~125 מייל · ~6.5 שע׳</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=36.8046,-121.786" target="_blank" style="text-decoration:none;font-size:11px;color:#1b575a;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Moss Landing — לוטרות ים ↗</a><a href="https://www.google.com/maps/search/?api=1&query=36.6177,-121.9166" target="_blank" style="text-decoration:none;font-size:11px;color:#1b575a;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 שער 17-Mile Drive (פסיפיק גרוב) ↗</a><a href="https://www.google.com/maps/search/?api=1&query=36.5721,-121.9647" target="_blank" style="text-decoration:none;font-size:11px;color:#1b575a;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Bird Rock — פילי ים וציפורי ים ↗</a></div>
+    </div>
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 4 · 29.10</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=36.5554,-121.9194&destination=34.4091,-119.6934&waypoints=36.3714,-121.9018|35.6641,-121.2864&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#1b575a;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#1b575a" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="147" cy="45" r="6" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="253" cy="45" r="6" fill="#1b575a" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#1b575a" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">כרמל</text><text x="147" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Bixby Creek Bridge</text><text x="253" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Piedras Blancas</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">סנטה ברברה</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~230 מייל · ~6 שע׳</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=36.3714,-121.9018" target="_blank" style="text-decoration:none;font-size:11px;color:#1b575a;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Bixby Creek Bridge — תצפית ↗</a><a href="https://www.google.com/maps/search/?api=1&query=35.6641,-121.2864" target="_blank" style="text-decoration:none;font-size:11px;color:#1b575a;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Piedras Blancas — פילי ים ↗</a></div>
+    </div>
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 5 · 30.10</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=36.084,-115.1537&destination=37.185,-113.0013&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">שדה LAS</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">ספרינגדייל/ציון</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~158 מייל · ~2.5 שע׳</div>
+      
+    </div>
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 6 · 31.10</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=37.185,-113.0013&destination=37.6748,-112.1524&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">ספרינגדייל/ציון</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">ברייס קניון</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~85 מייל · ~1.5 שע׳</div>
+      
+    </div>
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 7 · 01.11</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=37.6748,-112.1524&destination=36.9226,-111.4732&waypoints=37.0475,-112.5263&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="200" cy="45" r="6" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">ברייס קניון</text><text x="200" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Kanab UT</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">פייג׳/Lake Powell</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">171 מייל · 3 שע׳ 19 דק׳</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=37.0475,-112.5263" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Kanab UT — כביש סלול (לא Cottonwood עפר) ↗</a></div>
+    </div>
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 8 · 02.11</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=36.9226,-111.4732&destination=36.0569,-112.1406&waypoints=36.8794,-111.5104|36.0453,-111.829&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="147" cy="45" r="6" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="253" cy="45" r="6" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">פייג׳</text><text x="147" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Horseshoe Bend</text><text x="253" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Desert View Watchtower</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">גרנד קניון</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~140 מייל · ~2.5–2:50 שע׳</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=36.8794,-111.5104" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Horseshoe Bend — תצפית (אופציונלי, בוקר) ↗</a><a href="https://www.google.com/maps/search/?api=1&query=36.0453,-111.829" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Desert View Watchtower — כניסה מזרחית ↗</a></div>
+    </div>
+    <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
+        <div style="font-size:13px;font-weight:700;color:var(--text)">יום 9 · 03.11</div>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=36.0569,-112.1406&destination=36.1125,-115.1707&waypoints=36.0161,-114.7377&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+      </div>
+      <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px">
+        <line x1="40" y1="45" x2="360" y2="45" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
+        <circle cx="40" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="200" cy="45" r="6" fill="#2f7d4f" stroke="white" stroke-width="2"/><circle cx="360" cy="45" r="9" fill="#2f7d4f" stroke="white" stroke-width="2"/>
+        <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">גרנד קניון</text><text x="200" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Hoover Dam</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">לאס וגאס</text>
+      </svg>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~280 מייל · ~4–4.5 שע׳</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=36.0161,-114.7377" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Hoover Dam — גשר ותצפית ↗</a></div>
+    </div>
   </div>
 </div>
 <div id="tab-logistics" class="tab-content">
   <div class="panel" style="margin-bottom:16px">
     <h3>✈️ טיסות</h3>
     <table><thead><tr><th>מסלול</th><th>פרטים</th><th>סטטוס</th><th class="num">$ זוגי</th></tr></thead><tbody>
-      <tr><td>TLV → SFO (לופטהנזה)</td><td class="muted">26.10 · LH691/LH454 · 7FBTLH</td><td><span class="tag t-paid">שולם</span></td><td class="num">1,843</td></tr>
-      <tr><td>EWR → TLV (לופטהנזה)</td><td class="muted">10.11 · LH7602</td><td><span class="tag t-paid">שולם</span></td><td class="num">כלול</td></tr>
-      <tr><td>SBA → LAS (Southwest)</td><td class="muted">30.10 · WN2319 · 09:55→11:10 · BW5U5N · 18D/18E</td><td><span class="tag t-paid">שולם</span></td><td class="num">456.80</td></tr>
-      <tr><td>LAS → JFK (American)</td><td class="muted">6.11 · AA2138 · 11:41→19:40 · IWCVVZ · 21D/21E</td><td><span class="tag t-paid">שולם</span></td><td class="num">437</td></tr>
+      <tr><td>TLV → SFO (לופטהנזה)</td><td class="muted">26.10 · LH691/LH454 · קוד 7FBTLH</td><td><span class="tag t-paid">שולם</span></td><td class="num">1,843</td></tr>
+      <tr><td>EWR → TLV (לופטהנזה)</td><td class="muted">10.11 · LH7602 · Terminal C · כלול לעיל</td><td><span class="tag t-paid">שולם</span></td><td class="num">כלול</td></tr>
+      <tr><td>SBA → LAS (Southwest)</td><td class="muted">30.10 · WN2319 · 09:55→11:10 ישירה · Choice · מושבים 18D/18E</td><td><span class="tag t-paid">שולם ✓ BW5U5N</span></td><td class="num">456.80</td></tr>
+      <tr><td>LAS → JFK (American)</td><td class="muted">6.11 · AA2138 · 11:41→19:40 · מושבים 21D/21E · Economy Q</td><td><span class="tag t-paid">שולם ✓ IWCVVZ</span></td><td class="num">437</td></tr>
     </tbody></table>
-    <div class="dnote warn" style="margin-top:8px">⚠️ כבודה לא כלולה בשתי הטיסות הפנימיות. $100/טיסה ($50+$50). טרם שולם.</div>
-  </div>
-  <div class="panel" style="margin-bottom:16px">
-    <h3>🚗 רכבים</h3>
-    <table><thead><tr><th>רכב</th><th>פרטים</th><th>סטטוס</th><th class="num">$</th></tr></thead><tbody>
-      <tr><td>ראשון — Alamo</td><td class="muted">SF→SBA · 28–30.10 · Equinox · אופרן #55124868</td><td><span class="tag t-paid">שולם</span></td><td class="num">205</td></tr>
-      <tr><td>שני — Alamo</td><td class="muted">LAS · 30.10–4.11</td><td><span class="tag t-pending">להזמין</span></td><td class="num">~439</td></tr>
-    </tbody></table>
+    <div class="dnote star" style="margin-top:12px">✓ טיסת LAS→NYC הוזמנה סופית: American AA2138, קוד IWCVVZ, שולם $436.80 ב-Mastercard. נוחתת ב-JFK — קרוב יותר ל-Chelsea מ-EWR.</div>
+    <div class="dnote warn" style="margin-top:8px">⚠️ <b>כבודה לא כלולה בשתי הטיסות הפנימיות</b> (Southwest Choice + American Basic/Q). תוקצב $100 נוסף לכל טיסה ($50 לאורלי + $50 לגבי) — סה"כ $200 נוספים. טרם שולם בפועל. לבדוק ולשלם מראש באתר לפני הטיסה, בד"כ זול יותר מאשר בשדה.</div>
   </div>
   <div class="panel">
-    <h3>🏨 מלונות</h3>
-    <table><thead><tr><th>מלון</th><th>תאריכים</th><th>מס' הזמנה</th><th>סטטוס</th><th>בוקר</th><th class="num">$</th></tr></thead><tbody>
-      <tr><td>Hotel Riu Plaza, SF</td><td class="muted">26–27.10</td><td class="muted">WRC3HUXR</td><td><span class="tag t-pending">במלון</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">485</td></tr>
-      <tr><td>Comfort Inn Carmel</td><td class="muted">28.10</td><td class="muted">#6090660070</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">229</td></tr>
-      <tr><td>West Beach Inn SB</td><td class="muted">29.10</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ קל</span></td><td class="num">280</td></tr>
-      <tr><td>Hampton Inn Zion</td><td class="muted">30.10</td><td class="muted">#6314446390</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">281</td></tr>
-      <tr><td>Best Western Bryce</td><td class="muted">31.10</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">132</td></tr>
-      <tr><td>Wingate Page</td><td class="muted">01.11</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓</span></td><td class="num">94</td></tr>
-      <tr><td>Bright Angel Lodge</td><td class="muted">02.11</td><td class="muted">Xanterra #20511844</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-est">✗ נפרד</span></td><td class="num">327</td></tr>
-      <tr><td>Paris Las Vegas</td><td class="muted">03–06.11 · ביטול עד 25.10</td><td class="muted">איסתא #423574</td><td><span class="tag t-pending">עד 20.10.26</span></td><td style="text-align:center"><span class="tag t-est">✗</span></td><td class="num">661</td></tr>
-      <tr><td>Innside NoMad NY</td><td class="muted">06–10.11 · ביטול עד 22.10</td><td class="muted">איסתא #423938</td><td><span class="tag t-pending">עד 17.10.26</span></td><td style="text-align:center"><span class="tag t-est">✗</span></td><td class="num">966</td></tr>
-      <tr><td style="padding-right:20px">↳ מיסים בדלפק Innside</td><td class="muted">בצ'ק-אין</td><td class="muted">—</td><td><span class="tag t-pending">בצ'ק-אין</span></td><td class="muted" style="text-align:center">—</td><td class="num">197.36</td></tr>
-      <tr style="border-top:2px solid var(--accent1)"><td colspan="5" style="font-weight:700">סה"כ מלונות</td><td class="num" style="font-weight:900;color:var(--accent1)">3,652</td></tr>
+    <h3>🚗 רכבים</h3>
+    <table><thead><tr><th>רכב</th><th>מסלול ותאריכים</th><th>סטטוס</th><th class="num">$</th></tr></thead><tbody>
+      <tr><td>ראשון — Alamo</td><td class="muted">SF (Beach St) → SBA · 28–30.10 · Chevrolet Equinox · ביטוח מלא · אופרן #55124868</td><td><span class="tag t-paid">שולם</span></td><td class="num">205</td></tr>
+      <tr><td>שני — Alamo</td><td class="muted">LAS Rent-A-Car Center · 30.10–4.11 (5 ימים) · אופרן · CDW + צד ג' $300K</td><td><span class="tag t-pending">להזמין</span></td><td class="num">~439</td></tr>
     </tbody></table>
-    <div class="dnote warn" style="margin-top:8px">⚠️ בוקר לא כלול: גרנד קניון (Harvey House Café), Paris LV, Innside NoMad.</div>
+    <div class="dnote warn" style="margin-top:12px">⚠️ רכב שני: כל חברות ההשכרה בלאס וגאס פועלות מ-Rent-A-Car Center מרוכז ~3 מייל מהטרמינל — להקציב 30–45 דקות כולל שאטל.</div>
+  </div>
+  <div class="panel">
+    <h3>🏨 מלונות — פרטי הזמנה מלאים</h3>
+    <table><thead><tr><th>מלון</th><th>תאריכים</th><th>מס' הזמנה</th><th>סטטוס תשלום</th><th>בוקר</th><th class="num">$</th></tr></thead><tbody>
+      <tr><td>Hotel Riu Plaza Fisherman's Wharf, SF</td><td class="muted">26–27.10 · 2 לילות</td><td class="muted">WRC3HUXR</td><td><span class="tag t-pending">לשלם במלון</span></td><td style="text-align:center"><span class="tag t-paid">✓ כלול</span></td><td class="num">485</td></tr>
+      <tr><td>Comfort Inn Carmel By the Sea</td><td class="muted">28.10 · 1 לילה</td><td class="muted">Booking #6090660070</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ כלול</span></td><td class="num">229</td></tr>
+      <tr><td>West Beach Inn, Santa Barbara</td><td class="muted">29.10 · 1 לילה</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ קונטיננטלי קל</span></td><td class="num">280</td></tr>
+      <tr><td>Hampton Inn & Suites Springdale/Zion NP</td><td class="muted">30.10 · 1 לילה</td><td class="muted">Booking #6314446390</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ כלול</span></td><td class="num">281</td></tr>
+      <tr><td>Best Western PLUS Bryce Canyon Grand Hotel</td><td class="muted">31.10 · 1 לילה</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ כלול</span></td><td class="num">132</td></tr>
+      <tr><td>Wingate by Wyndham Page Lake Powell</td><td class="muted">01.11 · 1 לילה</td><td class="muted">Booking</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-paid">✓ כלול</span></td><td class="num">94</td></tr>
+      <tr><td>Bright Angel Lodge, Grand Canyon</td><td class="muted">02.11 · 1 לילה</td><td class="muted">Xanterra #20511844</td><td><span class="tag t-pending">לשלם</span></td><td style="text-align:center"><span class="tag t-est">✗ בתשלום נפרד</span></td><td class="num">327</td></tr>
+      <tr><td>Paris Las Vegas — Bordeaux fountain view, King</td><td class="muted">03–06.11 · 3 לילות · ביטול חינם עד 25.10.26 17:00</td><td class="muted">איסתא #423574</td><td><span class="tag t-pending">לשלם עד 20.10.26</span></td><td style="text-align:center"><span class="tag t-est">✗ לא כלול</span></td><td class="num">661</td></tr>
+      <tr><td>Innside by Meliá New York NoMad — The Innside Room Queen</td><td class="muted">06–10.11 · 4 לילות · ביטול חינם עד 22.10.26 17:00</td><td class="muted">איסתא #423938</td><td><span class="tag t-pending">לשלם עד 17.10.26</span></td><td style="text-align:center"><span class="tag t-est">✗ לא כלול</span></td><td class="num">966</td></tr>
+      <tr><td style="padding-right:20px;color:var(--text2);font-size:11.5px">↳ מיסים בדלפק המלון (לא באתר)</td><td class="muted">משולם ישירות במלון, לא מראש</td><td class="muted">—</td><td><span class="tag t-pending">לשלם בצ'ק-אין</span></td><td class="muted" style="text-align:center">—</td><td class="num">197.36</td></tr>
+      <tr style="border-top:2px solid var(--accent1)"><td colspan="5" style="font-weight:700">סה"כ מלונות (כולל מיסים בדלפק)</td><td class="num" style="font-weight:900;color:var(--accent1)">3,652</td></tr>
+    </tbody></table>
+    <div class="dnote star" style="margin-top:12px">💡 כל 9 המלונות במדיניות "תשלום במלון" או סמוך למועד — אין חיוב מראש. שמרו את מספרי ההזמנה נגישים (צילום מסך / הדפסה) לצ'ק-אין מהיר, במיוחד באזורים כפריים עם קליטה סלולרית מוגבלת (ברייס, פייג').</div>
+    <div class="dnote warn" style="margin-top:8px">⚠️ <b>ארוחת בוקר לא כלולה ב-3 מלונות:</b> גרנד קניון (בתשלום נפרד ב-Harvey House Café, 06:30–10:00), Paris Las Vegas, Innside NoMad. תקצבו ארוחת בוקר בנפרד בימים 02.11 ו-06–10.11.</div>
+    <div class="dnote warn" style="margin-top:8px">⚠️ <b>Innside NoMad — מדיניות ביטול:</b> ביטול חינם עד <b>22.10.26 17:00</b>. אחרי מועד זה — דמי ביטול מלאים על כל החדר ($966). בנוסף, יש <b>$197.36 מיסים לתשלום בדלפק המלון בלבד</b> (לא באתר, לא באיסתא) — לא לשכוח כרטיס אשראי בצ'ק-אין.</div>
+    <div class="dnote warn" style="margin-top:8px">⚠️ <b>Paris Las Vegas — מדיניות ביטול:</b> ביטול חינם עד <b>25.10.26 17:00</b> (שונה ממועד ה-Innside!). שתי ההזמנות מאיסתא — שני מועדי ביטול שונים, לא לבלבל.</div>
   </div>
 </div>
 <div id="tab-food" class="tab-content">
   <div class="panel" style="margin-bottom:16px">
     <h3>🍽️ תוכנית קולינרית יומית — טבעוני/צמחוני</h3>
-    <p style="color:var(--text2);font-size:13px">אורלי טבעונית, גבי צמחוני. בוקר/צהריים קליל, ערב = מסעדה בינונית.</p>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:14px">עיקרון: בוקר/צהריים קליל וזול, ערב = מסעדה עם ישיבה ברמת מחיר בינונית (לא Michelin). אורלי טבעונית, גבי צמחוני.</p>
+    <div class="dnote warn">⚠️ <b>ארוחת בוקר לא כלולה:</b> גרנד קניון (בתשלום נפרד ב-Harvey House Café, 06:30–10:00), לאס וגאס, ניו יורק (Innside NoMad). בכל שאר המלונות — בוקר כלול.</div>
   </div>
+
   <div class="panel" style="margin-bottom:16px">
-    <h3>📅 לוח ארוחות ערב</h3>
-    <table><thead><tr><th>תאריך</th><th>מסעדה</th><th>הערה</th></tr></thead><tbody>
-      <tr><td class="muted">26.10</td><td><b>The Plant Cafe Organic</b></td><td class="muted">SF, ליד הרציף</td></tr>
-      <tr><td class="muted">27.10</td><td><b>Greens Restaurant</b> 🔴</td><td class="muted">Fort Mason — להזמין!</td></tr>
-      <tr><td class="muted">28.10 צהריים</td><td><b>Julia's Vegetarian</b></td><td class="muted">Pacific Grove</td></tr>
-      <tr><td class="muted">28.10 ערב</td><td><b>Cultura Comida y Bebida</b> 🔴</td><td class="muted">כרמל — נסגרת מהר, להזמין!</td></tr>
-      <tr><td class="muted">29.10</td><td><b>Satellite SB</b></td><td class="muted">State Street, סנטה ברברה</td></tr>
-      <tr><td class="muted">30.10</td><td><b>Thai Sapa</b></td><td class="muted">ספרינגדייל</td></tr>
-      <tr><td class="muted">31.10</td><td><b>Bryce Canyon Lodge</b></td><td class="muted">ברייס</td></tr>
-      <tr><td class="muted">01.11</td><td><b>Bonkers Restaurant</b></td><td class="muted">פייג' (צהריים: Rocking V Cafe בקנאב)</td></tr>
-      <tr><td class="muted">02.11</td><td><b>Bright Angel/El Tovar</b></td><td class="muted">גרנד קניון</td></tr>
-      <tr><td class="muted">03–05.11</td><td class="muted">⏸️ לא מוצג כרגע</td><td class="muted">לאס וגאס — טרם הוחלט</td></tr>
-      <tr><td class="muted">06.11</td><td><b>PLANTA Queen NoMad</b></td><td class="muted">15 W 27th St — אותו בלוק כמו המלון!</td></tr>
-      <tr><td class="muted">07.11, 09.11</td><td class="muted">⏸️ לא מוצג כרגע</td><td class="muted">—</td></tr>
-      <tr><td class="muted">08.11</td><td><b>Hangawi</b> 🎂</td><td class="muted">יומולדת אורלי! 12 E 32nd St</td></tr>
-    </tbody></table>
+    <h3>📅 לוח ארוחות ערב לפי יום</h3>
+
+    <div class="animal-cat">
+      <div class="animal-cat-title">🌉 סן פרנסיסקו</div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">26.10</div>
+      <div style="flex:1"><b>The Plant Cafe Organic</b><div style="font-size:11px;color:var(--text2);margin-top:2px">ארוחת ערב ראשונה, ליד Fisherman's Wharf</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=The+Plant+Cafe+Organic+San+Francisco" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">27.10</div>
+      <div style="flex:1"><b>Greens Restaurant</b><span style="font-size:9.5px;font-weight:700;color:white;background:var(--accent3);padding:1px 8px;border-radius:10px;margin-left:8px">צריך הזמנה!</span><div style="font-size:11px;color:var(--text2);margin-top:2px">Fort Mason, נוף לגשר הזהב</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Greens+Restaurant+Fort+Mason+San+Francisco" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+    </div>
+
+    <div class="animal-cat">
+      <div class="animal-cat-title">🌊 כרמל</div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">28.10 צהריים</div>
+      <div style="flex:1"><b>Julia's Vegetarian</b><div style="font-size:11px;color:var(--text2);margin-top:2px">Pacific Grove, בדרך ל-17-Mile Drive</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Julia's+Vegetarian+Pacific+Grove+CA" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">28.10 ערב</div>
+      <div style="flex:1"><b>Cultura Comida y Bebida</b><span style="font-size:9.5px;font-weight:700;color:white;background:var(--accent3);padding:1px 8px;border-radius:10px;margin-left:8px">צריך הזמנה!</span><div style="font-size:11px;color:var(--text2);margin-top:2px">כרמל-בי-דה-סי · ⚠️ נסגרת מהר — להזמין מראש. חלופות: Village Corner California Bistro / Pangaea on Ocean Ave</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Cultura+Comida+y+Bebida+Carmel-by-the-Sea" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+    </div>
+
+    <div class="animal-cat">
+      <div class="animal-cat-title">🏖️ ביג סור / סנטה ברברה</div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">29.10 בדרך</div>
+      <div style="flex:1"><b>Café Kevah / Nepenthe</b><div style="font-size:11px;color:var(--text2);margin-top:2px">ביג סור — אין שם תפריט טבעוני אמיתי, שקלו פיקניק עצמאי</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Nepenthe+Big+Sur" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">29.10 ערב</div>
+      <div style="flex:1"><b>Satellite SB</b><div style="font-size:11px;color:var(--text2);margin-top:2px">State Street, סנטה ברברה</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Satellite+SB+Santa+Barbara" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+    </div>
+
+    <div class="animal-cat">
+      <div class="animal-cat-title">🏜️ ציון / ברייס / פייג'</div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">30.10</div>
+      <div style="flex:1"><b>Thai Sapa</b><div style="font-size:11px;color:var(--text2);margin-top:2px">ספרינגדייל</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Thai+Sapa+Springdale+UT" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">31.10</div>
+      <div style="flex:1"><b>Bryce Canyon Lodge Dining Room</b><div style="font-size:11px;color:var(--text2);margin-top:2px">האופציה המרכזית באזור</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bryce+Canyon+Lodge+Dining+Room" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">01.11 צהריים</div>
+      <div style="flex:1"><b>Rocking V Cafe</b><div style="font-size:11px;color:var(--text2);margin-top:2px">קנאב, בדרך לפייג'</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Rocking+V+Cafe+Kanab+UT" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">01.11 ערב</div>
+      <div style="flex:1"><b>Bonkers Restaurant</b><div style="font-size:11px;color:var(--text2);margin-top:2px">פייג'</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bonkers+Restaurant+Page+AZ" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">02.11</div>
+      <div style="flex:1"><b>Bright Angel Lodge / El Tovar</b><div style="font-size:11px;color:var(--text2);margin-top:2px">גרנד קניון South Rim</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bright+Angel+Lodge+Dining+Room+Grand+Canyon" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+    </div>
+
+    <div class="animal-cat">
+      <div class="animal-cat-title">🎰 לאס וגאס (03–05.11)</div>
+      <div class="dnote" style="background:var(--surface2);color:var(--text2);border:1px dashed var(--border)">⏸️ לפי בקשתך — לא מוצג כרגע. אופציות שכבר נבדקו ומחכות להחלטה: Crossroads Kitchen, True Food Kitchen, VegeNation. גם יום הנסיעה 3.11 (גרנד→וגאס) — טרם תוכנן.</div>
+    </div>
+
+    <div class="animal-cat">
+      <div class="animal-cat-title">🗽 ניו יורק (06–10.11)</div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">06.11</div>
+      <div style="flex:1"><b>PLANTA Queen NoMad</b><span style="font-size:9.5px;font-weight:700;color:white;background:var(--accent3);padding:1px 8px;border-radius:10px;margin-left:8px">ליד המלון</span><div style="font-size:11px;color:var(--text2);margin-top:2px">15 W 27th St — אותו בלוק כמו המלון! ארוחת ערב ראשונה בהגעה מוגאס</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=PLANTA+Queen+15+West+27th+Street+New+York" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div style="display:flex;align-items:baseline;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:10.5px;font-weight:700;color:var(--accent1);width:52px;flex-shrink:0">08.11</div>
+      <div style="flex:1"><b>Hangawi</b><span style="font-size:9.5px;font-weight:700;color:white;background:var(--accent3);padding:1px 8px;border-radius:10px;margin-left:8px">🎂 יומולדת אורלי!</span><div style="font-size:11px;color:var(--text2);margin-top:2px">12 E 32nd St · Michelin Bib Gourmand (לא כוכב) · ~$25–30/מנה · ~20 דק' הליכה מהמלון</div></div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Hangawi+12+East+32nd+Street+New+York" target="_blank" style="text-decoration:none;font-size:10.5px;color:var(--accent1);white-space:nowrap;margin-right:8px">📍 מפות ↗</a>
+    </div>
+      <div class="dnote" style="background:var(--surface2);color:var(--text2);border:1px dashed var(--border);margin-top:8px">⏸️ 7.11 ו-9.11 — לפי בקשתך, לא מוצג כרגע. רק 8.11 (יומולדת אורלי) מתוכנן.</div>
+    </div>
   </div>
+
   <div class="panel">
-    <h3>📌 הזמנת מקום מראש — כחודש לפני (~26.09.26)</h3>
+    <h3>📌 משימות פתוחות — הזמנת מקום מראש</h3>
     <div class="grid grid-2">
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Greens Restaurant</h4></div><p class="insight-body">27.10, SF — להזמין.</p></div>
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Cultura Comida y Bebida</h4></div><p class="insight-body">28.10, כרמל — דחוף!</p></div>
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🎂</span><h4>Hangawi</h4></div><p class="insight-body">8.11, NYC — יומולדת אורלי.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Greens Restaurant</h4></div><p class="insight-body">SF, 27.10 — Fort Mason. מסעדה פופולרית, ממליצים להזמין מראש.</p><div class="insight-action">להזמין</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Cultura Comida y Bebida</h4></div><p class="insight-body">כרמל, 28.10 — נסגרת מהר, ⚠️ חשוב לוודא הזמנה מראש.</p><div class="insight-action">להזמין בדחיפות</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🎂</span><h4>Hangawi — יומולדת אורלי</h4></div><p class="insight-body">NYC, 8.11 — אירוע מיוחד, מומלץ במיוחד להזמין מראש מקום נוח.</p><div class="insight-action">להזמין (אירוע מיוחד)</div></div>
     </div>
   </div>
 </div>
+
 <div id="tab-insights" class="tab-content">
   <div class="panel" style="margin-bottom:16px">
-    <h3>💳 תזכורות תשלום</h3>
-    <table><thead><tr><th>מלון</th><th>מתי לשלם</th><th class="num">$</th></tr></thead><tbody>
-      <tr><td>Innside NY NoMad</td><td><span class="tag t-pending">⏰ עד 17.10.26</span></td><td class="num">966+197.36</td></tr>
-      <tr><td>Paris Las Vegas</td><td><span class="tag t-pending">⏰ עד 20.10.26</span></td><td class="num">661</td></tr>
-    </tbody></table>
-    <div class="dnote warn" style="margin-top:12px">⚠️ שתי תזכורות דחופות: 17.10 ו-20.10.26. שאר 7 המלונות בצ'ק-אין.</div>
+    <h3>💳 תזכורות תשלום — כל המלונות</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:14px">שני מסלולי תשלום שונים: איסתא (חיוב מראש בתאריך קבוע) מול בוקינג/ישיר (חיוב בצ'ק-אין, בלי תאריך מראש — רק לוודא כרטיס תקף בזמן ההגעה).</p>
+    <table>
+      <thead><tr><th>מלון</th><th>סוג הזמנה</th><th>מתי לשלם</th><th class="num">סכום $</th></tr></thead>
+      <tbody>
+        <tr><td>Innside NY NoMad</td><td class="muted">איסתא #423938</td><td><span class="tag t-pending">⏰ עד 17.10.26</span></td><td class="num">966 + 197.36 בדלפק</td></tr>
+        <tr><td>Paris Las Vegas</td><td class="muted">איסתא #423574</td><td><span class="tag t-pending">⏰ עד 20.10.26</span></td><td class="num">661</td></tr>
+        <tr><td>Hotel Riu Plaza SF</td><td class="muted">ישיר WRC3HUXR</td><td><span class="tag t-est">בצ'ק-אין 26.10</span></td><td class="num">485</td></tr>
+        <tr><td>Comfort Inn Carmel</td><td class="muted">בוקינג #6090660070</td><td><span class="tag t-est">בצ'ק-אין 28.10</span></td><td class="num">229</td></tr>
+        <tr><td>West Beach Inn SB</td><td class="muted">בוקינג</td><td><span class="tag t-est">בצ'ק-אין 29.10</span></td><td class="num">280</td></tr>
+        <tr><td>Hampton Inn Zion</td><td class="muted">בוקינג #6314446390</td><td><span class="tag t-est">בצ'ק-אין 30.10</span></td><td class="num">281</td></tr>
+        <tr><td>Best Western Bryce</td><td class="muted">בוקינג</td><td><span class="tag t-est">בצ'ק-אין 31.10</span></td><td class="num">132</td></tr>
+        <tr><td>Wingate Page</td><td class="muted">בוקינג</td><td><span class="tag t-est">בצ'ק-אין 01.11</span></td><td class="num">94</td></tr>
+        <tr><td>Bright Angel Lodge</td><td class="muted">Xanterra #20511844</td><td><span class="tag t-est">בצ'ק-אין 02.11</span></td><td class="num">327</td></tr>
+      </tbody>
+    </table>
+    <div class="dnote warn" style="margin-top:12px">⚠️ <b>שתי תזכורות דחופות עם תאריך קבוע:</b> 17.10.26 (Innside, $966) ו-20.10.26 (Paris LV, $661) — לסמן ביומן, כרטיס 4918 חייב מסגרת פנויה. שאר 7 המלונות נטענים בצ'ק-אין עצמו — לוודא שהכרטיס בתוקף לאורך כל הטיול (לא רק בתחילתו).</div>
   </div>
   <div class="panel" style="margin-bottom:16px">
-    <h3>🎯 פעולות פתוחות</h3>
+    <h3>🍽️ הזמנת מקום למסעדות — כחודש לפני הטיול</h3>
+    <p style="color:var(--text2);font-size:13px;margin-bottom:14px">שלוש מסעדות שכדאי להזמין מראש. יעד מומלץ: <b>סביב 26.09.2026</b> (חודש לפני הנחיתה, 26.10.26) — מספיק זמן, לא מוקדם מדי לביטול אם התוכניות ישתנו.</p>
+    <table>
+      <thead><tr><th>מסעדה</th><th>מתי בטיול</th><th>מתי להזמין</th><th>הערה</th></tr></thead>
+      <tbody>
+        <tr><td>Greens Restaurant</td><td class="muted">27.10 · SF</td><td><span class="tag t-pending">~26.09.26</span></td><td class="muted">מסעדה פופולרית, ממליצים על הזמנה מראש</td></tr>
+        <tr><td>Cultura Comida y Bebida</td><td class="muted">28.10 · כרמל</td><td><span class="tag t-pending">~26.09.26</span></td><td class="muted">⚠️ נסגרת מהר — הכי דחופה מבין השלוש</td></tr>
+        <tr><td>Hangawi 🎂</td><td class="muted">08.11 · NYC (יומולדת אורלי)</td><td><span class="tag t-pending">~26.09.26</span></td><td class="muted">אירוע מיוחד — מומלץ לבקש שולחן נוח</td></tr>
+      </tbody>
+    </table>
+    <div class="dnote star" style="margin-top:12px">💡 שלוש ההזמנות יכולות להתבצע באותו יום — מומלץ לרכז אותן בשיחת טלפון/אתר אחד כדי לא לשכוח אף אחת.</div>
+  </div>
+  <div class="panel" style="margin-bottom:16px">
+    <h3>🎯 פעולות פתוחות לפי דחיפות</h3>
     <div class="grid grid-2">
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>רכב שני בלאס וגאס</h4></div><p class="insight-body">Alamo, ~$439. להזמין בהקדם.</p></div>
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Sphere (4.11)</h4></div><p class="insight-body">~$250. להזמין ספט'–אוק'.</p></div>
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟡</span><h4>America the Beautiful Pass</h4></div><p class="insight-body">$250. לרכוש באוקטובר 2026.</p></div>
-      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟢</span><h4>ESTA + צ'ק-אין</h4></div><p class="insight-body">לכל נוסע. צ'ק-אין מ-25.10.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>רכב שני בלאס וגאס</h4></div><p class="insight-body">Alamo דרך אופרן, ~$439 ל-5 ימים. להזמין בהקדם.</p><div class="insight-action">דחוף</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🔴</span><h4>Sphere (4.11)</h4></div><p class="insight-body">Wizard of Oz · יעד 20:00 (או 17:00). כרטיסים נגמרים חודשים מראש. ~$250 לזוג (משוער).</p><div class="insight-action">להזמין ספטמבר–אוקטובר</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟡</span><h4>America the Beautiful Non-Resident Pass</h4></div><p class="insight-body">$250 · פאס דיגיטלי לרכב · מכסה ציון, ברייס וגרנד קניון. בלי פס: $100/אדם נוסף לאגרת כניסה × 2 אנשים × 3 פארקים = $600 נוסף. <b>חיסכון: $350.</b><br>⚠️ לתושבי חוץ — פס דיגיטלי בלבד (אין משלוח בינלאומי לפס פיזי). לשמור offline לפני הכניסה לאזורים ללא קליטה.<br>✅ כניסה לציון, ברייס וגרנד קניון ללא הזמנה מוקדמת. ציון — שאטל חינמי בלבד לתוך הקניון (אין כניסה ברכב פרטי).</p><div class="insight-action">לרכוש ב-Recreation.gov לפני הטיול — ולהוריד offline</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟢</span><h4>ESTA + צ'ק-אין</h4></div><p class="insight-body">ESTA לכל נוסע (VWP). צ'ק-אין לופטהנזה מ-25.10.</p><div class="insight-action">להסדיר לפני הטיסה</div></div>
+
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟡</span><h4>Broadway NYC</h4></div><p class="insight-body">9.11 (יום 15) פנוי בערב — עדיין לא נבחרה הצגה ולא הוזמן כרטיס.</p><div class="insight-action">לבחור הצגה ולהזמין</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🟢</span><h4>Dirt Candy NYC</h4></div><p class="insight-body">מסעדה צמחונית/טבעונית ידועה ב-NYC — לא שובצה עדיין בלוח הארוחות (7–9.11 פנויים לערב חלופי).</p><div class="insight-action">לשקול ולהזמין מקום</div></div>
+
+    </div>
+  </div>
+  <div class="panel">
+    <h3>💡 תובנות מקצועיות למסלול</h3>
+    <div class="grid grid-2">
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">⚠️</span><h4>יום 4 (29.10) — היום ההדוק ביותר</h4></div><p class="insight-body">230 מייל כרמל→SB בכביש 1 = ~6 שע'. למחרת החזרת רכב 08:30 וטיסה. לצאת מכרמל 07:30, רק 2 עצירות, להגיע SB ב-15:30 לאור יום.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🦭</span><h4>נובמבר מצוין לפילי ים</h4></div><p class="insight-body">Piedras Blancas — 29.10 תופס את סוף שיא "הפריקה הסתווית" (juvenile haul-out), אחד משלושה שיאים שנתיים. מאות פרטים צעירים על החוף, אפס הליכה. עונת הרבייה הגדולה (עם הזכרים הבוגרים ב-16 רגל) מתחילה רק בסוף נובמבר — לא תיראו אותה, אבל מה שתראו עדיין מרשים ומובטח.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🌡️</span><h4>ברייס — קר קיצוני</h4></div><p class="insight-body">גובה 2,700מ', לילה מינוס, שלג אפשרי. בגדים חמים בשכבות חובה — לא מספיק ז'קט קל.</p></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🥗</span><h4>קולינריה — פער בין ספרינגדייל לפארקים המרוחקים</h4></div><p class="insight-body">ספרינגדייל (28.10, ליד ציון) מפתיעה לטובה — Thai Sapa, Wild Thyme Cafe, Whiptail Grill: אפשרויות טבעוניות אמיתיות, לא רק "סלט בלי עוף". לעומת זאת <b>ברייס, פייג' וגרנד קניון South Rim מוגבלים משמעותית</b> — כפרים קטנים עם מסעדה או שתיים, לרוב תפריט אמריקאי מסורתי. המלצה: לקנות חטיפים/פירות ב-Sol Foods בספרינגדייל (יש סלט-בר טבעוני) לפני ההמשך מזרחה, כדי לא להיתקע רעבים בפייג' או בברייס.</p><div class="insight-action">🟡 קניות מראש בספרינגדייל</div></div>
+      <div class="insight card"><div class="insight-head"><span class="insight-icon">🦅</span><h4>קונדור — לנהל ציפיות</h4></div><p class="insight-body">בגרנד קניון הקונדור בשיא באפריל–ספטמבר. בנובמבר עדיין אפשרי אך פחות ודאי — לסרוק שמיים ב-Yavapai Point בסבלנות, לא להסתמך.</p></div>
     </div>
   </div>
 </div>
 </div></div>
-<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026</div>
+<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 16.07.2026 (ב)</span></div>
 </div>
 <script>
 function showTab(e,name){
@@ -314,54 +615,54 @@ function showTab(e,name){
   e.currentTarget.classList.add('active');
 }
 const days = [
-{n:"1",d:"26.10",route:"נחיתה בסן פרנסיסקו",hotel:"Hotel Riu Plaza · לילה 1/2",dist:"—",time:"—",
- tl:[["13:40","נחיתה ב-SFO"],["15:00","צ'ק-אין"],["16:30","הליכה ב-Fisherman's Wharf"],["17:00","Pier 39 — אריות ים"],["19:00","ארוחת ערב ב-The Plant Cafe Organic"]],
- note:"יום הגעה רגוע. הפרש שעות: 9 שע'.",type:""},
-{n:"2",d:"27.10",route:"סן פרנסיסקו — יום עיר",hotel:"Riu Plaza · לילה 2/2",dist:"מקומי",time:"—",
- tl:[["09:00","Golden Gate Park"],["09:30","Stow Lake"],["11:00","Crissy Field"],["15:00","Cable Car"],["19:00","ארוחת ערב ב-Greens Restaurant 🔴"]],
- note:"עונת השיא ב-SF.",type:""},
-{n:"3",d:"28.10",route:"SF ← Moss Landing ← מונטריי ← 17-Mile ← כרמל",hotel:"Comfort Inn Carmel · 1 לילה",dist:"~125 מייל",time:"~6.5 שע'",
- tl:[["08:30","איסוף רכב Beach St"],["11:15","Moss Landing — לוטרות ים"],["12:15","צהריים ב-Julia's Vegetarian"],["13:15","17-Mile Drive"],["13:45","Bird Rock"],["15:00","צ'ק-אין כרמל"],["19:00","ארוחת ערב ב-Cultura Comida y Bebida 🔴"]],
- note:"✓ סדר נכון: Moss Landing לפני מונטריי/17-Mile.",type:"star"},
-{n:"4",d:"29.10",route:"כרמל ← Big Sur ← Piedras Blancas ← סנטה ברברה",hotel:"West Beach Inn · 1 לילה",dist:"~230 מייל",time:"~6 שע'",
- tl:[["07:30","יציאה — לא לאחר!"],["08:30","Bixby Creek Bridge"],["10:00","Piedras Blancas — פילי ים"],["14:30","הגעה SB"],["16:00","Stearns Wharf"],["18:05","שקיעה"],["19:00","ארוחת ערב ב-Satellite SB"]],
- note:"⚠️ היום ההדוק ביותר.",type:"warn"},
-{n:"5",d:"30.10",route:"SB ✈️ LAS ← ספרינגדייל/ציון",hotel:"Hampton Inn Zion · 1 לילה",dist:"~158 מייל",time:"טיסה+2.5 שע'",
- tl:[["07:50","החזרת רכב SBA"],["09:55","המראה WN2319 ✓ BW5U5N"],["11:10","נחיתה LAS"],["12:00","רכב שני"],["15:30","הגעה ספרינגדייל"],["17:15","טיול בעיירה"]],
- note:"✓ טיסה מאושרת 09:55→11:10.",type:"star"},
-{n:"6",d:"31.10",route:"ציון (בוקר) ← ברייס — ערב תצפית",hotel:"Best Western Bryce · 1 לילה",dist:"~85 מייל",time:"~1.5 שע'",
- tl:[["08:00","שאטל ספרינגדייל"],["08:30","Pa'rus Trail"],["10:30","Canyon Junction — איילים"],["12:30","יציאה לברייס"],["16:30","Sunset Point — תצפית בלבד"],["17:55","שקיעה"]],
- note:"✓ יום=סיור אחד. ⚠️ קר! שינוי שעות.",type:"warn"},
-{n:"7",d:"01.11",route:"ברייס — סיור מלא ← פייג'",hotel:"Wingate Page · 1 לילה",dist:"171 מייל",time:"3:19 שע'",
- tl:[["08:45","Inspiration+Bryce Point"],["09:15","Rim Trail הסלול"],["11:15","יציאה לפייג'"],["14:35","הגעה"],["16:50","שקיעה"],["19:00","ארוחת ערב ב-Bonkers Restaurant"]],
- note:"סיור הבוקר המלא של ברייס.",type:"star"},
-{n:"8",d:"02.11",route:"פייג' ← (Horseshoe Bend) ← גרנד קניון",hotel:"Bright Angel Lodge · 1 לילה",dist:"~140 מייל",time:"~2:45 שע'",
- tl:[["08:00","אופ': Horseshoe Bend בוקר"],["12:15","Desert View Watchtower"],["13:45","צ'ק-אין"],["16:30","תצפית שקיעה+קונדור"],["19:00","ארוחת ערב ב-Bright Angel/El Tovar"]],
- note:"⚠️ Lipan Point סגור עד 23.12.26.",type:"warn"},
-{n:"9",d:"03.11",route:"גרנד קניון ← Hoover Dam ← לאס וגאס",hotel:"Paris Las Vegas · לילה 1/3",dist:"~280 מייל",time:"~4.5 שע'",
- tl:[["09:30","יציאה — גמיש"],["13:30","Hoover Dam — פתוח עד 21:00"],["15:30","הגעה, צ'ק-אין"],["19:30","ערב חופשי בסטריפ"]],
- note:"✓ Hoover Dam פתוח עד 21:00.",type:"star"},
-{n:"10",d:"04.11",route:"לאס וגאס — Sphere",hotel:"Paris LV · לילה 2/3",dist:"מקומי",time:"—",
- tl:[["14:00","Bellagio"],["15:30","Venetian"],["20:00","מופע Sphere"]],
- note:"יום עירוני, אפס מאמץ.",type:""},
-{n:"11",d:"05.11",route:"לאס וגאס — יום בעיר (Outlets)",hotel:"Paris LV · לילה 3/3",dist:"4 מייל Uber",time:"~5 דק'",
- tl:[["11:00","Uber ל-North Premium Outlets"],["13:00","צהריים Cheesecake Factory"],["15:00","בריכה/מנוחה"]],
- note:"✓ Red Rock הוסר. Outlets ב-Uber.",type:"star"},
-{n:"12",d:"06.11",route:"וגאס ✈️ ניו יורק (AA2138)",hotel:"Innside NoMad · לילה 1/4",dist:"—",time:"~5 שע'",
- tl:[["09:15","Uber לטרמינל 3 (לא 1!)"],["11:41","המראה AA2138"],["19:40","נחיתה JFK"],["21:00","הגעה למלון"],["21:30","ארוחת ערב ב-PLANTA Queen NoMad — אותו בלוק!"]],
- note:"✓ טיסה מאושרת IWCVVZ.",type:"star"},
-{n:"13",d:"07.11",route:"ניו יורק — סנטרל פארק",hotel:"Innside NoMad · לילה 2/4",dist:"מקומי",time:"—",
- tl:[["09:00","The Ramble — צפרות"],["11:00","Belvedere Castle"],["19:00","ארוחת ערב"]],
- note:"⭐ עונת ההגירה בשיאה.",type:"star"},
-{n:"14",d:"08.11",route:"ניו יורק — High Line 🎂 יומולדת אורלי",hotel:"Innside NoMad · לילה 3/4",dist:"מקומי",time:"—",
- tl:[["09:30","High Line"],["11:30","Chelsea Market"],["19:00","🎂 ארוחת יומולדת ב-Hangawi"]],
- note:"🎂 יומולדת אורלי! להזמין מראש.",type:"star"},
-{n:"15",d:"09.11",route:"ניו יורק — MET",hotel:"Innside NoMad · לילה 4/4",dist:"מקומי",time:"—",
- tl:[["10:00","The MET"],["15:00","Central Park Reservoir"],["19:00","ערב חופשי"]],
- note:"MET — suggested donation.",type:""},
-{n:"16",d:"10.11",route:"ניו יורק ✈️ ישראל",hotel:"— חזרה —",dist:"—",time:"EWR ~45 דק'",
- tl:[["10:00","Bryant Park"],["10:45","Grand Central"],["15:30","יציאה ל-EWR"],["19:30","המראה LH7602"]],
- note:"⚠️ Terminal C. לא לאחר 15:30!",type:"warn"},
+{n:"1",d:"26.10",route:"נחיתה בסן פרנסיסקו",hotel:"Hotel Riu Plaza Fisherman's Wharf · לילה 1/2",dist:"—",time:"—",
+ tl:[["13:40","נחיתה ב-SFO"],["15:00","צ'ק-אין במלון, מנוחה קצרה"],["16:30","הליכה קלה סביב <b>Fisherman's Wharf</b> — האזור מיד ליד המלון"],["17:00","<b>Pier 39</b> — אריות ים על הרציף, ישיבה/עמידה בלבד, אין הליכה"],["19:00","ארוחת ערב ב-<b>The Plant Cafe Organic</b>, ליד הרציף"]],
+ note:"יום הגעה — קצב רגוע בכוונה. הפרש שעות מישראל: 9 שע'.",type:""},
+{n:"2",d:"27.10",route:"סן פרנסיסקו — יום עיר מלא",hotel:"Hotel Riu Plaza Fisherman's Wharf · לילה 2/2",dist:"נסיעות מקומיות",time:"—",
+ tl:[["09:00","נסיעה ל-<b>Golden Gate Park</b>"],["09:30","<b>Stow Lake</b> — ברווזים וציפורי מים, שביל שטוח סביב האגם (~30 דק')"],["11:00","<b>Crissy Field</b> — תצפית פתוחה לגשר הזהב, ציפורים ימיות, אפשר לשבת על הדשא"],["13:00","ארוחת צהריים באזור"],["15:00","<b>Cable Car</b> — חוויה, לא הליכה"],["18:00","ערב חופשי, ארוחת ערב"]],
+ note:"עונת השיא של SF — יבש ושמשי. להוריד Merlin Bird ID לפני המחר.",type:""},
+{n:"3",d:"28.10",route:"SF ← Moss Landing ← מונטריי ← 17-Mile Drive ← כרמל",hotel:"Comfort Inn Carmel By the Sea · 1 לילה",dist:"~125 מייל",time:"~6.5 שע' כולל עצירות",
+ tl:[["08:30","הגעה לדלפק Alamo, Beach St (איסוף בפועל ~40 דק' — טופס, בדיקת רכב)"],["09:15","יציאה מסן פרנסיסקו דרומה"],["11:15","<b>Moss Landing</b> — עצירה מהגשר לצפייה בלוטרות ים (~30 דק')"],["11:45","המשך למונטריי/פסיפיק גרוב (~25 דק')"],["12:15","ארוחת צהריים ב-<b>Julia's Vegetarian</b>, Pacific Grove"],["13:15","כניסה ל-<b>17-Mile Drive</b> ($12) — נסיעה עם עצירות תצפית"],["13:45","<b>Bird Rock</b> — מושבת פילי ים וציפורי ים, מהרכב/חניון (~15 דק')"],["14:45","יציאה בשער כרמל, הגעה לעיר"],["15:00","צ'ק-אין בכרמל"],["19:00","ארוחת ערב ב-<b>Cultura Comida y Bebida</b> — ⚠️ להזמין מראש!"]],
+ note:"✓ תוקן: הסדר הנכון הוא Moss Landing (צפון) לפני מונטריי ו-17-Mile Drive (דרום) — לא אחריהם. גם תוקנה שעת איסוף הרכב לזמן ריאלי.",type:"star"},
+{n:"4",d:"29.10",route:"כרמל ← Big Sur ← Piedras Blancas ← סנטה ברברה",hotel:"West Beach Inn, Santa Barbara · 1 לילה",dist:"~230 מייל",time:"~6 שע' כולל עצירות",
+ tl:[["07:30","יציאה מכרמל — <b>לא לאחר!</b>"],["08:30","<b>Bixby Creek Bridge</b> — עצירת תצפית מהחניון (~15 דק')"],["10:00","<b>Piedras Blancas</b> — מאות פילי ים על החוף, אפס הליכה, חניון צמוד (~45–60 דק')"],["11:15","המשך דרומה, ארוחת צהריים קלה ב-Cambria/San Simeon"],["14:30","הגעה לסנטה ברברה, צ'ק-אין"],["16:00","<b>Stearns Wharf</b> — טיילת ומזח, ציפורי ים"],["18:05","שקיעה על החוף"]],
+ note:"⚠️ היום ההדוק ביותר במסלול. יציאה 07:30 בדיוק, רק 2 עצירות. מחר טיסת בוקר.",type:"warn"},
+{n:"5",d:"30.10",route:"סנטה ברברה ✈️ לאס וגאס ← ספרינגדייל/ציון",hotel:"Hampton Inn & Suites Zion NP · 1 לילה",dist:"~158 מייל נסיעה",time:"טיסה 1:20 + נסיעה ~2.5 שע'",
+ tl:[["06:50","קימה, ארוחת בוקר רגועה במלון"],["07:20","יציאה מהמלון ל-SBA (~15 דק' נסיעה)"],["07:35","תדלוק אחרון ליד השדה"],["07:50","החזרת רכב Alamo בדלפק SBA"],["08:05","צ'ק-אין/ביקורת ביטחון — שדה קטן, ~15–20 דק'"],["08:35","המתנה בשער — קפה/מנוחה, לא לחץ"],["09:55","<b>המראה WN2319 ✓ קוד BW5U5N</b>, מושבים 18D/18E"],["11:10","נחיתה LAS"],["11:30","יציאה מהמסוף, שאטל למרכז השכרת הרכב"],["12:00","איסוף רכב שני (דלפק + טופס, ~25–30 דק')"],["12:30","יציאה לספרינגדייל"],["13:30","<b>עצירת צהריים</b> באזור מסקיט/סנט ג'ורג' (~45 דק')"],["15:30","הגעה לספרינגדייל, צ'ק-אין"],["17:15","טיול רגלי קצר בעיירה, נוף ציון בשקיעה"]],
+ note:"✓ טיסה מאושרת! שעות אמיתיות שונות מהמתוכנן: 09:55→11:10 (לא 10:05→11:25) — כל הבוקר הוזז ~10 דק׳ מוקדם יותר בהתאם.",type:"star"},
+{n:"6",d:"31.10",route:"ציון (סיור בוקר) ← ברייס — הגעת ערב, תצפיות בלבד",hotel:"Best Western PLUS Bryce Canyon · 1 לילה",dist:"~85 מייל",time:"~1.5 שע'",
+ tl:[["08:00","שאטל עיירת ספרינגדייל (אופציה ב׳ שנבחרה — לא ממהרים)"],["08:30","<b>Pa'rus Trail</b> — שביל שטוח לחלוטין לאורך הנחל (~1.5–2 שע' הלוך-חזור) — סיור הליכה של היום"],["10:30","<b>Canyon Junction</b> — חיפוש איילי פרד"],["11:00","חזרה לספרינגדייל"],["11:30","ארוחת צהריים בעיירה — בלי לחץ"],["12:30","יציאה לברייס (~1.5 שע')"],["14:00","צ'ק-אין, מנוחה קצרה (עד שעה)"],["16:30","נסיעה איטית ל-<b>Sunset Point</b> — עצירת תצפית בלבד, ללא הליכה"],["17:00","תצפית משער החניה — Hoodoos לפני שקיעה"],["17:55","שקיעה"]],
+ note:"✓ עודכן לפי העיקרון שלך: יום אחד = סיור הליכה אחד. 31.10 = ציון (בוקר). ברייס הערב = תצפיות מהרכב/חניון בלבד, לא טיול רגלי. הסיור המלא בברייס — מחר בבוקר. ⚠️ קר! שלג אפשרי. ⚠️ שינוי שעות הלילה.",type:"warn"},
+{n:"7",d:"01.11",route:"ברייס — סיור הבוקר המלא ← פייג' / Lake Powell",hotel:"Wingate by Wyndham Page Lake Powell · 1 לילה",dist:"171 מייל",time:"3 שע' 19 דק'",
+ tl:[["08:00","(שעון חדש) ארוחת בוקר"],["08:45","<b>Inspiration Point</b> ו-<b>Bryce Point</b> — תצפיות מהרכב (~10 דק' כל אחת)"],["09:15","<b>קטע Rim Trail הסלול</b> בין Sunset ל-Sunrise Point — שטוח לגמרי, סיור ההליכה של היום (~1 שע')"],["10:15","חיפוש איילים וציפורי דורסים מהתצפיות"],["10:45","זמן קצר בכפר/מרכז המבקרים"],["11:15","יציאה לפייג' — 171 מייל, 3 שע' 19 דק'"],["14:35","הגעה, צ'ק-אין קצר"],["15:15","מנוחה על שפת Lake Powell / Glen Canyon Dam Overlook (5 דק' הליכה, תצפית בלבד)"],["16:50","שקיעה (שעון חדש — מוקדמת!)"]],
+ note:"✓ זהו יום הסיור המלא של ברייס — תצפיות + הליכת Rim Trail, בדיוק כמו שביקשת. אתמול בערב היו רק תצפיות. פייג' הערב — תצפית בלבד, לא טיול (עקבי עם העיקרון שלך).",type:"star"},
+{n:"8",d:"02.11",route:"פייג' ← (Horseshoe Bend אופציונלי) ← גרנד קניון",hotel:"Bright Angel Lodge, Grand Canyon · 1 לילה",dist:"~140 מייל",time:"~2.5–2:50 שע'",
+ tl:[["08:00","<b>אופציונלי:</b> Horseshoe Bend — תאורה מלאה בבוקר (לא שקיעה!). שביל קל 0.75 מייל כל כיוון (~30–45 דק' סה\"כ)"],["09:30","יציאה לגרנד קניון דרך הכניסה המזרחית (Desert View)"],["12:15","<b>Desert View Watchtower</b> — מגדל תצפית היסטורי (~30 דק')"],["13:00","<b>Mather Point</b> — התצפית הראשית (~30 דק')"],["13:45","צ'ק-אין ב-Bright Angel Lodge"],["15:00","<b>Rim Trail</b> — הליכה שטוחה לפי בחירה, אין מרחק מחייב"],["16:30","תצפית שקיעה + סריקת שמיים לקונדור קליפורני"],["17:10","שקיעה"]],
+ note:"⚠️ Lipan Point סגור לשיפוצים עד 23.12.26 — הוסר מהתצפיות. Horseshoe Bend לא חובה — ראו דיון קודם.",type:"warn"},
+{n:"9",d:"03.11",route:"גרנד קניון ← Hoover Dam ← לאס וגאס",hotel:"Paris Las Vegas · לילה 1/3",dist:"~280 מייל",time:"~4–4.5 שע'",
+ tl:[["09:30","יציאה מגרנד קניון — <b>גמיש, אין חובה לשעה מדויקת</b>"],["13:30","<b>Hoover Dam</b> — הליכה על הגשר (חינם, פתוח 05:00–21:00), תצפית (~40–60 דק')"],["15:30","הגעה ל-Paris Las Vegas, צ'ק-אין"],["16:30","מנוחה קלה — יום נסיעה ארוך, בלי תוכנית נוספת"],["19:30","ארוחת ערב, טיול קליל בסטריפ"]],
+ note:"✓ תיקון קודם: הגשר פתוח עד 21:00, אין סגירה ב-15:00. ✓ עדכון נוסף: North Premium Outlets הוסר מהיום הזה — עבר ל-5.11 (ראו שם).",type:"star"},
+{n:"10",d:"04.11",route:"לאס וגאס — בתי מלון + Sphere",hotel:"Paris Las Vegas · לילה 2/3",dist:"מקומי",time:"—",
+ tl:[["10:00","בוקר חופשי / בריכת מלון"],["14:00","סיור רגלי: <b>Bellagio</b> — מזרקות, גן פרחים פנימי"],["15:30","<b>The Venetian</b> — תעלות. הכל ממוזג, ללא הליכה חיצונית"],["20:00","מופע <b>Sphere</b> (~50 דק')"]],
+ note:"יום עירוני לגמרי, אפס מאמץ פיזי.",type:""},
+{n:"11",d:"05.11",route:"לאס וגאס — יום בעיר, ללא יציאה",hotel:"Paris Las Vegas · לילה 3/3",dist:"4 מייל (Uber בלבד)",time:"~5 דק' כל כיוון",
+ tl:[["10:00","בוקר רגוע — אין תוכנית לחוץ"],["11:00","<b>Uber/Lyft ל-North Premium Outlets</b> (~5 דק', $16–20 כל כיוון — לא נדרש רכב שכור)"],["11:15","קניות — 180+ חנויות, Coach, Michael Kors, Nike ועוד"],["13:00","ארוחת צהריים ב-Cheesecake Factory או פודקורט (אפשרויות צמחוניות/טבעוניות)"],["14:30","חזרה לסטריפ ב-Uber"],["15:00","אחה\"צ חופשי — בריכה / מנוחה"],["19:30","ארוחת ערב, ערב חופשי — לארוז לקראת הטיסה מחר"]],
+ note:"✓ Red Rock Canyon הוסר. ✓ Outlets עברו לכאן — 4 מייל מהסטריפ, לא דורש רכב (הוזל/Uber מספיק), ולא נחשב 'יציאה מהעיר'.",type:"star"},
+{n:"12",d:"06.11",route:"לאס וגאס ✈️ ניו יורק (AA2138)",hotel:"Innside by Meliá NY NoMad · לילה 1/4",dist:"—",time:"~5 שע' טיסה",
+ tl:[["08:30","קימה, ארוזה סופית"],["09:00","צ'ק-אאוט מ-Paris Las Vegas"],["09:15","Uber/Taxi ל-LAS <b>טרמינל 3</b> (לא טרמינל 1! אמריקן איירליינס יושבת בT3, שונה מסאות'ווסט)"],["09:40","הגעה לטרמינל — כשעתיים לפני המראה, כמומלץ רשמית ע\"י LAS"],["09:50","צ'ק-אין/הפקדת כבודה"],["10:05","ביקורת ביטחון (Terminal 3, בד\"כ 15–30 דק')"],["10:45","זמן בשער — קפה/מנוחה"],["11:00","עליה למטוס"],["11:41","המראה AA2138 מ-LAS"],["19:40","נחיתה JFK"],["21:00","הגעה למלון ב-NoMad (קצה צפוני של צ'לסי)"],["21:30","ארוחת ערב ב-<b>PLANTA Queen NoMad</b> — 15 W 27th St, אותו בלוק כמו המלון!"]],
+ note:"✓ תוקן: LAS ממליץ רשמית שעתיים לפני טיסה מקומית. אמריקן = טרמינל 3, לא 1 — לבדוק כרטיס טיסה מראש. טיסה מאושרת IWCVVZ, מושבים 21D/21E. הפרש שעות מישראל: 7 שע'.",type:"star"},
+{n:"13",d:"07.11",route:"ניו יורק — סנטרל פארק",hotel:"Innside by Meliá NY NoMad · לילה 2/4",dist:"מקומי",time:"—",
+ tl:[["09:00","<b>The Ramble</b> — שביל טבעי, שטוח יחסית, שיא נדידת סתיו — עשרות מיני יערורים אפשריים"],["10:30","<b>Bow Bridge</b> — גשר אייקוני (5 דק' מ-Ramble)"],["11:00","<b>Belvedere Castle</b> — תצפית גבוהה לדורסים בנדידה"],["12:30","<b>Sheep Meadow</b> — ישיבה על הדשא, ארוחת צהריים באזור"],["19:00","ארוחת ערב במנהטן"]],
+ note:"⭐ עונת ההגירה בשיאה — מהמקומות הטובים בעולם לצפרות עירונית.",type:"star"},
+{n:"14",d:"08.11",route:"ניו יורק — High Line + Chelsea 🎂 יומולדת אורלי",hotel:"Innside by Meliá NY NoMad · לילה 3/4",dist:"מקומי",time:"—",
+ tl:[["09:30","<b>High Line</b> — טיילת מוגבהת שטוחה לחלוטין (2.5 ק\"מ, ניתן לעצור בכל שלב)"],["11:30","<b>Chelsea Market</b> — שוק מקורה, אוכל וקניות"],["14:00","<b>Edge Observatory</b> — תצפית זכוכית, מעלית בלבד"],["19:00","🎂 <b>ארוחת יומולדת לאורלי ב-Hangawi</b> — 12 E 32nd St, Michelin Bib Gourmand, ~20 דק' הליכה"]],
+ note:"🎂 יומולדת אורלי! Hangawi — להזמין מקום מראש. הכל שטוח ונגיש, קרוב למלון.",type:"star"},
+{n:"15",d:"09.11",route:"ניו יורק — MET + Reservoir",hotel:"Innside by Meliá NY NoMad · לילה 4/4",dist:"מקומי",time:"—",
+ tl:[["10:00","<b>The MET</b> — מוזיאון ענק, ניתן לשבת/לנוח בפנים שעות"],["13:00","<b>Macy's Herald Square</b> — קניות"],["15:00","<b>Central Park Reservoir</b> — ברווזי מים בסתיו, שביל שטוח סביב האגם (~2.5 ק\"מ)"],["19:00","ערב חופשי"]],
+ note:"MET — כניסה ב-suggested donation.",type:""},
+{n:"16",d:"10.11",route:"ניו יורק ✈️ ישראל (EWR, LH7602)",hotel:"— טיסה חזרה —",dist:"—",time:"EWR ~45 דק'",
+ tl:[["09:00","בוקר חופשי"],["10:00","<b>Bryant Park</b> — גן קטן, ציפורים עירוניות"],["10:45","<b>Grand Central Terminal</b> — 10 דק' הליכה, אולם מרשים"],["13:00","חזרה למלון, איסוף כבודה"],["15:30","יציאה ל-EWR — <b>לא יאוחר יותר!</b>"],["19:30","המראה LH7602"]],
+ note:"⚠️ Terminal C, Lufthansa. צ'ק-אין אונליין מ-18:30 ב-9.11.",type:"warn"},
 ];
 document.getElementById('days').innerHTML = days.map(d=>`
   <div class="day-row"><div class="day-badge"><div class="dn">${d.n}</div><div class="dd">${d.d}</div></div>
@@ -370,92 +671,75 @@ document.getElementById('days').innerHTML = days.map(d=>`
   <div class="day-foot"><span>📏 <b>${d.dist}</b></span><span>⏱️ <b>${d.time}</b></span></div>
   ${d.note?`<div class="dnote ${d.type||''}">${d.note}</div>`:''}</div></div>`).join('');
 const budget = [
-  ["✈️ טיסות","TLV↔SFO/EWR לופטהנזה","paid","שולם",1843],
-  ["","SBA→LAS Southwest WN2319 · BW5U5N","paid","שולם",456.80],
+  ["✈️ טיסות","TLV↔SFO/EWR לופטהנזה 7FBTLH","paid","שולם",1843],
+  ["","SBA→LAS Southwest WN2319 · BW5U5N · מושבים 18D/18E","paid","שולם",456.80],
   ["","LAS→JFK American AA2138 · IWCVVZ","paid","שולם",437],
-  ["","↳ כבודה Southwest ($50+$50)","est","טרם שולם",100],
-  ["","↳ כבודה American ($50+$50)","est","טרם שולם",100],
-  ["🏨 מלונות","Riu Plaza SF","pending","לשלם במלון",485],
+  ["","↳ כבודה — Southwest WN2319 ($50 לאורלי + $50 לגבי)","est","טרם שולם",100],
+  ["","↳ כבודה — American AA2138 ($50 לאורלי + $50 לגבי)","est","טרם שולם",100],
+  ["🏨 מלונות","Hotel Riu Plaza SF · 2 לילות","pending","לשלם במלון",485],
   ["","Comfort Inn Carmel","pending","לשלם",229],
   ["","West Beach Inn SB","pending","לשלם",280],
   ["","Hampton Inn Zion","pending","לשלם",281],
   ["","Best Western Bryce","pending","לשלם",132],
   ["","Wingate Page","pending","לשלם",94],
   ["","Bright Angel Lodge","pending","לשלם",327],
-  ["","Paris Las Vegas","pending","עד 20.10.26",661],
-  ["","Innside NY NoMad","pending","עד 17.10.26",966],
-  ["","↳ Innside — מיסי דלפק","pending","בצ'ק-אין",197.36],
-  ["🚗 רכב+דלק","רכב ראשון Alamo","paid","שולם",205],
-  ["","רכב שני Alamo LAS","est","משוער",439],
-  ["","דלק שני הרכבים","est","משוער",155],
-  ["","17-Mile Drive+חניות","est","משוער",30],
+  ["","Paris Las Vegas · Bordeaux fountain view King (ביטול חינם עד 25.10.26)","pending","לשלם עד 20.10.26",661],
+  ["","Innside NY NoMad · The Innside Room Queen (ביטול חינם עד 22.10.26)","pending","לשלם עד 17.10.26",966],
+  ["","↳ Innside NY NoMad · מיסים בדלפק (לא באתר)","pending","לשלם בצ'ק-אין",197.36],
+  ["🚗 רכב+דלק","רכב ראשון Alamo SF→SBA","paid","שולם",205],
+  ["","רכב שני Alamo LAS · 5 ימים","est","משוער",439],
+  ["","דלק — שני הרכבים ~1,050 מייל","est","משוער",155],
+  ["","17-Mile Drive + חניות","est","משוער",30],
   ["","Uber NYC→EWR","est","משוער",80],
-  ["🏔️ פארקים","America the Beautiful Pass","pending","טרם נרכש",250],
-  ["🎭 בידור","Sphere · 2 כרטיסים","pending","טרם הוזמן",250],
-  ["","Eiffel Tower+Edge","est","משוער",120],
-  ["🍽️ אוכל","SF+כרמל+SB","est","משוער",270],
-  ["","פארקים ציון→גרנד","est","משוער",200],
-  ["","לאס וגאס","est","משוער",300],
-  ["","ניו יורק","est","משוער",400],
-  ["","טיפים","est","משוער",200],
-  ["🛍️ קניות+שונות","קניות גבי","est","תקציב",500],
-  ["","קניות אורלי","est","תקציב",500],
-  ["","ביטוח נסיעה","paid","שולם",125.80],
-  ["","תרופות/שוטף","est","משוער",50],
+  ["🏔️ פארקים","America the Beautiful Non-Resident Pass","pending","טרם נרכש",250],
+  ["🎭 בידור","Sphere לאס וגאס · 2 כרטיסים","pending","טרם הוזמן",250],
+  ["","Eiffel Tower + Edge (אופציונלי)","est","משוער",120],
+  ["🍽️ אוכל","SF + כרמל + SB (בוקר כלול)","est","משוער",270],
+  ["","פארקים ציון→גרנד (בוקר כלול)","est","משוער",200],
+  ["","לאס וגאס (ללא בוקר)","est","משוער",300],
+  ["","ניו יורק (ללא בוקר)","est","משוער",400],
+  ["","טיפים 18–20%","est","משוער",200],
+  ["🛍️ קניות+שונות","קניות — גבי","est","תקציב",500],
+  ["","קניות — אורלי","est","תקציב",500],
+  ["","ביטוח נסיעה 2 נוסעים · Phoenix Travel Smart 26/031/667/5720564","paid","שולם",125.80],
+  ["","תרופות / שוטף","est","משוער",50],
 ];
 document.getElementById('budget-rows').innerHTML = budget.map(b=>{
   const tc = b[2]==='paid'?'t-paid':(b[2]==='pending'?'t-pending':'t-est');
   return `<tr><td>${b[0]}</td><td class="muted">${b[1]}</td><td><span class="tag ${tc}">${b[3]}</span></td><td class="num">$${b[4].toLocaleString()}</td></tr>`;
-}).join('') + `<tr style="border-top:2px solid var(--accent1)"><td colspan="3" style="font-weight:700">סה"כ (זוגי)</td><td class="num" style="font-weight:900;color:var(--accent1)">$11,024</td></tr>`;
+}).join('') + `<tr style="border-top:2px solid var(--accent1)"><td colspan="3" style="font-weight:700">סה"כ צפוי לטיול (זוגי)</td><td class="num" style="font-weight:900;color:var(--accent1);font-size:15px">$11,024</td></tr>`;
 const attr = [
-  ["סן פרנסיסקו","Pier 39","אריות ים","אפס","✓","route","ליד המלון","Pier 39 San Francisco"],
-  ["סן פרנסיסקו","Crissy Field","גשר+ציפורים","קלה","✓","route","","Crissy Field San Francisco"],
-  ["כביש 1","17-Mile Drive · Bird Rock","פילי ים","אפס","✓","route","$12","Bird Rock 17-Mile Drive Pebble Beach"],
-  ["כביש 1","Moss Landing","לוטרות ים","אפס","✓","route","","Moss Landing State Beach CA"],
-  ["כביש 1","Bixby Creek Bridge","נוף חוף","2 דק'","✓","route","","Bixby Creek Bridge Big Sur"],
-  ["כביש 1","Piedras Blancas","פילי ים","אפס","✓","route","⭐","Piedras Blancas Elephant Seal Vista Point"],
-  ["ציון","Pa'rus Trail","איילים","שטוחה","✓","route","","Pa'rus Trail Zion National Park"],
-  ["ברייס","Bryce Point","Hoodoos","5 דק'","✓","route","","Bryce Point Bryce Canyon National Park"],
-  ["פייג'","Horseshoe Bend","נוף","נגישה","✓","route","","Horseshoe Bend Overlook Page AZ"],
-  ["גרנד קניון","Desert View+Mather","תצפיות","5 דק'","✓","route","","Desert View Watchtower Grand Canyon"],
-  ["לאס וגאס","Hoover Dam","סכר","אפס","✓","route","","Hoover Dam Bypass Bridge Overlook"],
-  ["לאס וגאס","Sphere","מופע","מושב","✓","route","","Sphere Las Vegas"],
-  ["לאס וגאס","North Premium Outlets","קניות","Uber","✓","route","","Las Vegas North Premium Outlets"],
-  ["ניו יורק","Central Park · Ramble","ציפורים","קלה","✓","route","⭐","The Ramble Central Park New York"],
-  ["ניו יורק","High Line","נוף","שטוחה","✓","route","","High Line New York entrance"],
+  ["סן פרנסיסקו","Pier 39","אריות ים על הרציף","אפס","✓","route","ליד המלון","Pier 39 San Francisco"],
+  ["סן פרנסיסקו","Crissy Field","תצפית גשר + ציפורים","קלה","✓","route","ישיבה אפשרית","Crissy Field San Francisco"],
+  ["סן פרנסיסקו","Stow Lake","ברווזים, ציפורי מים","קלה","✓","route","נסיעה בפארק","Stow Lake Golden Gate Park"],
+  ["כביש 1","17-Mile Drive · Bird Rock","פילי ים, קורמורנים","אפס","✓","route","כניסה $12","Bird Rock 17-Mile Drive Pebble Beach"],
+  ["כביש 1","Moss Landing","לוטרות ים","אפס","✓","route","מהגשר","Moss Landing State Beach CA"],
+  ["כביש 1","Bixby Creek Bridge","גשר, נוף חוף","2 דק'","✓","route","חניון ליד","Bixby Creek Bridge Big Sur"],
+  ["כביש 1","Piedras Blancas","מאות פילי ים","אפס","✓","route","⭐ שיא יום 4","Piedras Blancas Elephant Seal Vista Point"],
+  ["כביש 1","Morro Bay","לוטרות, ציפורים","קלה","✗","no","הושמט",""],
+  ["נבאדה","Valley of Fire","כבשי הרים, סלעים","אפס","◐","opt","רק אם זמן","Valley of Fire State Park NV"],
+  ["ציון","Pa'rus Trail","איילים, ציפורי נחל","שטוחה","✓","route","שטוח בציון","Pa'rus Trail Zion National Park"],
+  ["ציון","Canyon Junction","איילים","אפס","✓","route","בוקר מוקדם","Canyon Junction Zion National Park"],
+  ["ברייס","Sunset / Bryce Point","Hoodoos","5 דק'","✓","route","חניה צמוד","Bryce Point Bryce Canyon National Park"],
+  ["פייג'","Horseshoe Bend","פיתול הקולורדו","נגישה","✓","route","תצפית חדשה","Horseshoe Bend Overlook Page AZ"],
+  ["גרנד קניון","Desert View + Mather","תצפיות ראשיות","5 דק'","✓","route","כניסה מזרחית","Desert View Watchtower Grand Canyon"],
+  ["גרנד קניון","Rim Trail / Yavapai","קונדור (עונתי)","שטוחה","✓","route","⭐ לסרוק שמיים","Yavapai Point Grand Canyon"],
+  ["לאס וגאס","Hoover Dam","סכר מהגשר","אפס","✓","route","גשר בלבד","Hoover Dam Bypass Bridge Overlook"],
+  ["לאס וגאס","Bellagio + Venetian","מזרקות, תעלות","בפנים","✓","route","ממוזג","Bellagio Fountains Las Vegas"],
+  ["לאס וגאס","Sphere","מופע ויזואלי","מושב","✓","route","להזמין!","Sphere Las Vegas"],
+  ["לאס וגאס","Red Rock Canyon","כבשי הרים, ציפורי טרף","אפס","✗","no","הוסר מהמסלול — לא יוצאים מהעיר ב-5.11",""],
+  ["לאס וגאס","North Premium Outlets","קניות · 180+ חנויות","אפס (Uber)","✓","route","עבר ל-5.11 · 4 מייל מהסטריפ בלבד","Las Vegas North Premium Outlets"],
+  ["ניו יורק","Central Park · The Ramble","עשרות מיני ציפורים","קלה","✓","route","⭐ עונת הגירה","The Ramble Central Park New York"],
+  ["ניו יורק","Belvedere Castle","דורסים בנדידה","קלה","✓","route","תצפית גבוהה","Belvedere Castle Central Park"],
+  ["ניו יורק","High Line","נוף עיר, טיילת","שטוחה","✓","route","שטוח לגמרי","High Line New York entrance"],
+  ["ניו יורק","The MET + Reservoir","מוזיאון · ברווזי מים","בפנים/קלה","✓","route","donation","Metropolitan Museum of Art New York"],
+  ["ניו יורק","Bryant Park + Grand Central","ציפורים, ארכיטקטורה","קלה","✓","route","בוקר אחרון","Bryant Park New York"],
 ];
 document.getElementById('attr-rows').innerHTML = attr.map(a=>{
-  const tc = a[5]==='route'?'t-route':'t-no';
-  const mapLink = a[7] ? `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a[7])}" target="_blank" style="text-decoration:none;font-size:11px;color:var(--accent1)">📍 מפות ↗</a>` : '—';
-  return `<tr><td>${a[0]}</td><td>${a[1]}</td><td class="muted">${a[2]}</td><td class="muted" style="text-align:center">${a[3]}</td><td style="text-align:center"><span class="tag ${tc}">${a[4]}</span></td><td class="muted">${a[6]}</td><td style="text-align:center">${mapLink}</td></tr>`;
-}).join('');
-
-const segments = [
-  {day:"3",date:"28.10",from:"סן פרנסיסקו",to:"כרמל",dist:"~125 מייל",time:"~6.5 שע'",flat:37.8074,flng:-122.4135,tlat:36.5554,tlng:-121.9194,color:"#1b575a",
-   stops:[["Moss Landing — לוטרות ים",36.8046,-121.786],["17-Mile Drive",36.6177,-121.9166],["Bird Rock",36.5721,-121.9647]]},
-  {day:"4",date:"29.10",from:"כרמל",to:"סנטה ברברה",dist:"~230 מייל",time:"~6 שע'",flat:36.5554,flng:-121.9194,tlat:34.4091,tlng:-119.6934,color:"#1b575a",
-   stops:[["Bixby Creek Bridge",36.3714,-121.9018],["Piedras Blancas",35.6641,-121.2864]]},
-  {day:"5",date:"30.10",from:"שדה LAS",to:"ספרינגדייל",dist:"~158 מייל",time:"~2.5 שע'",flat:36.084,flng:-115.1537,tlat:37.185,tlng:-113.0013,color:"#2f7d4f",stops:[]},
-  {day:"6",date:"31.10",from:"ספרינגדייל",to:"ברייס",dist:"~85 מייל",time:"~1.5 שע'",flat:37.185,flng:-113.0013,tlat:37.6748,tlng:-112.1524,color:"#2f7d4f",stops:[]},
-  {day:"7",date:"01.11",from:"ברייס",to:"פייג'",dist:"171 מייל",time:"3:19 שע'",flat:37.6748,flng:-112.1524,tlat:36.9226,tlng:-111.4732,color:"#2f7d4f",
-   stops:[["Kanab UT",37.0475,-112.5263]]},
-  {day:"8",date:"02.11",from:"פייג'",to:"גרנד קניון",dist:"~140 מייל",time:"~2.75 שע'",flat:36.9226,flng:-111.4732,tlat:36.0569,tlng:-112.1406,color:"#2f7d4f",
-   stops:[["Horseshoe Bend",36.8794,-111.5104],["Desert View",36.0453,-111.829]]},
-  {day:"9",date:"03.11",from:"גרנד קניון",to:"לאס וגאס",dist:"~280 מייל",time:"~4.5 שע'",flat:36.0569,flng:-112.1406,tlat:36.1125,tlng:-115.1707,color:"#2f7d4f",
-   stops:[["Hoover Dam",36.0161,-114.7377]]},
-];
-document.getElementById('mapCards').innerHTML = segments.map(s=>{
-  const wp = s.stops.length ? '&waypoints='+s.stops.map(x=>x[1]+','+x[2]).join('|') : '';
-  const link = `https://www.google.com/maps/dir/?api=1&origin=${s.flat},${s.flng}&destination=${s.tlat},${s.tlng}${wp}&travelmode=driving`;
-  const chips = s.stops.map(x=>`<a href="https://www.google.com/maps/search/?api=1&query=${x[1]},${x[2]}" target="_blank" style="text-decoration:none;font-size:11px;color:${s.color};background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px;margin-left:6px">📍 ${x[0]} ↗</a>`).join('');
-  return `<div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
-      <div style="font-weight:700">יום ${s.day} · ${s.date}: ${s.from} → ${s.to}</div>
-      <a href="${link}" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:${s.color};padding:5px 12px;border-radius:20px">🧭 ניווט מלא ↗</a>
-    </div>
-    <div style="font-size:12px;color:var(--text2);margin-top:6px">${s.dist} · ${s.time}</div>
-    <div style="margin-top:8px">${chips}</div>
-  </div>`;
+  const tc = a[5]==='route'?'t-route':(a[5]==='opt'?'t-opt':'t-no');
+  const star = a[6].includes('⭐');
+  const mapLink = a[7] ? `<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a[7])}" target="_blank" style="text-decoration:none;font-size:11px;color:var(--accent1)">📍 מפות ↗</a>` : '<span class="muted">—</span>';
+  return `<tr><td style="font-weight:500">${a[0]}</td><td${star?' style="color:var(--accent1)"':''}>${a[1]}</td><td class="muted">${a[2]}</td><td class="muted" style="text-align:center">${a[3]}</td><td style="text-align:center"><span class="tag ${tc}">${a[4]}</span></td><td class="muted">${a[6]}</td><td style="text-align:center">${mapLink}</td></tr>`;
 }).join('');
 </script>
 </body>
