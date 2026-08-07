@@ -131,7 +131,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   <div class="meta"><span class="chip">קליפורניה</span><span class="chip">יוטה</span><span class="chip">אריזונה</span><span class="chip">נבאדה</span><span class="chip">ניו יורק</span><span class="chip">גבי: צמחוני</span><span class="chip">אורלי: טבעונית</span><span class="chip" style="background:rgba(192,138,62,.15);border-color:var(--amber);color:var(--amber);font-weight:600">🕐 עודכן: 07.08.2026 · 11:43</span></div>
 </div>
 <div class="grid grid-4">
-  <div class="kpi card" style="--c:var(--accent1)"><div class="kpi-num">$11,024</div><div class="kpi-label">סה"כ תקציב צפוי (זוגי)</div><div class="kpi-delta">שולם: $3,067.60 · יתרה: ~$7,956</div></div>
+  <div class="kpi card" style="--c:var(--accent1)"><div class="kpi-num">$10,664</div><div class="kpi-label">סה"כ תקציב צפוי (זוגי)</div><div class="kpi-delta">שולם: $3,506.60 · יתרה: ~$7,157</div></div>
   <div class="kpi card" style="--c:var(--accent2)"><div class="kpi-num">16</div><div class="kpi-label">ימים · 9 לינות שונות</div><div class="kpi-delta">2 טיסות פנים · 2 רכבים</div></div>
   <div class="kpi card" style="--c:var(--accent4)"><div class="kpi-num">~1,850</div><div class="kpi-label">מייל נסיעה ברכב</div><div class="kpi-delta">כביש 1 + פארקים דרום-מערב</div></div>
   <div class="kpi card" style="--c:var(--accent3)"><div class="kpi-num">1</div><div class="kpi-label">פעולות דחופות פתוחות</div><div class="kpi-delta">Sphere · 4.11</div></div>
@@ -252,11 +252,11 @@ td.muted { color:var(--text2); font-size:11.5px; }
     </div>
     <div class="panel">
       <h3>💳 סטטוס תשלום</h3>
-      <div class="bar-item"><div class="bar-label">שולם</div><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,var(--accent4),var(--mint))"></div></div><div class="bar-value">$3,067.60</div></div>
-      <div class="bar-item"><div class="bar-label">יתרה לתשלום</div><div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,var(--accent3),var(--pink))"></div></div><div class="bar-value">$7,956</div></div>
+      <div class="bar-item"><div class="bar-label">שולם</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:linear-gradient(90deg,var(--accent4),var(--mint))"></div></div><div class="bar-value">$3,506.60</div></div>
+      <div class="bar-item"><div class="bar-label">יתרה לתשלום</div><div class="bar-track"><div class="bar-fill" style="width:67%;background:linear-gradient(90deg,var(--accent3),var(--pink))"></div></div><div class="bar-value">$7,157</div></div>
       <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px">שולם עד כה:</div>
-        <div style="font-size:12.5px;line-height:1.9">✈️ לופטהנזה — $1,843<br>✈️ American AA2356 (LAS→JFK) — $437 ⚠️ שונה<br>✈️ Southwest WN2319 (SBA→LAS) — $456.80<br>🚗 רכב ראשון Alamo — $205<br>🛡️ ביטוח נסיעה Phoenix Travel Smart — $125.80</div>
+        <div style="font-size:12.5px;line-height:1.9">✈️ לופטהנזה — $1,843<br>✈️ American AA2356 (LAS→JFK) — $437 ⚠️ שונה<br>✈️ Southwest WN2319 (SBA→LAS) — $456.80<br>🚗 רכב ראשון Alamo — $205<br>🚗 רכב שני Alamo — $439<br>🛡️ ביטוח נסיעה Phoenix Travel Smart — $125.80</div>
       </div>
     </div>
   </div>
@@ -579,7 +579,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   </div>
 </div>
 </div></div>
-<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 07.08.2026 · 09:02</span></div>
+<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 07.08.2026 · 09:12</span></div>
 </div>
 <script>
 function showTab(e,name){
@@ -681,7 +681,7 @@ const budget = [
 document.getElementById('budget-rows').innerHTML = budget.map(b=>{
   const tc = b[2]==='paid'?'t-paid':(b[2]==='pending'?'t-pending':'t-est');
   return `<tr><td>${b[0]}</td><td class="muted">${b[1]}</td><td><span class="tag ${tc}">${b[3]}</span></td><td class="num">$${b[4].toLocaleString()}</td></tr>`;
-}).join('') + `<tr style="border-top:2px solid var(--accent1)"><td colspan="3" style="font-weight:700">סה"כ צפוי לטיול (זוגי)</td><td class="num" style="font-weight:900;color:var(--accent1);font-size:15px">$11,024</td></tr>`;
+}).join('') + `<tr style="border-top:2px solid var(--accent1)"><td colspan="3" style="font-weight:700">סה"כ צפוי לטיול (זוגי)</td><td class="num" style="font-weight:900;color:var(--accent1);font-size:15px">$10,664</td></tr>`;
 const attr = [
   // יום 1–2 · 26–27.10 · סן פרנסיסקו
   ["1–2 · 26–27.10","סן פרנסיסקו","Pier 39 — אריות ים","אפס","✓","route","ממש ליד המלון · מובטח","Pier 39 San Francisco"],
