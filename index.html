@@ -128,7 +128,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   <div class="eyebrow">דשבורד תכנון טיול</div>
   <h1>ארצות הברית 2026</h1>
   <div class="sub">גבי בן עזרא ואורלי · 26 באוקטובר – 10 בנובמבר · 16 ימים · דגש: ציפורים, חיות, נוף · ללא הליכות קשות</div>
-  <div class="meta"><span class="chip">קליפורניה</span><span class="chip">יוטה</span><span class="chip">אריזונה</span><span class="chip">נבאדה</span><span class="chip">ניו יורק</span><span class="chip">גבי: צמחוני</span><span class="chip">אורלי: טבעונית</span><span class="chip" style="background:rgba(192,138,62,.15);border-color:var(--amber);color:var(--amber);font-weight:600">🕐 עודכן: 07.08.2026 · 19:51</span></div>
+  <div class="meta"><span class="chip">קליפורניה</span><span class="chip">יוטה</span><span class="chip">אריזונה</span><span class="chip">נבאדה</span><span class="chip">ניו יורק</span><span class="chip">גבי: צמחוני</span><span class="chip">אורלי: טבעונית</span><span class="chip" style="background:rgba(192,138,62,.15);border-color:var(--amber);color:var(--amber);font-weight:600">🕐 עודכן: 07.08.2026 · 21:48</span></div>
 </div>
 <div class="grid grid-4">
   <div class="kpi card" style="--c:var(--accent1)"><div class="kpi-num">$10,664</div><div class="kpi-label">סה"כ תקציב צפוי (זוגי)</div><div class="kpi-delta">שולם: $3,506.60 · יתרה: ~$7,157</div></div>
@@ -139,6 +139,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
 <div class="layout">
 <nav class="sidebar">
   <button class="tab-btn active" onclick="showTab(event,'route')">🗺️ מסלול מפורט</button>
+  <button class="tab-btn" onclick="showTab(event,'weather')">🌤️ מזג אוויר</button>
   <button class="tab-btn" onclick="showTab(event,'animals')">🦅 חיות וציפורים</button>
   <button class="tab-btn" onclick="showTab(event,'budget')">💰 תקציב</button>
   <button class="tab-btn" onclick="showTab(event,'attractions')">📍 אטרקציות בדרך</button>
@@ -149,7 +150,10 @@ td.muted { color:var(--text2); font-size:11.5px; }
 </nav>
 <div class="main-content">
 <div id="tab-route" class="tab-content active">
-  <div class="panel" style="margin-bottom:16px">
+  <div class="panel"><h3>📋 יומן מסלול — 16 ימים</h3><div id="days"></div></div>
+</div>
+<div id="tab-weather" class="tab-content">
+  <div class="panel">
     <h3>🌤️ מזג אוויר ושקיעה לפי יעד</h3>
     <div class="weather-grid">
       <div class="wcell"><div class="wp">סן פרנסיסקו</div><div class="wt">20–22°</div><div class="wd">שמשי · 18:15</div></div>
@@ -163,7 +167,6 @@ td.muted { color:var(--text2); font-size:11.5px; }
     </div>
     <div class="dnote warn" style="margin-top:12px">🕐 הפרשי שעות מישראל: קליפורניה 9–10 שע' · יוטה/אריזונה 8–9 שע' · ניו יורק 7 שע'. ⚠️ שינוי שעות בארה"ב בלילה 31.10→1.11 — שעה אחורה, בזמן שאתם בברייס/פייג'.</div>
   </div>
-  <div class="panel"><h3>📋 יומן מסלול — 16 ימים</h3><div id="days"></div></div>
 </div>
 <div id="tab-animals" class="tab-content">
   <div class="panel">
@@ -252,8 +255,23 @@ td.muted { color:var(--text2); font-size:11.5px; }
     </div>
     <div class="panel">
       <h3>💳 סטטוס תשלום</h3>
-      <div class="bar-item"><div class="bar-label">שולם</div><div class="bar-track"><div class="bar-fill" style="width:33%;background:linear-gradient(90deg,var(--accent4),var(--mint))"></div></div><div class="bar-value">$3,506.60</div></div>
-      <div class="bar-item"><div class="bar-label">יתרה לתשלום</div><div class="bar-track"><div class="bar-fill" style="width:67%;background:linear-gradient(90deg,var(--accent3),var(--pink))"></div></div><div class="bar-value">$7,157</div></div>
+      <div class="donut-wrap" style="margin-bottom:14px">
+        <svg width="150" height="150" viewBox="0 0 160 160" style="transform:rotate(-90deg)">
+          <circle cx="80" cy="80" r="60" fill="none" stroke="var(--surface2)" stroke-width="24"/>
+          <circle cx="80" cy="80" r="60" fill="none" stroke="#2f7d4f" stroke-width="24" stroke-dasharray="124 253" stroke-dashoffset="0" stroke-linecap="round"/>
+        </svg>
+        <div style="text-align:center">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#2f7d4f">33%</div>
+          <div style="font-size:12px;color:var(--text2)">שולם</div>
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span class="legend-sq" style="background:#2f7d4f"></span>שולם<span class="legend-val">$3,506.60</span></div>
+          <div class="legend-item"><span class="legend-sq" style="background:var(--surface2);border:1px solid var(--border)"></span>יתרה לתשלום<span class="legend-val">$7,157</span></div>
+        </div>
+      </div>
+      <div style="text-align:center;padding:10px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:14px">
+        <span style="font-size:12px;color:var(--text2)">סה"כ תקציב הטיול: </span><span style="font-size:16px;font-weight:900;color:var(--accent1)">$10,664</span>
+      </div>
       <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px">שולם עד כה:</div>
         <div style="font-size:12.5px;line-height:1.9">✈️ לופטהנזה — $1,843<br>✈️ American AA2356 (LAS→JFK) — $437 ⚠️ שונה<br>✈️ Southwest WN2319 (SBA→LAS) — $456.80<br>🚗 רכב ראשון Alamo — $205<br>🚗 רכב שני Alamo — $439<br>🛡️ ביטוח נסיעה Phoenix Travel Smart — $125.80</div>
@@ -598,7 +616,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   </div>
 </div>
 </div></div>
-<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 07.08.2026 · 19:51</span></div>
+<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 07.08.2026 · 21:48</span></div>
 </div>
 <script>
 function showTab(e,name){
