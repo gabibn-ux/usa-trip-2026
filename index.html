@@ -129,7 +129,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   <div class="eyebrow">דשבורד תכנון טיול</div>
   <h1>ארצות הברית 2026</h1>
   <div class="sub">גבי בן עזרא ואורלי · 26 באוקטובר – 10 בנובמבר · 16 ימים · דגש: ציפורים, חיות, נוף · ללא הליכות קשות</div>
-  <div class="meta"><span class="chip">קליפורניה</span><span class="chip">יוטה</span><span class="chip">אריזונה</span><span class="chip">נבאדה</span><span class="chip">ניו יורק</span><span class="chip">גבי: צמחוני</span><span class="chip">אורלי: טבעונית</span><span class="chip" style="background:rgba(192,138,62,.15);border-color:var(--amber);color:var(--amber);font-weight:600">🕐 עודכן: 26.09.2026 · 19:33</span></div>
+  <div class="meta"><span class="chip">קליפורניה</span><span class="chip">יוטה</span><span class="chip">אריזונה</span><span class="chip">נבאדה</span><span class="chip">ניו יורק</span><span class="chip">גבי: צמחוני</span><span class="chip">אורלי: טבעונית</span><span class="chip" style="background:rgba(192,138,62,.15);border-color:var(--amber);color:var(--amber);font-weight:600">🕐 עודכן: 27.09.2026 · 17:35</span></div>
 </div>
 <div class="grid grid-4">
   <div class="kpi card" style="--c:var(--accent1)"><div class="kpi-num">$12,073</div><div class="kpi-label">סה"כ תקציב צפוי (זוגי)</div><div class="kpi-delta">שולם: $4,502.14 · יתרה: ~$7,571</div></div>
@@ -146,6 +146,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   <button class="tab-btn" onclick="showTab(event,'attractions')">📍 אטרקציות בדרך</button>
   <button class="tab-btn" onclick="showTab(event,'map')">🗺️ מפת מסלול</button>
   <button class="tab-btn" onclick="showTab(event,'logistics')">✈️ טיסות, רכבים ומלונות</button>
+  <button class="tab-btn" onclick="showTab(event,'transfers')">🚕 העברות</button>
   <button class="tab-btn" onclick="showTab(event,'food')">🥗 קולינריה</button>
   <button class="tab-btn" onclick="showTab(event,'insights')">💡 תובנות ופעולות</button>
 </nav>
@@ -407,7 +408,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
     <div style="background:var(--surface2);border-radius:14px;padding:16px;margin-bottom:12px;border:1px solid var(--border)">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;flex-wrap:wrap;gap:6px">
         <div style="font-size:13px;font-weight:700;color:var(--text)">יום 9 · 03.11 · יום שלישי</div>
-        <a href="https://www.google.com/maps/dir/?api=1&origin=36.0569,-112.1406&destination=36.1125,-115.1707&waypoints=35.1894,-114.053|36.0161,-114.7377|36.1614,-115.1579&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
+        <a href="https://www.google.com/maps/dir/?api=1&origin=36.0569,-112.1406&destination=36.1125,-115.1707&waypoints=35.1894,-114.053|36.0161,-114.7377|36.053921,-115.169159&travelmode=driving" target="_blank" style="text-decoration:none;font-size:11px;color:white;background:#2f7d4f;padding:5px 12px;border-radius:20px;font-weight:500">🧭 ניווט מלא (כל העצירות) ↗</a>
       </div>
       <svg viewBox="0 0 400 60" style="width:100%;height:auto;display:block;margin-top:8px;direction:ltr">
         <line x1="40" y1="45" x2="360" y2="45" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1,9" stroke-linecap="round"/>
@@ -415,9 +416,9 @@ td.muted { color:var(--text2); font-size:11.5px; }
         <text x="40" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="start" font-family="Heebo,Arial">גרנד קניון</text><text x="120" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Kingman</text><text x="200" y="34" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Hoover Dam</text><text x="280" y="24" font-size="9.5" font-weight="500" fill="var(--text2)" text-anchor="middle" font-family="Heebo,Arial">Outlets</text><text x="360" y="24" font-size="12" font-weight="700" fill="var(--text)" text-anchor="end" font-family="Heebo,Arial">Paris LV</text>
       </svg>
       <div style="font-size:12px;color:var(--text2);margin-top:4px;text-align:center">~290 מייל · ~4:30 שע׳ נטו · ⚠️ בנבדה −1 שעה</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=36.0161,-114.7377" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Hoover Dam — גשר ותצפית ↗</a><a href="https://www.google.com/maps/search/?api=1&query=Las+Vegas+North+Premium+Outlets" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Las Vegas North Premium Outlets ↗</a><a href="https://www.google.com/maps/search/?api=1&query=Crossroads+Kitchen+Resorts+World+Las+Vegas" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Crossroads Kitchen — ערב 20:30 ↗</a></div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=36.0161,-114.7377" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Hoover Dam — גשר ותצפית ↗</a><a href="https://www.google.com/maps/search/?api=1&query=36.053921,-115.169159" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Las Vegas South Premium Outlets ↗</a><a href="https://www.google.com/maps/search/?api=1&query=Crossroads+Kitchen+Resorts+World+Las+Vegas" target="_blank" style="text-decoration:none;font-size:11px;color:#2f7d4f;background:var(--surface);border:1px solid var(--border);padding:4px 10px;border-radius:14px">📍 Crossroads Kitchen — ערב 20:30 ↗</a></div>
       <div style="margin-top:10px;border-radius:12px;overflow:hidden;border:1px solid var(--border)">
-        <iframe src="https://www.google.com/maps?saddr=36.0569,-112.1406&daddr=35.1894,-114.053+to:36.0161,-114.7377+to:36.1614,-115.1579+to:36.1125,-115.1707&output=embed" width="100%" height="280" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps?saddr=36.0569,-112.1406&daddr=35.1894,-114.053+to:36.0161,-114.7377+to:36.053921,-115.169159+to:36.1125,-115.1707&output=embed" width="100%" height="280" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
@@ -441,6 +442,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
       <tr><td>שני — Alamo</td><td class="muted">LAS Rent-A-Car Center · 30.10 11:30–4.11 10:00 (5 ימים) · Chevrolet Equinox · שובר 75378307 · אישור 2127938722 · כולל LDW + SLP $300K + נהג נוסף</td><td><span class="tag t-paid">שולם ✓</span></td><td class="num">~439</td></tr>
     </tbody></table>
     <div class="dnote warn" style="margin-top:12px">⚠️ רכב שני: כל חברות ההשכרה בלאס וגאס פועלות מ-Rent-A-Car Center מרוכז ~3 מייל מהטרמינל — להקציב 30–45 דקות כולל שאטל.</div>
+    <div class="dnote star" style="margin-top:8px">✓ <b>Skip the Counter (Alamo):</b> זמין ב-LAS Rent-A-Car Center (רכב שני) — להפעיל מראש באתר Alamo (24 שעות לפני, שני שלבים: פרטי רישיון + תשלום/הסכם), ואז ישר לרכב בלי תור. <b>לא זמין</b> ב-SF Beach St (רכב ראשון, מיקום שכונתי) — שם רק Accelerated Check-in (שומר זמן חלקית, עדיין דורש עצירה בדלפק).</div>
     <div class="dnote warn" style="margin-top:8px">📋 <b>לאיסוף שני הרכבים — לוודא שיש:</b> רישיון נהיגה ישראלי פיזי בתוקף, רישיון נהיגה בינלאומי פיזי בתוקף, דרכון ישראלי פיזי בתוקף, כרטיס אשראי פיזי בינלאומי (Visa/MC/Amex — <b>לא Diners, לא כרטיס חיוב מיידי, לא Apple Pay</b>) בתוקף ל-4 חודשים לפחות מיום האיסוף.</div>
   </div>
   <div class="panel">
@@ -467,6 +469,94 @@ td.muted { color:var(--text2); font-size:11.5px; }
     <div class="dnote warn" style="margin-top:8px">⚠️ <b>ארוחת בוקר לא כלולה רק ב-2 מלונות:</b> Paris Las Vegas, Innside NoMad. תקצבו ארוחת בוקר בנפרד בימים 03–06.11 (לאס וגאס) ו-06–10.11 (ניו יורק).</div>
     <div class="dnote warn" style="margin-top:8px">⚠️ <b>Innside NoMad — מדיניות ביטול:</b> ביטול חינם עד <b>22.10.26 17:00</b>. אחרי מועד זה — דמי ביטול מלאים על כל החדר ($966). בנוסף, יש <b>$197.36 מיסים לתשלום בדלפק המלון בלבד</b> (לא באתר, לא באיסתא) — לא לשכוח כרטיס אשראי בצ'ק-אין.</div>
     <div class="dnote warn" style="margin-top:8px">⚠️ <b>Paris Las Vegas — מדיניות ביטול:</b> ביטול חינם עד <b>25.10.26 17:00</b> (שונה ממועד ה-Innside!). שתי ההזמנות מאיסתא — שני מועדי ביטול שונים, לא לבלבל.</div>
+  </div>
+</div>
+<div id="tab-transfers" class="tab-content">
+  <div class="panel" style="margin-bottom:16px">
+    <h3>🚕 מדריך העברות — שדה תעופה ↔ מלון/רכב</h3>
+    <div class="dnote star">העדפה: נוחות — Uber/Lyft דלת-לדלת בכל מקום שאפשר, במקום תחבורה ציבורית או שאטלים מרובי-החלפות.</div>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>1️⃣ סן פרנסיסקו — SFO ← נחיתה (יום 1, 26.10)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>טרמינל</td><td class="muted">Terminal G — הטרמינל הבינלאומי (לופטהנזה)</td></tr>
+      <tr><td>אחרי המכס</td><td class="muted">לעלות לקומת <b>Departures Level</b> (הקומה העליונה) — מעלית/אסקלטור מהמסועים</td></tr>
+      <tr><td>איסוף Uber/Lyft</td><td class="muted">לצאת מדלתות הטרמינל, שילוט Uber/Lyft — איזור <b>Zones 14-17</b>, ה-Center Island בקומת Departures</td></tr>
+      <tr><td>⚠️ שים לב</td><td class="muted">SFO העביר את איסוף Uber/Lyft לחניון <b>רק עבור הטרמינלים המקומיים</b>. הטרמינל הבינלאומי (G) נשאר בשילוט הרגיל ליד הדלתות — לא צריך ללכת לחניון</td></tr>
+      <tr><td class="num">עלות/זמן</td><td class="muted">~$60 · כבר בתקציב</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>2️⃣ סן פרנסיסקו — מלון ← איסוף רכב שכור (יום 3, 28.10)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>מהמלון</td><td class="muted">Hotel Riu Plaza Fisherman's Wharf, 2500 Mason St — הליכה קצרה ברגל (~5 דק', כמה רחובות בלבד)</td></tr>
+      <tr><td>יעד</td><td class="muted">Alamo Rent A Car, 350 Beach St (פינת Beach/Mason, ליד Fisherman's Wharf) · טל' (415) 474-9600</td></tr>
+      <tr><td>איסוף</td><td class="muted">קיוסק שירות עצמי (Self-Service Kiosk) זמין · ✓ <b>Accelerated Check-in</b> מומלץ להפעיל מראש</td></tr>
+      <tr><td>⚠️ Skip the Counter</td><td class="muted">לא זמין במיקום זה (מיקום שכונתי, לא שדה תעופה)</td></tr>
+      <tr><td>⏱️ באפר</td><td class="muted">מיקום קטן — לתכנן ~30-40 דק' מהמלון ועד יציאה עם הרכב</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>3️⃣ סנטה ברברה — SBA ← החזרת רכב + יציאה לטיסה (יום 5, 30.10)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>מבנה השדה</td><td class="muted">שדה קטן ופשוט — טרמינל יחיד, 4 שערים בלבד. אין צורך בשאטל.</td></tr>
+      <tr><td>החזרת רכב</td><td class="muted">מגרש Alamo צמוד לטרמינל, בחניון הדרומי — הליכה קצרה (~3-5 דק') לדלפק הבידוק</td></tr>
+      <tr><td>ביטחון (TSA)</td><td class="muted">נפתח ~04:00, נסגר ~15 דק' אחרי ההמראה האחרונה של היום — עם המראה ב-09:55 אין בעיית עומס, אך אין צורך להגיע מוקדם מדי (השדה קטן)</td></tr>
+      <tr><td>שער</td><td class="muted">ייקבע בצ'ק-אין (4 שערים בלבד) — מסלול קצר מהבידוק</td></tr>
+      <tr><td>⏱️ באפר</td><td class="muted">שדה קטן = תהליך מהיר; ~1:45 שעה לפני המראה (כפי שמתוכנן) מספיק בנוחות</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>4️⃣ לאס וגאס — LAS ← נחיתה, איסוף רכב שכור (יום 5, 30.10)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>טרמינל</td><td class="muted">Terminal 1 (Southwest)</td></tr>
+      <tr><td>מסועי מזוודות</td><td class="muted">קומה 1 — Baggage Claim</td></tr>
+      <tr><td>שילוט</td><td class="muted">Ground Transportation / Rental Car Shuttle → יציאה מדלתות <b>10-11</b></td></tr>
+      <tr><td>שאטל</td><td class="muted">שאטל <b>חינמי</b> ל-Rent-A-Car Center (~5 ק"מ דרומה), דלפק Alamo</td></tr>
+      <tr><td>✓ Skip the Counter</td><td class="muted">מיקום זה <b>כן משתתף</b> — ראו הערה למטה, מומלץ להפעיל מראש</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>5️⃣ לאס וגאס — החזרת רכב (יום 10, 4.11)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>נסיעה</td><td class="muted">Paris Las Vegas → Rent-A-Car Center (7135 Gilespie St) בנסיעה עצמית</td></tr>
+      <tr><td>אחרי ההחזרה</td><td class="muted">הליכה קצרה (~3-5 דק') ל-<b>South Strip Transit Terminal</b>, 6675 Gilespie St — אותו רחוב</td></tr>
+      <tr><td>חזרה למלון</td><td class="muted"><b>The Deuce</b> (RTC) ל-Paris Las Vegas — כל 10-15 דק', ~20-25 דק' נסיעה</td></tr>
+      <tr><td class="num">עלות</td><td class="muted">$6 לנוסע (כרטיס 2 שעות) — דרך אפליקציית Uber/rideRTC או מכונה בתחנה</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>6️⃣ לאס וגאס — Paris ← יציאה לשדה (יום 12, 6.11)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>טרמינל</td><td class="muted">Terminal 3 (American Airlines)</td></tr>
+      <tr><td>⚠️ איסוף Uber/Lyft</td><td class="muted">לא בכניסה הראשית — <b>בגראז' החניה מול הטרמינל, קומה V</b></td></tr>
+      <tr><td>מסלול הליכה</td><td class="muted">לעלות לקומה 1 (אסקלטור/מעלית) → לצאת דרך "Parking Bridge" (גשר הולכי-רגל מקורה) → לחצות לגראז' → לרדת קומה אחת ל-Level V → שילוט Uber</td></tr>
+      <tr><td>⏱️ באפר</td><td class="muted">מסלול לא אינטואיטיבי — לצאת מהמלון בזמן (יש כבר 20 דק' באפר בלו"ז הקיים)</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel" style="margin-bottom:16px">
+    <h3>7️⃣ ניו יורק — JFK ← נחיתה (יום 12, 6.11)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>טרמינל</td><td class="muted">Terminal 8 (American Airlines) — הכי פשוט מכל ההעברות</td></tr>
+      <tr><td>איסוף Uber/Lyft</td><td class="muted">אין הגבלת שאטל בטרמינל זה — מהמסועים ישר ל<b>מדרכת קומת ההגעות (Level 2)</b>, Uber/Lyft עוצרים ישירות</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="panel">
+    <h3>8️⃣ ניו יורק — מלון ← EWR ליציאה (יום 16, 10.11)</h3>
+    <table><thead><tr><th>שלב</th><th>פרטים</th></tr></thead><tbody>
+      <tr><td>טרמינל</td><td class="muted">Terminal B (לופטהנזה)</td></tr>
+      <tr><td>המלצה</td><td class="muted"><b>Uber/Lyft דלת-לדלת</b> מ-NoMad — $60-130 (תלוי בעומס), 40-70 דק'</td></tr>
+      <tr><td>חלופה זולה יותר</td><td class="muted">Newark Airport Express מ-Port Authority ($23.50) — דורש הגעה לשם קודם, לא מומלץ עם מזוודות לפני טיסה בינ"ל</td></tr>
+      <tr><td class="num">עלות</td><td class="muted">כבר בתקציב (~$80)</td></tr>
+    </tbody></table>
   </div>
 </div>
 <div id="tab-food" class="tab-content">
@@ -658,6 +748,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
         <tr><td>Greens Restaurant</td><td class="muted">27.10 · SF</td><td><span class="tag t-pending">לנסות שוב</span></td><td class="muted">האופציה המועדפת — נוף לגשר. לא הייתה זמינה, לבדוק קרוב למועד</td></tr>
         <tr><td>Cultura Comida y Bebida ✓</td><td class="muted">28.10 · כרמל</td><td><span class="tag t-paid">מאושר — OpenTable #5564</span></td><td class="muted">שולחן ל-2, 20:00</td></tr>
         <tr><td>Arizona Steakhouse ✓</td><td class="muted">02.11 · גרנד קניון</td><td><span class="tag t-paid">מאושר — 19:15, Dining Room (Tock)</span></td><td class="muted">שולחן ל-2. אם עוברים לגרסה ב' (טוסייאן) — לבטל עד 29.10</td></tr>
+        <tr><td>OKU ✓</td><td class="muted">29.10 · סנטה ברברה</td><td><span class="tag t-paid">מאושר — 19:30, ישיבה בחוץ (Outdoor)</span></td><td class="muted">שולחן ל-2, דרך Google/OpenTable</td></tr>
         <tr><td>Hangawi 🎂</td><td class="muted">08.11 · NYC (יומולדת אורלי)</td><td><span class="tag t-pending">~26.09.26</span></td><td class="muted">אירוע מיוחד — מומלץ לבקש שולחן נוח</td></tr>
       </tbody>
     </table>
@@ -690,7 +781,7 @@ td.muted { color:var(--text2); font-size:11.5px; }
   </div>
 </div>
 </div></div>
-<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 26.09.2026 · 19:33</span></div>
+<div class="footer">נסיעה טובה, גבי ואורלי · אוקטובר–נובמבר 2026<br><span style="font-family:Heebo,sans-serif;font-style:normal;font-size:11px;color:var(--text2);opacity:.7">עודכן לאחרונה: 27.09.2026 · 17:35</span></div>
 </div>
 <script>
 function showTab(e,name){
@@ -709,14 +800,14 @@ const days = [
  tl:[["09:00","<b>רחוב לומברד</b> — Cable Car (קו Powell-Hyde, עוצר ליד המלון) עד תחנת Hyde/Lombard, צילום הקטע המפותל"],["09:45","<b>הליכה</b> (~15-20 דק', בעיקר בירידה) דרך Columbus Avenue ו-<b>North Beach</b> השכונה האיטלקית, ישירות ל-<b>צ'יינה טאון</b>"],["10:15","<b>צ'יינה טאון</b> — Grant Avenue, שער הדרקון"],["11:30","<b>קו אוטובוס 30-Stockton</b> ל-<b>יוניון סקוור</b> — קניות וארוחת צהריים"],["14:30","חזרה לכיוון פישרמנס וורף בקו 30"],["15:00","<b>קו אוטובוס 28 (19th Avenue)</b> מפישרמנס וורף ישירות ל-<b>Golden Gate Bridge Welcome Center</b>"],["15:30","<b>גשר שער הזהב</b> — תצפית וצילומים, הליכה קלה על הגשר אם רוצים (שטוח לגמרי)"],["17:00","קו 28 חזרה לכיוון Cow Hollow/Marina"],["20:00","ארוחת ערב ב-<b>Wildseed</b> ✓ מוזמן — רחוב Union, 100% טבעוני"]],
  note:"✓ תוקן: לומברד↔צ'יינה טאון הוא הליכה נעימה (~15-20 דק', בעיקר בירידה) דרך North Beach האיטלקית — לא נדרש אוטובוס בקטע הזה. קו 30-Stockton משמש רק צ'יינה טאון→יוניון סקוור. קו 28 עוצר ישירות ב-Welcome Center של הגשר. מומלץ Muni Passport יומי (~$5).",type:"star"},
 {n:"3",d:"28.10",route:"SF ← Moss Landing ← מונטריי ← 17-Mile Drive ← כרמל",hotel:"Comfort Inn Carmel By the Sea · 1 לילה",dist:"~125 מייל",time:"~6.75 שע' כולל עצירות",
- tl:[["08:30","הגעה לדלפק Alamo, Beach St (איסוף בפועל ~40 דק' — טופס, בדיקת רכב)"],["09:15","יציאה מסן פרנסיסקו דרומה"],["11:15","<b>Moss Landing</b> — עצירה מהגשר לצפייה בלוטרות ים (~30 דק')"],["11:45","המשך למונטריי (~15 דק')"],["12:00","<b>Monterey Wharf</b> — אריות ים על הרציף, נמל דייגים, אפס הליכה (~10 דק')"],["12:15","המשך ל-Pacific Grove (~10 דק')"],["12:30","ארוחת צהריים ב-<b>Julia's Vegetarian</b>, Pacific Grove"],["13:30","כניסה ל-<b>17-Mile Drive</b> ($12) — נסיעה עם עצירות תצפית"],["14:00","<b>Bird Rock</b> — מושבת פילי ים וציפורי ים, מהרכב/חניון (~15 דק')"],["15:00","יציאה בשער כרמל, הגעה לעיר"],["15:15","צ'ק-אין בכרמל, מנוחה קצרה"],["16:00","🍷 <b>De Tierra Vineyards</b> (Mission St) — טעימת יין מקומי מ-Santa Lucia Highlands (Pinot Noir, Chardonnay), פטיו נעים · פתוח עד 18:00 · ✓ להזמין מראש (Tock)"],["17:30","חזרה למלון, התרעננות"],["19:00","ארוחת ערב ב-<b>Cultura Comida y Bebida</b> ✓ — OpenTable #5564, שולחן ל-2"]],
- note:"✓ תוקן: הסדר הנכון הוא Moss Landing (צפון) לפני מונטריי ו-17-Mile Drive (דרום) — לא אחריהם. גם תוקנה שעת איסוף הרכב לזמן ריאלי. ✓ נוספה עצירת Monterey Wharf (הייתה חסרה מלוח הזמנים) — 10 דק' בלבד, אפס הליכה. ✓ נוספה טעימת יין ב-De Tierra Vineyards (16:00-17:30, ברגל מהמלון) — נבדק: פתוח עד 18:00 בימי חול, לכן חייב להיות לפני הארוחה (19:00) ולא אחריה. חשוב להזמין מראש.",type:"star"},
+ tl:[["08:30","הגעה לדלפק Alamo, Beach St — ⚠️ Skip the Counter לא זמין כאן (מיקום שכונתי, לא שדה תעופה), אך <b>Accelerated Check-in</b> מופעל מראש לחיסכון בזמן (~40 דק' צפוי, לא 5-10)"],["09:15","יציאה מסן פרנסיסקו דרומה"],["11:15","<b>Moss Landing</b> — עצירה מהגשר לצפייה בלוטרות ים (~30 דק')"],["11:45","המשך למונטריי (~15 דק')"],["12:00","<b>Monterey Wharf</b> — אריות ים על הרציף, נמל דייגים, אפס הליכה (~10 דק')"],["12:15","המשך ל-Pacific Grove (~10 דק')"],["12:30","ארוחת צהריים ב-<b>Julia's Vegetarian</b>, Pacific Grove"],["13:30","כניסה ל-<b>17-Mile Drive</b> ($12) — נסיעה עם עצירות תצפית"],["14:00","<b>Bird Rock</b> — מושבת פילי ים וציפורי ים, מהרכב/חניון (~15 דק')"],["15:00","יציאה בשער כרמל, הגעה לעיר"],["15:15","צ'ק-אין בכרמל, מנוחה קצרה"],["16:00","🍷 <b>De Tierra Vineyards</b> (Mission St) — טעימת יין מקומי מ-Santa Lucia Highlands (Pinot Noir, Chardonnay), פטיו נעים · פתוח עד 18:00 · ✓ להזמין מראש (Tock)"],["17:30","חזרה למלון, התרעננות"],["19:00","ארוחת ערב ב-<b>Cultura Comida y Bebida</b> ✓ — OpenTable #5564, שולחן ל-2"]],
+ note:"✓ תוקן: הסדר הנכון הוא Moss Landing (צפון) לפני מונטריי ו-17-Mile Drive (דרום) — לא אחריהם. גם תוקנה שעת איסוף הרכב לזמן ריאלי. ✓ נוספה עצירת Monterey Wharf (הייתה חסרה מלוח הזמנים) — 10 דק' בלבד, אפס הליכה. ✓ נוספה טעימת יין ב-De Tierra Vineyards (16:00-17:30, ברגל מהמלון) — נבדק: פתוח עד 18:00 בימי חול, לכן חייב להיות לפני הארוחה (19:00) ולא אחריה. חשוב להזמין מראש. ✓ נוספה ארוחת ערב בסנטה ברברה — הערב היה חסר מלוח הזמנים (הסתיים בשקיעה בלבד). ✓ עודכן ל-OKU (יפני/סושי, לא מקסיקני כמו כרמל) — נבדק תפריט מלא: יש מגוון רחב של רולים ומנות צמחוניות/טבעוניות אמיתיות, לא רק אבוקדו-מלפפון. משלב בילוי ערב (בר גג, נוף לים, קמין) וארוחה מלאה באותו מקום, קרוב מאוד למלון. ✓ ההזמנה אושרה — 19:30, ישיבה בחוץ, שולחן ל-2. ✓ הקוקטייל הועבר מ-OKU לפטיו של Santa Barbara Shellfish Company על המזח עצמו (בילוי בחוף/טיילת, לא במסעדת הערב) — ממילא באזור בזמן השקיעה, פתוח עד 21:00.",type:"star"},
 {n:"4",d:"29.10",route:"כרמל ← Big Sur ← McWay Falls ← Piedras Blancas ← סנטה ברברה",hotel:"West Beach Inn, Santa Barbara · 1 לילה",dist:"~230 מייל",time:"~8–8.5 שע' דלת-לדלת",
- tl:[["07:30","יציאה מכרמל — <b>לא לאחר!</b>"],["08:30","<b>Bixby Creek Bridge</b> — עצירת תצפית מהחניון (~15 דק')"],["09:15","המשך דרומה ל-McWay Falls (~24 מייל, ~35–40 דק')"],["09:55","<b>McWay Falls</b> (Julia Pfeiffer Burns SP) — מפל שנופל ישירות לים, שביל שטוח 400 מ' בלבד (~10 דק')"],["10:10","המשך דרומה ל-Piedras Blancas (~54 מייל, ~70 דק')"],["11:20","<b>Piedras Blancas</b> — מאות פילי ים על החוף, אפס הליכה, חניון צמוד (~45–60 דק')"],["12:25","המשך דרומה, ארוחת צהריים קלה ב-Cambria/San Simeon (~30–45 דק')"],["16:00","הגעה לסנטה ברברה, צ'ק-אין"],["16:45","<b>Stearns Wharf</b> — טיילת ומזח, ציפורי ים"],["18:05","שקיעה על החוף"]],
+ tl:[["07:30","יציאה מכרמל — <b>לא לאחר!</b>"],["08:30","<b>Bixby Creek Bridge</b> — עצירת תצפית מהחניון (~15 דק')"],["09:15","המשך דרומה ל-McWay Falls (~24 מייל, ~35–40 דק')"],["09:55","<b>McWay Falls</b> (Julia Pfeiffer Burns SP) — מפל שנופל ישירות לים, שביל שטוח 400 מ' בלבד (~10 דק')"],["10:10","המשך דרומה ל-Piedras Blancas (~54 מייל, ~70 דק')"],["11:20","<b>Piedras Blancas</b> — מאות פילי ים על החוף, אפס הליכה, חניון צמוד (~45–60 דק')"],["12:25","המשך דרומה, ארוחת צהריים קלה ב-Cambria/San Simeon (~30–45 דק')"],["16:00","הגעה לסנטה ברברה, צ'ק-אין"],["16:45","<b>Stearns Wharf</b> — טיילת ומזח, ציפורי ים"],["17:45","🍷 קוקטייל/יין על המזח עצמו ב-<b>Santa Barbara Shellfish Company</b> (230 Stearns Wharf) — פטיו חיצוני מעל המים, בירה/יין, פתוח עד 21:00"],["18:05","שקיעה — נשארים באותו מקום על המזח"],["19:30","ארוחת ערב ב-<b>OKU</b> ✓ <b>מאושר</b> — 29 E Cabrillo Blvd, ~3 דק' הליכה מהמזח, ישיבה בחוץ (Outdoor), שולחן ל-2 · תפריט טבעוני/צמחוני עשיר: Veg Wild Mushroom Roll, Veg Rainbow Roll, Vegetable Tempura, Crispy Korean Cauliflower ועוד · לציין \"טבעוני\" לגבי הרטבים"]],
  note:"✓ תוקן: כביש 1 דרך ביג סור סוער יותר ממה שהמרחק מרמז. ✓ נוספה עצירת McWay Falls (הייתה חסרה מלוח הזמנים) — שביל קצר וקל, בדיוק בין Bixby ל-Piedras Blancas גיאוגרפית. ⚠️ היום ההדוק ביותר במסלול — כעת עם 3 עצירות, יציאה 07:30 בדיוק, קריטי לא לאחר. מחר טיסת בוקר.",type:"warn"},
 {n:"5",d:"30.10",route:"סנטה ברברה ✈️ לאס וגאס ← Mesquite ← ספרינגדייל/ציון",hotel:"Bumbleberry Inn (איסתא #474566) · 1 לילה",dist:"~165 מייל נסיעה",time:"טיסה 1:15 + נסיעה ~2:45 שע' + צהריים",
- tl:[["06:50","קימה, ארוחת בוקר רגועה במלון"],["07:20","יציאה מהמלון ל-SBA (~15 דק' נסיעה)"],["07:35","תדלוק אחרון ליד השדה"],["07:50","החזרת רכב Alamo בדלפק SBA"],["08:05","צ'ק-אין/ביקורת ביטחון — שדה קטן, ~15–20 דק'"],["08:35","המתנה בשער — קפה/מנוחה, לא לחץ"],["09:55","<b>המראה WN2319 ✓ קוד BW5U5N</b>, מושבים 18D/18E"],["11:10","נחיתה LAS — <b>טרמינל 1</b> (שעון נבדה)"],["11:15","איסוף מזוודות — Baggage Claim, מפלס 1"],["11:40","שלטי <b>Ground Transportation / Rental Car Shuttle</b> → תחנת השאטל <b>מחוץ לדלתות 10–11</b>. שאטל חינמי ל-Rent-A-Car Center (~5 ק\"מ דרומה)"],["12:00","<b>Rent-A-Car Center</b>, 7135 Gilespie St — דלפק Alamo, שובר 75378307, Chevrolet Equinox (~25–30 דק'). מומלץ לבדוק צ'ק-אין מקוון מראש באתר Alamo"],["12:45","יציאה צפונה ב-I-15"],["14:00","ארוחת צהריים ב-<b>D Thai Bistro</b>, Mesquite — 1085 W Pioneer Blvd · שישי 11:00–15:30 · אפשרויות טבעוניות"],["14:50","המשך ב-I-15 ← אריזונה ← יוטה. ⚠️ <b>בכניסה ליוטה השעון מתקדם בשעה</b>"],["17:10","(שעון יוטה) הגעה ל-Bumbleberry Inn, צ'ק-אין"],["17:45","הליכה קלה בעיירה, נוף ציון לקראת שקיעה"],["18:37","שקיעה"],["19:00","ארוחת ערב ב-<b>Thai Sapa</b> — 198 Zion Park Blvd · פתוח כל יום 11:00–21:30"]],
- note:"⚠️ <b>שני אזורי זמן:</b> LAS ו-Mesquite בשעון נבדה; ספרינגדייל בשעון יוטה (+1 שעה). ההגעה 17:10 שעון יוטה = 16:10 שעון נבדה. ✓ ארוחת הצהריים עברה ל-Mesquite (D Thai Bistro) במקום St. George. ✓ תוקן: שקיעה 18:37 (לא 18:00).",type:"warn"},
+ tl:[["06:50","קימה, ארוחת בוקר רגועה במלון"],["07:20","יציאה מהמלון ל-SBA (~15 דק' נסיעה)"],["07:35","תדלוק אחרון ליד השדה"],["07:50","החזרת רכב Alamo בדלפק SBA"],["08:05","צ'ק-אין/ביקורת ביטחון — שדה קטן, ~15–20 דק'"],["08:35","המתנה בשער — קפה/מנוחה, לא לחץ"],["09:55","<b>המראה WN2319 ✓ קוד BW5U5N</b>, מושבים 18D/18E"],["11:10","נחיתה LAS — <b>טרמינל 1</b> (שעון נבדה)"],["11:15","איסוף מזוודות — Baggage Claim, מפלס 1"],["11:40","שלטי <b>Ground Transportation / Rental Car Shuttle</b> → תחנת השאטל <b>מחוץ לדלתות 10–11</b>. שאטל חינמי ל-Rent-A-Car Center (~5 ק\"מ דרומה)"],["12:00","<b>Rent-A-Car Center</b>, 7135 Gilespie St — ✓ <b>Skip the Counter</b> מופעל מראש (ראו לשונית העברות) — ישר לרכב, ~5-10 דק' בלבד במקום 25-30"],["12:45","יציאה צפונה ב-I-15"],["14:00","ארוחת צהריים ב-<b>D Thai Bistro</b>, Mesquite — 1085 W Pioneer Blvd · שישי 11:00–15:30 · אפשרויות טבעוניות"],["14:50","המשך ב-I-15 ← אריזונה ← יוטה. ⚠️ <b>בכניסה ליוטה השעון מתקדם בשעה</b>"],["17:10","(שעון יוטה) הגעה ל-Bumbleberry Inn, צ'ק-אין"],["17:45","הליכה קלה בעיירה, נוף ציון לקראת שקיעה"],["18:37","שקיעה"],["19:00","ארוחת ערב ב-<b>Thai Sapa</b> — 198 Zion Park Blvd · פתוח כל יום 11:00–21:30"]],
+ note:"⚠️ <b>שני אזורי זמן:</b> LAS ו-Mesquite בשעון נבדה; ספרינגדייל בשעון יוטה (+1 שעה). ההגעה 17:10 שעון יוטה = 16:10 שעון נבדה. ✓ ארוחת הצהריים עברה ל-Mesquite (D Thai Bistro) במקום St. George. ✓ תוקן: שקיעה 18:37 (לא 18:00). ✓ <b>Skip the Counter מאושר ב-Rent-A-Car Center</b> — להפעיל באתר Alamo לפחות 24 שעות מראש (2 שלבים: פרטי רישיון נהיגה, ואז תשלום+הסכם), להדפיס/לשמור את הברקוד.",type:"warn"},
 {n:"6",d:"31.10",route:"ציון (Riverside Walk) ← Red Canyon ← ברייס",hotel:"Best Western PLUS Bryce Canyon Grand · 1 לילה",dist:"~85 מייל",time:"~1:50 שע'",
  tl:[["07:30","ארוחת בוקר במלון (כלולה)"],["08:15","צ'ק-אאוט, מזוודות ברכב. <b>לבקש מהמלון להשאיר את הרכב בחניה עד ~12:30</b> — חניון הפארק צפוי להיות מלא (שבת, ליל האלווין)"],["08:20","<b>שאטל ספרינגדייל</b> (חינם, מ-08:00, כל 10–15 דק') לכניסה לפארק"],["08:45","<b>שאטל הקניון</b> (מ-07:00, כל 5–10 דק') ל-<b>Temple of Sinawava</b> (~45 דק')"],["09:30","<b>Riverside Walk</b> — הלוך-חזור (~3.5 ק\"מ, שטוח, קירות קניון מרהיבים). עוצרים בקצה השביל הסלול, לא נכנסים לנרואוז/למים"],["11:00","<b>Zion Human History Museum</b> — עצירה אופציונלית בדרך למרכז המבקרים, ממוזג, תמונות והקשר היסטורי (~15 דק')"],["11:20","שאטל חזרה למרכז המבקרים ← שאטל ספרינגדייל למלון"],["12:15","ארוחת צהריים קלה בספרינגדייל — <b>Whiptail Grill</b>, או <b>Sol Foods</b> (סלט-בר + אספקה לדרך)"],["13:00","נסיעה לברייס דרך מנהרת Zion–Mt Carmel · עצירה קצרה ב-<b>Red Canyon</b> (כביש 12)"],["15:00","צ'ק-אין, מנוחה"],["17:45","<b>Sunset Point / Inspiration Point</b> — תצפית מהחניון, ללא הליכה"],["18:32","שקיעה — קר מאוד (~0°)"],["19:00","ארוחת ערב ליד המלון — <b>Cowboy's Buffet & Steak Room</b> (Ruby's Inn, ~7 דק' הליכה) · בופה, ללא הזמנה. חלופה: המסעדה במלון"],["לילה","⏰ <b>מעבר לשעון חורף — להזיז את השעון שעה אחורה</b>"]],
  note:"✓ השאטל פועל ב-31.10 (עונת סתיו 25.10–28.11): שאטל הקניון מ-07:00, האחרון חוזר מ-Temple of Sinawava ב-18:15; שאטל ספרינגדייל מ-08:00. ✓ מנהרת Zion–Mt Carmel — ה-Equinox עומד במגבלות, סגירות הלילה היו רק בספטמבר. ✓ תוקן: שקיעה 18:32 (עדיין שעון קיץ), לא 17:55. ⚠️ ב-Cowboy's Buffet לא אומתו מנות טבעוניות — לשאול במקום. ⚠️ קר! שלג אפשרי.",type:"warn"},
@@ -726,15 +817,15 @@ const days = [
 {n:"8",d:"02.11",route:"פייג' ← Navajo Bridge ← Cameron ← Desert View ← גרנד קניון",hotel:"Bright Angel Lodge · 1 לילה (גיבוי: Grand Canyon Hotel & Suites, Tusayan)",dist:"~168 מייל",time:"~3:45 שע' נטו",
  tl:[["07:30","ארוחת בוקר ב-Sleep Inn, צ'ק-אאוט"],["08:30","נסיעה ל-<b>Navajo Bridge</b> (~40 מייל, כביש 89A)"],["09:15","⭐ <b>Navajo Bridge</b> — קונדורים. גשר הולכי רגל שטוח; לסרוק את הקורות מתחת לגשר ואת המצוקים (משקפת)"],["10:00","נסיעה ל-Cameron (~70 מייל)"],["11:10","ארוחת צהריים ב-<b>Cameron Trading Post</b> (06:00–21:00) — Vegetarian Navajo Taco / Bean Burrito; לאורלי בלי גבינה, לשאול על שומן חזיר בשעועית"],["12:40","<b>Desert View Watchtower</b> — עלייה למגדל (כרטיס חינם לפי סדר הגעה, 08:00–17:00)"],["13:45","<b>Tusayan Ruin</b> (שביל 150 מ') + <b>Grandview Point</b>"],["14:35","<b>Yavapai Point</b> + Geology Museum (⭐ קונדור) ← Rim Trail סלול ל-<b>Mather Point</b> (~1 ק\"מ)"],["15:45","<b>א':</b> צ'ק-אין Bright Angel Lodge · <b>ב':</b> חונים בכפר (Bright Angel/Maswik, או מרכז המבקרים + שאטל כחול)"],["16:00","רובע היסטורי ברגל — Lookout Studio, Kolb Studio, Hopi House, לובי El Tovar. סנאי Kaibab ואיילים ליד הלודג'. אופציונלי: Bright Angel Trail עד המנהרה הראשונה (~10 דק' ירידה, ~20 עלייה)"],["16:50","<b>שאטל אדום</b> מ-Hermits Rest Route Transfer ל-<b>Hopi Point</b>"],["17:32","🌅 שקיעה ב-Hopi Point — קר ורוח: מעיל, כובע, כפפות"],["18:15","שאטל חזרה לכפר"],["18:20 (ב')","<b>גרסה ב':</b> נסיעה לטוסייאן (~20 דק') ← צ'ק-אין Grand Canyon Hotel & Suites ← 19:30 ארוחת ערב ב-<b>Plaza Bonita</b> (352 AZ-64, 07:00–22:00) — פאחיטס ירקות / אנצ'ילדס שעועית בלי גבינה ושמנת"],["19:15 (א')","<b>גרסה א':</b> ארוחת ערב ב-<b>Arizona Steakhouse</b> ✓ מוזמן — Dining Room, 2 סועדים (Tock) · טמאלס VG, קערת טופו VG"]],
  note:"✓ יום 8 נבנה מחדש: Horseshoe Bend עבר ליום 7; הבוקר ל-Navajo Bridge — הסיכוי הטוב ביותר לקונדור במסלול (התצפית הטובה שם היא אחה\"צ, בבוקר פחות ודאי). ✓ תוקן: שקיעה 17:32 (לא 17:10). ⚠️ Lipan Point סגורה עד 23.12.26. ⚠️ <b>גרסה ב'</b> = אם הסגירה של Bright Angel הוארכה: לינה בטוסייאן, להודיע למלון על הגעה ~18:45, פיקדון $50 בצ'ק-אין; שאטל טוסייאן לא פועל בנובמבר. במקרה כזה <b>לבטל את Arizona Steakhouse דרך Tock</b>. החלטה עד 29.10 23:59 (שעון אריזונה).",type:"warn"},
-{n:"9",d:"03.11",route:"גרנד קניון ← Kingman ← Hoover Dam ← North Premium Outlets ← לאס וגאס",hotel:"Paris Las Vegas · לילה 1/3",dist:"~290 מייל",time:"~4:30 שע' נטו",
- tl:[["06:52","זריחה (אופציונלי) — Yavapai / Mather Point"],["08:30","<b>א':</b> ארוחת בוקר ב-Harvey House (כלולה בחבילה, מ-08:30) · <b>ב':</b> ארוחת בוקר במלון בטוסייאן (כלולה)"],["09:30","יציאה (שעון אריזונה) — Williams ← I-40 ← Kingman"],["12:45","ארוחת צהריים ב-<b>Kingman</b> — Chipotle (Sofritas, טבעוני) או Thai 66"],["14:15 / 13:15","<b>Hoover Dam</b> — הליכה על הגשר (~45 דק', חינם, 05:00–21:00). ⚠️ <b>בכניסה לנבדה השעון חוזר שעה: 14:15 אריזונה = 13:15 נבדה</b>"],["14:00","(שעון נבדה) נסיעה ל-<b>Las Vegas North Premium Outlets</b> (~50 ק\"מ, ~35–40 דק')"],["14:40","🛍️ קניות — שלישי 10:00–20:00. המזוודות בתא המטען, לא גלויות"],["18:00","נסיעה ל-Paris Las Vegas"],["18:30","צ'ק-אין Paris · חניה עצמית ~$20 ללילה (אמצע שבוע)"],["20:30","ארוחת ערב ב-<b>Crossroads Kitchen</b> ✓ (Resorts World) — Uber מהמלון"]],
- note:"✓ Outlets הועברו ליום הזה — עם הרכב השכור (מוחזר רק ב-4.11 10:00), בלי Uber ובלי סחיבת שקיות; 5.11 מתפנה. ✓ נוספה עצירת צהריים ב-Kingman. ⚠️ שני אזורי זמן: עד הסכר שעון אריזונה, אחריו שעון נבדה (שעה אחורה).",type:"star"},
+{n:"9",d:"03.11",route:"גרנד קניון ← Kingman ← Hoover Dam ← South Premium Outlets ← לאס וגאס",hotel:"Paris Las Vegas · לילה 1/3",dist:"~290 מייל",time:"~4:30 שע' נטו",
+ tl:[["06:52","זריחה (אופציונלי) — Yavapai / Mather Point"],["08:30","<b>א':</b> ארוחת בוקר ב-Harvey House (כלולה בחבילה, מ-08:30) · <b>ב':</b> ארוחת בוקר במלון בטוסייאן (כלולה)"],["09:30","יציאה (שעון אריזונה) — Williams ← I-40 ← Kingman"],["12:45","ארוחת צהריים ב-<b>Kingman</b> — Chipotle (Sofritas, טבעוני) או Thai 66"],["14:15 / 13:15","<b>Hoover Dam</b> — הליכה על הגשר (~45 דק', חינם, 05:00–21:00). ⚠️ <b>בכניסה לנבדה השעון חוזר שעה: 14:15 אריזונה = 13:15 נבדה</b>"],["14:00","(שעון נבדה) נסיעה ל-<b>Las Vegas South Premium Outlets</b>, 7400 Las Vegas Blvd S (~45-50 ק\"מ מהסכר, ~35–40 דק' — לפי הערכה, כדאי לוודא מול Google Maps סמוך למועד; המסלול הזה קרוב יותר בדרך מהסכר מאשר האאוטלט הצפוני)"],["14:40","🛍️ קניות — שלישי-חמישי 10:00–20:00. המזוודות בתא המטען, לא גלויות"],["18:00","נסיעה ל-Paris Las Vegas (~15-20 דק', בקצה הדרומי של הרצועה)"],["18:30","צ'ק-אין Paris · חניה עצמית ~$20 ללילה (אמצע שבוע)"],["20:30","ארוחת ערב ב-<b>Crossroads Kitchen</b> ✓ (Resorts World) — Uber מהמלון"]],
+ note:"✓ Outlets הועברו ליום הזה — עם הרכב השכור (מוחזר רק ב-4.11 10:00), בלי Uber ובלי סחיבת שקיות. ✓ נוספה עצירת צהריים ב-Kingman. ⚠️ שני אזורי זמן: עד הסכר שעון אריזונה, אחריו שעון נבדה (שעה אחורה). ✓ שונה מהאאוטלט הצפוני לדרומי — הגיוני יותר בדרך מהסכר (לפני הכניסה לרצועה, לא אחריה). האאוטלט הצפוני עבר ליום החופשי (5.11).",type:"star"},
 {n:"10",d:"04.11",route:"לאס וגאס — החזרת רכב, בתי מלון + Sphere",hotel:"Paris Las Vegas · לילה 2/3",dist:"מקומי",time:"—",
- tl:[["09:15","יציאה מ-Paris ל-Rent-A-Car Center (7135 Gilespie St) — לתדלק בדרך"],["10:00","<b>החזרת רכב Alamo</b> (שובר 75378307) — מועד ההחזרה בשובר"],["10:30","Uber חזרה ל-Paris"],["14:00","סיור רגלי: <b>Bellagio</b> — מזרקות, גן פרחים פנימי"],["15:30","<b>The Venetian</b> — תעלות. הכל ממוזג, ללא הליכה חיצונית"],["17:00","ארוחת ערב ב-<b>True Food Kitchen</b> (Forum Shops, קיסרים) — קליל, מנות טבעוניות/צמחוניות מסומנות בבירור"],["18:15","Uber/הליכה חזרה ל-Venetian (~15-20 דק')"],["19:00","הגעה ל-Sphere — <b>שעה מראש</b> לחוויית Atrium"],["19:15","דלתות נפתחות (45 דק' לפני) — <b>20:00 בכרטיס = תחילת הסרט, לא פתיחת דלתות!</b>"],["20:00","מופע <b>Sphere: Wizard of Oz</b> ✓ — הזמנה #42-11281/NEV, Section 407 Row 5 Seats 5-6 (~50 דק' סרט, ~1:45-2 שע' סה\"כ עם Atrium)"]],
- note:"✓ Sphere הוזמן — $238, מושבים מעולים ב-407 Row 5. ✓ נוספה החזרת הרכב בבוקר (10:00). True Food Kitchen (Forum Shops) ~15-20 דק' מ-Venetian — לתכנן את הזמן. ⚠️ מומלץ להזמין מקום מראש (Walk-in אפשרי אך לא מובטח).",type:"star"},
+ tl:[["09:15","יציאה מ-Paris ל-Rent-A-Car Center (7135 Gilespie St) — לתדלק בדרך"],["10:00","<b>החזרת רכב Alamo</b> (שובר 75378307) — מועד ההחזרה בשובר"],["10:15","הליכה קצרה (~3-5 דק') ל-<b>South Strip Transit Terminal</b>, 6675 Gilespie St — אותו רחוב, ליד ה-Rent-A-Car Center"],["10:30","<b>The Deuce</b> (אוטובוס RTC) חזרה ל-Paris Las Vegas — כל 10-15 דק', $6 לכרטיס 2 שעות (אפליקציית Uber/rideRTC/מכונה בתחנה), ~20-25 דק' נסיעה"],["14:00","סיור רגלי: <b>Bellagio</b> — מזרקות, גן פרחים פנימי"],["15:30","<b>The Venetian</b> — תעלות. הכל ממוזג, ללא הליכה חיצונית"],["17:00","ארוחת ערב ב-<b>True Food Kitchen</b> (Forum Shops, קיסרים) — קליל, מנות טבעוניות/צמחוניות מסומנות בבירור"],["18:15","Uber/הליכה חזרה ל-Venetian (~15-20 דק')"],["19:00","הגעה ל-Sphere — <b>שעה מראש</b> לחוויית Atrium"],["19:15","דלתות נפתחות (45 דק' לפני) — <b>20:00 בכרטיס = תחילת הסרט, לא פתיחת דלתות!</b>"],["20:00","מופע <b>Sphere: Wizard of Oz</b> ✓ — הזמנה #42-11281/NEV, Section 407 Row 5 Seats 5-6 (~50 דק' סרט, ~1:45-2 שע' סה\"כ עם Atrium)"]],
+ note:"✓ Sphere הוזמן — $238, מושבים מעולים ב-407 Row 5. ✓ נוספה החזרת הרכב בבוקר (10:00). True Food Kitchen (Forum Shops) ~15-20 דק' מ-Venetian — לתכנן את הזמן. ⚠️ מומלץ להזמין מקום מראש (Walk-in אפשרי אך לא מובטח). ✓ החזרה מ-Rent-A-Car Center ל-Paris דרך The Deuce (לא Uber) — תחנת South Strip Transit נמצאת ממש באותו רחוב (Gilespie St) ליד ה-Rent-A-Car Center.",type:"star"},
 {n:"11",d:"05.11",route:"לאס וגאס — יום חופשי",hotel:"Paris Las Vegas · לילה 3/3",dist:"מקומי",time:"—",
- tl:[["10:00","בוקר רגוע — אין תוכנית לחוץ"],["11:00","יום חופשי — ה-Outlets כבר נעשו ב-3.11. אם צריך השלמה: Uber ל-North Premium Outlets (~$16–20 כל כיוון)"],["13:00","ארוחת צהריים לפי בחירה"],["15:00","אחה\"צ חופשי — בריכה / מנוחה"],["19:30","ארוחת ערב, ערב חופשי — לארוז לקראת הטיסה מחר"]],
- note:"✓ Outlets עברו ל-3.11 עם הרכב השכור — היום פנוי לגמרי. Red Rock Canyon הוסר.",type:"star"},
+ tl:[["10:00","בוקר רגוע — אין תוכנית לחוץ"],["11:00","Uber ל-<b>Las Vegas North Premium Outlets</b> (~875 S Grand Central Pkwy, ~$16–20 כל כיוון, ~15-20 דק')"],["11:30","🛍️ קניות — פתוח 10:00–21:00 (א'-ה')"],["14:00","ארוחת צהריים באזור האאוטלט או Uber חזרה"],["15:00","אחה\"צ חופשי — בריכה / מנוחה"],["19:30","ארוחת ערב, ערב חופשי — לארוז לקראת הטיסה מחר"]],
+ note:"✓ האאוטלט הדרומי עבר ל-3.11 עם הרכב השכור (בדרך מהסכר). ✓ ביום החופשי הזה מתוכנן ביקור באאוטלט הצפוני (North Premium Outlets) — שני מתחמים שונים לגמרי מבחינת חנויות, שווה לבקר בשניהם. Red Rock Canyon הוסר.",type:"star"},
 {n:"12",d:"06.11",route:"לאס וגאס ✈️ ניו יורק (AA2356)",hotel:"Innside by Meliá NY NoMad · לילה 1/4",dist:"—",time:"~5.5 שע' טיסה",
  tl:[["10:00","קימה, ארוזה סופית — יש זמן, לא לחץ"],["10:30","ארוחת בוקר / קפה רגוע"],["11:00","צ'ק-אאוט מ-Paris Las Vegas"],["11:15","Uber/Taxi ל-LAS <b>טרמינל 3</b> (אמריקן איירליינס = T3, לא T1)"],["11:35","הגעה לטרמינל — כשעתיים לפני המראה"],["11:45","צ'ק-אין/הפקדת כבודה"],["12:00","ביקורת ביטחון (Terminal 3, בד\"כ 15–30 דק')"],["12:30","זמן בשער — ארוחת צהריים קלה בשדה"],["12:49","✈️ <b>המראה AA2356 מ-LAS</b> — מושבים 21D/21E"],["21:00","נחיתה JFK"],["22:15","הגעה למלון ב-NoMad"],["22:30","ארוחת ערב קלה ב-<b>PLANTA Queen NoMad</b> — 15 W 27th St (אם פתוח), או room service"]],
  note:"⚠️ טיסה שונתה ע\"י אמריקן: AA2138 (11:41) → AA2356 (12:49→21:00). מושבים 21D/21E נשמרו. קוד הזמנה IWCVVZ. הנחיתה המאוחרת מצמצמת את ערב ההגעה — PLANTA Queen סוגרת מאוחר, לאשר שעות לפני. הפרש שעות מישראל: 7 שע'.",type:"warn"},
@@ -847,7 +938,7 @@ const attr = [
   ["8 · 2.11","גרנד קניון — Bright Angel Lodge","לינה + ארוחת ערב Arizona Steakhouse ✓ 19:15","אפס","✓","route","גיבוי: טוסייאן + Plaza Bonita","Bright Angel Lodge Grand Canyon"],
   // יום 9 · 3.11 · גרנד קניון → Hoover Dam → לאס וגאס
   ["9 · 3.11","Hoover Dam — גשר תצפית","סכר + נוף Lake Mead","אפס","✓","route","גשר בלבד (ללא סיור פנימי) · ~45 דק'","Hoover Dam Bypass Bridge Overlook"],
-  ["9 · 3.11","Las Vegas North Premium Outlets","🛍️ קניות","קלה","✓","route","עם הרכב השכור · 10:00–20:00","Las Vegas North Premium Outlets"],
+  ["9 · 3.11","Las Vegas South Premium Outlets","🛍️ קניות","קלה","✓","route","עם הרכב השכור · 10:00–20:00, 7400 Las Vegas Blvd S","36.053921,-115.169159"],
 ];
 // Group attr rows by day and render as visual blocks
 const dayGroups = {};
